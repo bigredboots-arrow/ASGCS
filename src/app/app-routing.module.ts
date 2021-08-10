@@ -13,19 +13,31 @@ import { OutboundReportsComponent } from './pages/outbound/outbound-reports/outb
 const routes: Routes = [
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
+    data: {
+      breadcrumb: 'Dashydash'
+    }
   },
   {
     path: 'demandOverview',
-    component: DemandOverviewComponent
+    component: DemandOverviewComponent,
+    data: {
+      breadcrumb: 'Manufacturing Sites > Overview'
+    }
   },
   {
     path: 'demandDiscover',
-    component: DemandDiscoverComponent
+    component: DemandDiscoverComponent,
+    data: {
+      breadcrumb: 'Manufacturing Sites > Discover'
+    }
   },
   {
     path: 'demandReports',
-    component: DemandReportsComponent
+    component: DemandReportsComponent,
+    data: {
+      breadcrumb: 'Manufacturing Sites > Reports'
+    }
   },
   {
     path: 'outboundOverview',

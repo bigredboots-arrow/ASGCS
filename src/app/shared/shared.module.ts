@@ -7,6 +7,7 @@ import { GridCellDirective } from './components/grid/grid-cell/grid-cell.directi
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import { NavigationSidePanelComponent } from './components/navigation-side-panel/navigation-side-panel.component';
 import { SingleDoubleClickDirective } from './directives/single-double-click.directive';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SingleDoubleClickDirective } from './directives/single-double-click.dir
     GridCellDirective,
     NavigationBarComponent,
     NavigationSidePanelComponent,
-    SingleDoubleClickDirective
+    SingleDoubleClickDirective,
+    HeaderComponent
   ],
   imports: [CommonModule, RouterModule],
   exports: [
@@ -22,7 +24,8 @@ import { SingleDoubleClickDirective } from './directives/single-double-click.dir
     GridCellDirective,
     NavigationBarComponent,
     NavigationSidePanelComponent,
-    SingleDoubleClickDirective
+    SingleDoubleClickDirective,
+    HeaderComponent
   ]
 })
 export class SharedModule {}

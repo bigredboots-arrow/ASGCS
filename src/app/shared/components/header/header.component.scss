@@ -1,4 +1,4 @@
-@import './scss/variables';
+@import '../../../scss/variables';
 
 #header {
   padding-top: 50px;
@@ -30,8 +30,8 @@
 }
 .breadcrumb span::before {
   content: '';
-  border-left: 2px solid var(--white-color);
-  border-bottom: 2px solid var(--white-color);
+  border-left: 2px solid $grey-lightest;
+  border-bottom: 2px solid $grey-lightest;
   width: 8px;
   height: 8px;
   display: inline-block;
@@ -61,7 +61,7 @@
   top: 3px;
 }
 .site-search:before {
-  background-color: var(--white-color);
+  background-color: $grey-lightest;
   border-radius: 0px;
   content: '';
   display: inline-block;
@@ -74,7 +74,7 @@
   width: 5px;
 }
 .site-search:after {
-  border: 2px solid var(--white-color);
+  border: 2px solid $grey-lightest;
   border-radius: 50%;
   box-sizing: content-box;
   content: '';

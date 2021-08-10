@@ -68,32 +68,3 @@ h6 {
     cursor: pointer;
   }
 }
-
-.btn {
-  padding: 1rem 1.5rem;
-  box-sizing: border-box;
-  font-size: 1.2rem;
-  border-radius: 4px;
-  font-weight: bold;
-  margin: 0 0 1rem 0;
-  display: inline-block;
-  color: #fff;
-
-  &.btn-primary {
-    background: lighten(#3b4d63, 20%);
-    outline: 0;
-    border: 0;
-
-    &:disabled {
-      background: lighten(#3b4d63, 30%);
-      &:hover {
-        background: lighten(#3b4d63, 30%);
-        cursor: not-allowed;
-      }
-    }
-
-    &:hover {
-      background: lighten(#3b4d63, 10%);
-    }
-  }
-}

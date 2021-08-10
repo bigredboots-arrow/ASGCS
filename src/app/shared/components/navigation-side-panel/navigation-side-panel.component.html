@@ -1,0 +1,29 @@
+<nav role="navigation" class="main-navigation">
+  <ul>
+    <li class="dashboard">
+      <a [routerLink]="['/dashboard']" routerLinkActive="active"><span>Dashboard</span></a>
+    </li>
+    <li class="manufacturing-sites">
+      <span>Manufacturing Sites</span>
+      <ul>
+        <li><a [routerLink]="['/demandOverview']">Overview </a></li>
+        <li><a [routerLink]="['/demandDiscover']">Discover</a></li>
+        <li><a [routerLink]="['/demandReports']">Reports</a></li>
+      </ul>
+    </li>
+    <li class="outbound">
+      <span>Outbound Shipments</span>
+      <ul>
+        <li><a [routerLink]="['/outboundOverview']">Overview </a></li>
+        <li><a [routerLink]="['/outboundDiscover']">Discover</a></li>
+        <li><a [routerLink]="['/outboundReports']">Reports</a></li>
+      </ul>
+    </li>
+    <li class="hubs"><span>Hubs</span></li>
+    <li class="inbound"><span>Inbound-Shipments</span></li>
+    <li class="suppliers"><span>Suppliers</span></li>
+    <li class="subtiers"><span>Sub Tiers</span></li>
+    <li class="raw"><span>Raw materials</span></li>
+    <li class="settings"><span>Settings</span></li>
+  </ul>
+</nav>

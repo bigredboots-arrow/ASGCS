@@ -13,13 +13,13 @@ body {
   margin: 0px;
   padding: 0px;
   background: $grey-color;
-  color: $grey-lightest;
+  color: $grey-lighter;
   font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-size: $base-font;
 }
 
 a {
-  color: $grey-lightest;
+  color: $grey-lighter;
   font-weight: 400;
   text-decoration: none;
 }
@@ -32,8 +32,8 @@ a {
   display: block;
 
   &.card-body {
-    background: #ffffff;
-    color: #444;
+    background: $black;
+    color: $grey-lighter;
     display: block;
 
     transition: background 0.5s;

@@ -10,7 +10,7 @@
 .breadcrumb {
   white-space: nowrap;
   font-size: $larger-font;
-  color: $grey-lighte;
+  color: $grey-lighter;
   opacity: 1;
   max-width: 100%;
   overflow: hidden;
@@ -246,4 +246,97 @@
     transform: rotate(45deg);
     width: 2px;
   }
+}
+
+label.filters {
+  background: #000;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  padding: 10px 15px 8px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 0px;
+}
+label.filters:before {
+  content: '';
+  width: 17px;
+  height: 16px;
+  margin-right: 10px;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+#toggle-filters {
+  opacity: 0;
+  position: absolute;
+}
+#toggle-filters:checked ~ .overview-filters {
+  max-height: 100px;
+  transition: 0.3s ease-in all;
+}
+#toggle-filters:checked ~ label.filters {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  transition: 0.3s ease-in all;
+}
+.overview-filters {
+  max-height: 0px;
+  transition: 0.3s ease-in all;
+  overflow: hidden;
+  display: block;
+  background-color: #000;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.block-filters,
+.block-filterbuttons {
+  display: flex;
+  gap: 20px;
+}
+
+.datepicker {
+  display: inline-block;
+  width: 340px;
+  background: #fff;
+  color: #000;
+  border-radius: 5px;
+  padding: 0px;
+}
+.k-dropdown {
+  width: auto;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  height: 30px;
+  border-radius: 5px;
+  background: #333;
+}
+.k-dropdown .k-dropdown-wrap .k-select {
+  background-color: transparent;
+}
+.k-dropdowntree {
+  width: auto;
+  font-size: 12px;
+}
+.k-dropdowntree .k-dropdown-wrap .k-select {
+  background-color: transparent;
+}
+.k-dateinput {
+  font-size: 12px;
+}
+.k-datepicker .k-picker-wrap {
+  width: 65% !important;
+}
+.k-calendar {
+  width: 200px;
+}
+.k-i-arrow-s::before {
+  color: #dcdcdc;
 }

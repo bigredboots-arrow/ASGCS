@@ -8,6 +8,7 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
 import { NavigationSidePanelComponent } from './components/navigation-side-panel/navigation-side-panel.component';
 import { SingleDoubleClickDirective } from './directives/single-double-click.directive';
 import { HeaderComponent } from './components/header/header.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeaderComponent } from './components/header/header.component';
     NavigationBarComponent,
     NavigationSidePanelComponent,
     SingleDoubleClickDirective,
-    HeaderComponent
+    HeaderComponent,
+    SidebarComponent
   ],
   imports: [CommonModule, RouterModule],
   exports: [
@@ -25,7 +27,8 @@ import { HeaderComponent } from './components/header/header.component';
     NavigationBarComponent,
     NavigationSidePanelComponent,
     SingleDoubleClickDirective,
-    HeaderComponent
+    HeaderComponent,
+    SidebarComponent
   ]
 })
 export class SharedModule {}

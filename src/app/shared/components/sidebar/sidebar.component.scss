@@ -1,0 +1,14 @@
+.settings-sidebar {
+  position: absolute;
+  top: 0px;
+  right: -300px;
+  width: 300px;
+  background: #ccc;
+  color: black;
+  height: 100vh;
+  z-index: 1;
+  transition: 0.3s ease-in all;
+}
+.settings-sidebar.sidebar-active {
+  right: 0px;
+}

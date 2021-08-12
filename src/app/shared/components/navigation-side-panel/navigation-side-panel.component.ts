@@ -21,10 +21,16 @@ export class NavigationSidePanelComponent implements OnInit, OnDestroy {
     this._subscriptionsSubject$ = new Subject<void>();
   }
 
+  classApplied = false;
+
+  toggleClass() {
+    this.classApplied = !this.classApplied;
+  }
+
   ngOnInit(): void {
     this._sidePanelService.panelStateChanges
       .pipe(takeUntil(this._subscriptionsSubject$))
-      .subscribe((state: SidePanelState) => this.currentPanelState = state);
+      .subscribe((state: SidePanelState) => (this.currentPanelState = state));
   }
 
   ngOnDestroy(): void {

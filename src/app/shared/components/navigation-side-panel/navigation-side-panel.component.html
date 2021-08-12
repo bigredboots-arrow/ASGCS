@@ -3,10 +3,10 @@
     <li class="dashboard">
       <a [routerLink]="['/dashboard']" routerLinkActive="active"><span>Dashboard</span></a>
     </li>
-    <li class="manufacturing-sites">
-      <span>Manufacturing Sites</span>
+    <li class="manufacturing-sites" [class.active]="classApplied">
+      <span (click)="toggleClass()">Manufacturing Sites</span>
       <ul>
-        <li><a [routerLink]="['/demandOverview']">Overview </a></li>
+        <li><a [routerLink]="['/demandOverview']">Overview</a></li>
         <li><a [routerLink]="['/demandDiscover']">Discover</a></li>
         <li><a [routerLink]="['/demandReports']">Reports</a></li>
       </ul>
@@ -14,7 +14,7 @@
     <li class="outbound">
       <span>Outbound Shipments</span>
       <ul>
-        <li><a [routerLink]="['/outboundOverview']">Overview </a></li>
+        <li><a [routerLink]="['/outboundOverview']">Overview</a></li>
         <li><a [routerLink]="['/outboundDiscover']">Discover</a></li>
         <li><a [routerLink]="['/outboundReports']">Reports</a></li>
       </ul>

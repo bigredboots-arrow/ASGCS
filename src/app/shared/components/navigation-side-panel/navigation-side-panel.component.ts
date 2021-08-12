@@ -21,10 +21,14 @@ export class NavigationSidePanelComponent implements OnInit, OnDestroy {
     this._subscriptionsSubject$ = new Subject<void>();
   }
 
-  demandOpen = false;
+  demandOpen = true;
+  outboundOpen = false;
 
-  toggleClass() {
+  toggleDemandClass() {
     this.demandOpen = !this.demandOpen;
+  }
+  toggleOutboundClass() {
+    this.outboundOpen = !this.outboundOpen;
   }
 
   ngOnInit(): void {

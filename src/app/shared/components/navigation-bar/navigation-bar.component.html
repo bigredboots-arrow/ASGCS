@@ -1,10 +1,16 @@
-<div class="navigation-top-bar" id="sidebar">
+<div id="sidebar">
   <div class="home-logo">
-    <div class=" ciena company-logo"></div>
-    <div id="hamburger" role="button" class="toggler" singleDoubleClick (onSingleClick)="handleSingleClick()">
+    <div
+      id="hamburger"
+      role="button"
+      class="toggler"
+      singleDoubleClick
+      (onSingleClick)="handleSingleClick()"
+    >
       <span></span>
     </div>
   </div>
+  <div class="ciena company-logo"></div>
   <div class="navigation-extended">
     <ng-content select="[panel=navigationExtended"></ng-content>
   </div>

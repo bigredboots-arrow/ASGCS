@@ -47,3 +47,50 @@ a {
 .sidebar-active .overlayer {
   display: block !important;
 }
+
+/*mobile collapsed nav-menu */
+.left-column.collapse .main-navigation ul li .navigation-links {
+  position: absolute;
+  z-index: 1;
+  background: $blue-color;
+  margin-left: 40px;
+  padding: 5px 0px;
+  margin-top: 0px !important;
+  max-width: 0px;
+  overflow: hidden;
+  transition: $default-transition;
+  white-space: nowrap;
+  color: $white;
+}
+.left-column.collapse .main-navigation ul li:hover .navigation-links {
+  max-width: 300px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.left-column.collapse .main-navigation ul li:hover .navigation-links ul {
+  max-height: 80px;
+}
+.left-column.collapse .main-navigation ul li:hover .navigation-links a,
+.left-column.collapse .main-navigation ul li:hover .navigation-links ul a {
+  color: $white;
+}
+.left-column.collapse .main-navigation > ul > li span::after {
+  display: none !important;
+}
+
+.left-column.collapse .main-navigation ul li:hover::after {
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid $blue-color;
+  display: inline-block;
+  content: '';
+  left: 34px;
+  position: absolute;
+  top: 10px;
+}
+.left-column.collapse .main-navigation ul ul {
+  margin: 0px;
+}

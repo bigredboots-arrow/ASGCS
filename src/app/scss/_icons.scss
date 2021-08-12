@@ -10,31 +10,31 @@
   fill: #eeeeee;
 }
 
-.main-navigation ul li.dashboard::before {
+.main-navigation ul li.dashboard .icon::before {
   background-image: url(/assets/icons/dashboard.svg);
 }
-.main-navigation ul li.demand::before {
-  background-image: url(/assets/icons/manufacturer-active.svg);
+.main-navigation ul li.demand .icon::before {
+  background-image: url(/assets/icons/demand.svg);
 }
-.main-navigation ul li.outbound::before {
+.main-navigation ul li.outbound .icon::before {
   background-image: url(/assets/icons/shipping.svg);
 }
-.main-navigation ul li.hubs::before {
+.main-navigation ul li.hubs .icon::before {
   background-image: url(/assets/icons/hubs.svg);
 }
-.main-navigation ul li.inbound::before {
+.main-navigation ul li.inbound .icon::before {
   background-image: url(/assets/icons/shipping.svg);
 }
-.main-navigation ul li.suppliers::before {
-  background-image: url(/assets/icons/manufacturer.svg);
+.main-navigation ul li.suppliers .icon::before {
+  background-image: url(/assets/icons/demand.svg);
 }
-.main-navigation ul li.subtiers::before {
+.main-navigation ul li.subtiers .icon::before {
   background-image: url(/assets/icons/subtiers.svg);
 }
-.main-navigation ul li.raw::before {
+.main-navigation ul li.raw .icon::before {
   background-image: url(/assets/icons/rawmaterials.svg);
 }
-.main-navigation ul li.settings::before {
+.main-navigation ul li.settings .icon::before {
   background-image: url(/assets/icons/settings.svg);
 }
 
@@ -48,4 +48,8 @@
 
 label.filters:before {
   background-image: url(/assets/icons/filter.svg);
+}
+
+.main-navigation ul li.demand.status-good::before {
+  background-image: url(/assets/icons/demand-active.svg);
 }

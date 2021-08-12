@@ -340,3 +340,28 @@ label.filters:before {
 .k-i-arrow-s::before {
   color: #dcdcdc;
 }
+
+app-sidebar {
+  position: absolute;
+  top: 0px;
+  right: -300px;
+  width: 300px;
+  background: #ccc;
+  color: black;
+  height: 100vh;
+  z-index: 2;
+  transition: 0.3s ease-in all;
+}
+.overlayer {
+  background: rgba(50, 50, 50, 0.7);
+  position: absolute;
+  top: 0;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  display: none;
+}
+app-sidebar {
+  z-index: 2;
+}

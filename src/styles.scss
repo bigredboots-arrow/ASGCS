@@ -40,3 +40,10 @@ a {
     cursor: pointer;
   }
 }
+
+.sidebar-active app-sidebar {
+  right: 0px !important;
+}
+.sidebar-active .overlayer {
+  display: block !important;
+}

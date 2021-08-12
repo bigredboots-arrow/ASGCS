@@ -1,10 +1,12 @@
 <nav role="navigation" class="main-navigation">
   <ul>
     <li class="dashboard">
-      <a [routerLink]="['/dashboard']" routerLinkActive="active"><span>Dashboard</span></a>
+      <a [routerLink]="['/dashboard']" routerLinkActive="active"
+        ><span>Dashboard</span></a
+      >
     </li>
-    <li class="manufacturing-sites" [class.active]="classApplied">
-      <span (click)="toggleClass()">Manufacturing Sites</span>
+    <li class="demand status-good" [class.--open]="demandOpen">
+      <span (click)="toggleClass()">Demand</span>
       <ul>
         <li><a [routerLink]="['/demandOverview']">Overview</a></li>
         <li><a [routerLink]="['/demandDiscover']">Discover</a></li>

@@ -1,0 +1,51 @@
+.icon {
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.k-icon {
+  font-size: 20px;
+}
+
+.st0 {
+  fill: #eeeeee;
+}
+
+.main-navigation ul li.dashboard::before {
+  background-image: url(/assets/icons/dashboard.svg);
+}
+.main-navigation ul li.demand::before {
+  background-image: url(/assets/icons/manufacturer-active.svg);
+}
+.main-navigation ul li.outbound::before {
+  background-image: url(/assets/icons/shipping.svg);
+}
+.main-navigation ul li.hubs::before {
+  background-image: url(/assets/icons/hubs.svg);
+}
+.main-navigation ul li.inbound::before {
+  background-image: url(/assets/icons/shipping.svg);
+}
+.main-navigation ul li.suppliers::before {
+  background-image: url(/assets/icons/manufacturer.svg);
+}
+.main-navigation ul li.subtiers::before {
+  background-image: url(/assets/icons/subtiers.svg);
+}
+.main-navigation ul li.raw::before {
+  background-image: url(/assets/icons/rawmaterials.svg);
+}
+.main-navigation ul li.settings::before {
+  background-image: url(/assets/icons/settings.svg);
+}
+
+.home-logo .company-logo.ciena {
+  background-image: url(/assets/tenants/ciena-logo.svg);
+}
+
+.top-navigation-block .notifications .icon {
+  background-image: url(/assets/icons/notification.svg);
+}
+
+label.filters:before {
+  background-image: url(/assets/icons/filter.svg);
+}

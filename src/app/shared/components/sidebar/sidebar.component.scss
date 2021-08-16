@@ -1,3 +1,5 @@
+@import '../../../scss/variables';
+
 .settings-sidebar {
   top: 0px;
   right: -300px;
@@ -7,4 +9,21 @@
   height: 100vh;
   z-index: 1;
   transition: 0.3s ease-in all;
+}
+.sidebar-top {
+  display: flex;
+
+  .user-block {
+    display: block;
+  }
+  .settings-close {
+    display: block;
+  }
+  .name {
+    grid-row: 1;
+    grid-column: 2;
+    font-size: 15px;
+    font-weight: 600;
+    color: $grey-lighter;
+  }
 }

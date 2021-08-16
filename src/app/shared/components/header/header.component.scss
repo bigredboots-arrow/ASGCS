@@ -125,6 +125,20 @@
     justify-content: flex-end;
     width: 100%;
   }
+  .user-block {
+    display: flex;
+
+    .avatar {
+      position: relative;
+      width: 40px;
+      height: 35px;
+      background-repeat: no-repeat;
+      margin-right: 10px;
+      display: block;
+      cursor: pointer;
+      background-size: cover;
+    }
+  }
   .name {
     grid-row: 1;
     grid-column: 2;

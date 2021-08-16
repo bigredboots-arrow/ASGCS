@@ -16,6 +16,16 @@
   .user-block {
     display: flex;
   }
+  .avatar {
+    position: relative;
+    width: 40px;
+    height: 35px;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    display: block;
+    cursor: pointer;
+    background-size: cover;
+  }
   .settings-close {
     display: block;
   }

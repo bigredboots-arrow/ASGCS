@@ -14,7 +14,7 @@
   display: flex;
 
   .user-block {
-    display: block;
+    display: flex;
   }
   .settings-close {
     display: block;
@@ -24,6 +24,6 @@
     grid-column: 2;
     font-size: 15px;
     font-weight: 600;
-    color: $grey-lighter;
+    color: $black;
   }
 }

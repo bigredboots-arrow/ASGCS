@@ -3,31 +3,35 @@
 .settings-sidebar {
   top: 0px;
   right: -300px;
-  width: 300px;
-  background: #ccc;
-  color: black;
+  width: 270px;
+  background: $grey-lighter;
+  color: $black;
   height: 100vh;
   z-index: 1;
   transition: 0.3s ease-in all;
 }
 .sidebar-top {
   display: flex;
+  justify-content: space-between;
 
   .user-block {
     display: flex;
+    gap: 10px;
+    align-items: center;
   }
   .avatar {
     position: relative;
-    width: 40px;
+    width: 35px;
     height: 35px;
     background-repeat: no-repeat;
-    margin-right: 10px;
     display: block;
     cursor: pointer;
     background-size: cover;
   }
   .settings-close {
     display: block;
+    transform: rotate(45deg);
+    font-size: $largest-font;
   }
   .name {
     grid-row: 1;

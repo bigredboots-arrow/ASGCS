@@ -49,7 +49,9 @@
 .top-navigation-block .user-block .avatar {
   background-image: url(/assets/icons/profile.svg);
 }
-
+.sidebar-top .user-block .avatar {
+  background-image: url(/assets/icons/profile-reverse.svg);
+}
 label.filters:before {
   background-image: url(/assets/icons/filter.svg);
 }

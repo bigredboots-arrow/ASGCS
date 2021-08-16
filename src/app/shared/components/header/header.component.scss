@@ -359,11 +359,12 @@ app-sidebar {
   position: absolute;
   top: 0px;
   right: -300px;
-  width: 300px;
+  width: 270px;
   background: #ccc;
   color: black;
   height: 100vh;
   z-index: 2;
+  padding: 15px;
   transition: 0.3s ease-in all;
 }
 .overlayer {
@@ -375,7 +376,4 @@ app-sidebar {
   right: 0px;
   z-index: 1;
   display: none;
-}
-app-sidebar {
-  z-index: 2;
 }

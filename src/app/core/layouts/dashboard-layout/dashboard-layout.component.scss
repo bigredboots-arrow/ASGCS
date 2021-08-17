@@ -2,10 +2,10 @@
   display: flex;
   overflow: hidden;
   position: relative;
+  
 
   .left-column {
     top: 0;
-    transition: all 0.3s;
 
     &.open {
       flex: 0 0 250px;
@@ -22,5 +22,6 @@
 
   .right-column {
     width: 100%;
+    margin-left: 20px;
   }
 }

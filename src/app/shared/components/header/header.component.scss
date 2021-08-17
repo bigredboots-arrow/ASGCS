@@ -2,6 +2,10 @@
 
 #header {
   padding-top: 42px;
+  margin-right: 35px;
+}
+.header {
+  margin-bottom: 50px;
 }
 .header-events {
   display: flex;
@@ -308,6 +312,7 @@ label.filters:before {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
+  margin-right: 35px;
 }
 
 .block-filters,
@@ -395,6 +400,12 @@ label.filters:before {
 
 .k-i-arrow-s::before {
   color: #dcdcdc;
+}
+.filterblock {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
 }
 .filterblock .k-input {
   padding: 0px 10px;

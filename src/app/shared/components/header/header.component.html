@@ -52,57 +52,71 @@
   </div>
 </div>
 <!--filters -->
-<input type="checkbox" id="toggle-filters" />
-<label for="toggle-filters" class="filters">Filters</label>
-<div class="overview-filters">
-  <div class="filterblock">
-    <div class="block-filters">
-      <div class="k-widget k-dropdown">
-        <span class="k-dropdown-wrap">
-          <span class="k-input">Status</span>
-          <span class="k-select">
-            <span class="k-icon k-i-arrow-s"></span>
+<div class="filter-block">
+  <div class="filters" (click)="toggleFilters()">Filters</div>
+  <div class="overview-filters">
+    <div class="filterblock">
+      <div class="block-filters">
+        <div class="filter-item">
+          <div class="filter-label">Status</div>
+          <span class="k-dropdown-wrap">
+            <span class="k-input">Status</span>
+            <span class="k-select">
+              <span class="k-icon k-i-arrow-s"></span>
+            </span>
           </span>
-        </span>
-      </div>
-      <div class="datepicker">
-        <div class="from-date">
-          8/31/2021
         </div>
-        <div class="text-date">TO</div>
-        <div class="to-date">
-          12/31/2021
+        <div class="filter-item">
+          <div class="filter-label">Dates</div>
+          <div class="datepicker">
+            <div class="from-date">
+              8/31/2021
+            </div>
+            <div class="text-date">TO</div>
+            <div class="to-date">
+              12/31/2021
+            </div>
+            <span role="button" class="k-select">
+              <span class="k-icon k-i-calendar"></span>
+            </span>
+          </div>
         </div>
-        <span role="button" class="k-select">
-          <span class="k-icon k-i-calendar"></span>
-        </span>
+
+        <div class="filter-item">
+          <div class="filter-label">Type</div>
+          <span class="k-dropdown-wrap">
+            <span class="k-input">Type</span>
+            <span class="k-select"
+              ><span class="k-icon k-i-arrow-s"></span
+            ></span>
+          </span>
+        </div>
+
+        <div class="filter-item">
+          <div class="filter-label">sites</div>
+          <span class="k-dropdown-wrap"
+            ><span class="k-input">Manuf. Sites</span>
+            <span class="k-select"
+              ><span class="k-icon k-i-arrow-s"></span></span
+          ></span>
+        </div>
+
+        <div class="filter-item">
+          <div class="filter-label">Supplier</div>
+          <span class="k-dropdown-wrap">
+            <span class="k-input">Supplier</span>
+            <span class="k-select"
+              ><span class="k-icon k-i-arrow-s"></span
+            ></span>
+          </span>
+        </div>
       </div>
 
-      <div class="k-widget k-dropdown">
-        <span class="k-dropdown-wrap">
-          <span class="k-input">Type</span>
-          <span class="k-select"><span class="k-icon k-i-arrow-s"></span></span>
-        </span>
+      <div class="block-filterbuttons">
+        <button kendobutton="" class="secondary">Reset</button>
+        <button kendobutton="" class="blue">Apply</button>
+        <label for="toggle-filters" class="close-filters">+</label>
       </div>
-
-      <div class="k-widget k-dropdown">
-        <span class="k-dropdown-wrap"
-          ><span class="k-input">Manuf. Sites</span>
-          <span class="k-select"><span class="k-icon k-i-arrow-s"></span></span
-        ></span>
-      </div>
-
-      <div class="k-widget k-dropdown">
-        <span class="k-dropdown-wrap">
-          <span class="k-input">Supplier</span>
-          <span class="k-select"><span class="k-icon k-i-arrow-s"></span></span>
-        </span>
-      </div>
-    </div>
-
-    <div class="block-filterbuttons">
-      <button kendobutton="" class="secondary">Reset</button>
-      <button kendobutton="" class="blue">Apply</button>
     </div>
   </div>
 </div>

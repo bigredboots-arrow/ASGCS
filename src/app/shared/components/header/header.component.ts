@@ -16,10 +16,15 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class HeaderComponent implements OnInit {
   @ViewChild('overview') overview: ElementRef;
+  @ViewChild('filters') filters: ElementRef;
+
   constructor() {}
 
   toggleSidebar() {
     this.overview.nativeElement.classList.toggle('sidebar-active');
+  }
+  toggleFilters() {
+    this.filters.nativeElement.classList.toggle('filter-active');
   }
 
   ngOnInit(): void {}

@@ -5,28 +5,36 @@
 
   .left-column {
     top: 0;
+    transition: 0.3s ease-in all;
 
     &.open {
       flex: 0 0 250px;
       padding: 35px 15px 35px 35px;
+      transition: 0.3s ease-in all;
     }
     &.collapse {
       flex: 0 0 55px;
       padding: 35px 15px 35px 20px;
+      transition: 0.3s ease-in all;
     }
     &.close {
       flex: 0 0 0px;
+      transition: 0.3s ease-in all;
     }
   }
 
   .right-column {
     width: 100%;
     margin-left: 20px;
+    height: calc(100vh - 70px);
   }
+}
+.header {
+  height: 190px;
 }
 .main-content {
   margin: 0px 25px 0px 0px;
   overflow-y: scroll;
   padding-right: 10px;
-  height: calc(100vh - 15px);
+  height: calc(100vh - 190px);
 }

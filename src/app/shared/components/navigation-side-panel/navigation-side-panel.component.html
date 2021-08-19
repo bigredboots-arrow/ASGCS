@@ -1,15 +1,9 @@
 <nav role="navigation" class="main-navigation">
   <ul>
     <li class="dashboard">
-      <a
-        class="icon"
-        [routerLink]="['/dashboard']"
-        routerLinkActive="active"
-      ></a>
+      <a class="icon" [routerLink]="['/dashboard']" routerLinkActive="active"></a>
       <div class="navigation-links">
-        <a [routerLink]="['/dashboard']" routerLinkActive="active"
-          ><span>Dashboard</span></a
-        >
+        <a [routerLink]="['/dashboard']" routerLinkActive="active"><span>Dashboard</span></a>
       </div>
     </li>
     <li class="demand status-good" [class.open]="demandOpen">
@@ -52,6 +46,7 @@
     </li>
     <!-- <li class="raw status-disabled"><div class="icon"></div><div class="navigation-links"><span>Raw materials</span></div></li> -->
     <li class="settings">
+      <div class="icon"></div>
       <div class="navigation-links"><a>Settings</a></div>
     </li>
   </ul>

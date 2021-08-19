@@ -1,4 +1,10 @@
-import { Component, OnInit, OnDestroy, Input, HostListener } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  Input,
+  HostListener
+} from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { DashboardLayoutConfiguration } from './models/dashboard-layout-configuration.model';
@@ -20,30 +26,38 @@ export class DashboardLayoutComponent implements OnInit {
 
   constructor(private _sidePanelService: SidePanelService) {
     this._subscriptionsSubject$ = new Subject<void>();
-    this.configuration = new DashboardLayoutConfiguration(SidePanelPosition.LEFT, SidePanelState.OPEN);
-    this._sidePanelService.changeState(this.configuration.initialSidePanelState)
+    this.configuration = new DashboardLayoutConfiguration(
+      SidePanelPosition.LEFT,
+      SidePanelState.OPEN
+    );
+    this._sidePanelService.changeState(
+      this.configuration.initialSidePanelState
+    );
   }
 
   ngOnInit(): void {
+    const width: number = window.innerWidth;
+    if (width < 768) this._sidePanelService.changeState(SidePanelState.CLOSE);
+    else if (width < 1200)
+      this._sidePanelService.changeState(SidePanelState.COLLAPSE);
+    else this._sidePanelService.changeState(SidePanelState.OPEN);
+
     window.dispatchEvent(new Event('resize'));
-    this._sidePanelService
-      .panelStateChanges
+    this._sidePanelService.panelStateChanges
       .pipe(takeUntil(this._subscriptionsSubject$))
-      .subscribe((state: SidePanelState) => this.currentPanelState = state);
+      .subscribe((state: SidePanelState) => (this.currentPanelState = state));
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     // @@@ May have to rethink
     const width: number = window.innerWidth;
-    if (width < 768) 
-      this._sidePanelService.changeState(SidePanelState.CLOSE);
-    else if (width < 991)
+    if (width < 768) this._sidePanelService.changeState(SidePanelState.CLOSE);
+    else if (width < 1200)
       this._sidePanelService.changeState(SidePanelState.COLLAPSE);
-    else
-      this._sidePanelService.changeState(SidePanelState.OPEN);
+    else this._sidePanelService.changeState(SidePanelState.OPEN);
   }
-  
+
   ngOnDestroy(): void {
     this._subscriptionsSubject$.next();
     this._subscriptionsSubject$.complete();

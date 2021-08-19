@@ -498,3 +498,37 @@ app-sidebar {
   z-index: 1;
   display: none;
 }
+
+.collapse .overview-filters {
+  position: absolute;
+  max-width: 300px !important;
+  width: 300px !important;
+  top: 50px;
+  background: black;
+  border: 1px solid #999;
+  padding: 10px;
+  z-index: 3;
+}
+
+.collapse .filter-block.filter-active {
+  width: fit-content;
+  position: relative;
+}
+
+.collapse
+  .filter-block.filter-active[_ngcontent-pjd-c53]
+  .filters[_ngcontent-pjd-c53]
+  span[_ngcontent-pjd-c53] {
+  max-width: 100px;
+  color: white;
+}
+
+.collapse
+  .filter-block.filter-active[_ngcontent-pjd-c53]
+  .filters[_ngcontent-pjd-c53] {
+  border-radius: 10px !important;
+}
+
+.collapse .filterblock {
+  display: block;
+}

@@ -272,9 +272,30 @@
   background: $black;
   color: #fff;
   display: flex;
-  align-items: center;
+  padding-top: 3px;
   border-radius: 10px;
   width: fit-content;
+  height: 50px;
+
+  &.filter-active {
+    width: calc(100% - 35px);
+  }
+  &.filter-active .overview-filters {
+    max-width: 100%;
+    transition: 0.3s ease-in all;
+    width: 100%;
+    padding-right: 20px;
+  }
+  &.filter-active .filters {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    transition: 0.3s ease-in all;
+    span {
+      max-width: 0px;
+      color: $black;
+      transition: $default-transition;
+    }
+  }
 }
 .filters {
   border: none;
@@ -292,6 +313,8 @@
   span {
     display: inline-block;
     max-width: 100px;
+    position: relative;
+    top: 2px;
     color: $white;
     overflow: hidden;
     transition: $default-transition;
@@ -312,31 +335,21 @@
 }
 .overview-filters {
   max-width: 0px;
-  max-height: 0px;
   transition: 0.3s ease-in all;
   overflow: hidden;
 }
-.filter-active .overview-filters {
-  max-width: 100%;
-  max-height: 100px;
-  transition: 0.3s ease-in all;
-}
-.filter-active .filters {
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  transition: 0.3s ease-in all;
-  span {
-    max-width: 0px;
-    color: $black;
-    transition: $default-transition;
-  }
-}
 
-.block-filters,
+.block-filters {
+  display: flex;
+  gap: 12px;
+  flex-flow: nowrap;
+  width: 100%;
+}
 .block-filterbuttons {
   display: flex;
   gap: 12px;
-  flex-wrap: wrap;
+  flex-flow: nowrap;
+  margin-top: 8px;
 }
 .select {
   width: 100%;
@@ -391,7 +404,7 @@
   }
 }
 .datepicker .text-date {
-  margin: 0 3px;
+  margin: 4px 3px;
   font-weight: 600;
   font-size: 12px;
 }
@@ -404,12 +417,12 @@
 }
 .filterblock {
   display: flex;
-  padding: 15px 0px;
   justify-content: space-between;
   align-items: center;
 }
 .filter-label {
   font-size: 12px;
+  padding-bottom: 1px;
 }
 .filterblock .k-input {
   padding: 0px 5px;
@@ -438,6 +451,7 @@
   height: 20px;
   position: relative;
   top: 5px;
+  cursor: pointer;
 }
 
 .filter-item .k-dropdown-wrap {

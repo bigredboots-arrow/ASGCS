@@ -1,0 +1,10 @@
+.header.collapse .filter-block.filter-active .overview-filters {
+  position: absolute;
+  max-width: 300px !important;
+  width: 300px !important;
+  top: 50px;
+  background: black;
+  border: 1px solid #999;
+  padding: 10px;
+  z-index: 3;
+}

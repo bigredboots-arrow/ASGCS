@@ -1,15 +1,15 @@
 @import '../../../scss/variables';
-
-#header {
-  padding-top: 42px;
-  margin-right: 35px;
-}
 .header {
   margin-bottom: 50px;
+}
+.main-header {
+  padding-top: 42px;
+  margin-right: 35px;
 }
 .header-events {
   display: flex;
 }
+
 /*breadcrumbs */
 .breadcrumb {
   white-space: nowrap;
@@ -276,6 +276,7 @@
   border-radius: 10px;
   width: fit-content;
   height: 50px;
+  position: relative;
 
   &.filter-active {
     width: calc(100% - 35px);
@@ -415,7 +416,7 @@
 .k-i-arrow-s::before {
   color: #dcdcdc;
 }
-.filterblock {
+.filter-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -424,7 +425,7 @@
   font-size: 12px;
   padding-bottom: 1px;
 }
-.filterblock .k-input {
+.filter-container .k-input {
   padding: 0px 5px;
   background: #dcdcdc;
   color: #000;
@@ -433,7 +434,7 @@
   display: flex;
   align-items: center;
 }
-.filterblock .k-select {
+.filter-container .k-select {
   background: #009ddc;
   height: 24px;
   border-radius: 0 5px 5px 0;
@@ -444,7 +445,7 @@
   text-align: center;
   cursor: pointer;
 }
-.filterblock .close-filters {
+.filter-container .close-filters {
   transform: rotate(45deg);
   font-size: 30px;
   line-height: 14px;
@@ -499,36 +500,47 @@ app-sidebar {
   display: none;
 }
 
-.collapse .overview-filters {
-  position: absolute;
-  max-width: 300px !important;
-  width: 300px !important;
-  top: 50px;
-  background: black;
-  border: 1px solid #999;
-  padding: 10px;
-  z-index: 3;
-}
+@media only screen and (max-width: 1200px) {
+  .filter-container {
+    display: block;
+  }
+  .filter-block.filter-active {
+    width: fit-content;
+    position: relative;
 
-.collapse .filter-block.filter-active {
-  width: fit-content;
-  position: relative;
-}
+    .overview-filters {
+      position: absolute;
+      max-width: 300px !important;
+      width: 300px !important;
+      top: 50px;
+      background: black;
+      border: 1px solid #999;
+      padding: 10px;
+      z-index: 3;
+      border-radius: 0px 10px 10px 10px;
+    }
+    .filters {
+      border-radius: 10px !important;
 
-.collapse
-  .filter-block.filter-active[_ngcontent-pjd-c53]
-  .filters[_ngcontent-pjd-c53]
-  span[_ngcontent-pjd-c53] {
-  max-width: 100px;
-  color: white;
-}
+      span {
+        max-width: 100px;
+        color: white;
+      }
+    }
+  }
 
-.collapse
-  .filter-block.filter-active[_ngcontent-pjd-c53]
-  .filters[_ngcontent-pjd-c53] {
-  border-radius: 10px !important;
-}
+  .block-filters {
+    display: block;
+  }
+  .filter-item {
+    border-width: 0;
+    display: flex;
+    margin: 25px 0;
+    align-items: center;
+    gap: 7px;
 
-.collapse .filterblock {
-  display: block;
+    &:first-child {
+      margin-top: 0px;
+    }
+  }
 }

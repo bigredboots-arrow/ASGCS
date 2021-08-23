@@ -92,3 +92,14 @@
     cursor: not-allowed;
   }
 }
+.is-active .parent {
+  color: $white;
+}
+a.is-active {
+  color: $white;
+  font-weight: 600;
+  transition: $default-transition;
+}
+.dashboard {
+  font-weight: 600;
+}

@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { breadCrumbConstant } from '../../../common/global-constants';
+import { GlobalConstants } from '../../../common/global-constants';
 
 @Component({
   selector: 'app-header',
@@ -18,6 +18,8 @@ import { breadCrumbConstant } from '../../../common/global-constants';
 export class HeaderComponent implements OnInit {
   @ViewChild('overview') overview: ElementRef;
   @ViewChild('filters') filters: ElementRef;
+
+  breadCrumb = GlobalConstants.breadCrumb;
 
   constructor() {}
 
@@ -29,7 +31,11 @@ export class HeaderComponent implements OnInit {
     this.overview.nativeElement.classList.toggle('filter-active');
   }
 
-  myBreadCrumb = breadCrumbConstant;
-
-  ngOnInit(): void {}
+  myBreadCrumb = this.breadCrumb;
+  
+  ngOnInit(
+    
+  ): void {
+    
+  }
 }

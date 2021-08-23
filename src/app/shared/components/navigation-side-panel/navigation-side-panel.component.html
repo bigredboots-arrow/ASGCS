@@ -7,30 +7,71 @@
         routerLinkActive="active"
       ></a>
       <div class="navigation-links">
-        <a [routerLink]="['/dashboard']" routerLinkActive="active"
-          ><span>Dashboard</span></a
+        <a
+          [routerLink]="['/dashboard']"
+          routerLinkActive="active"
+          [routerLinkActive]="['is-active']"
+          ><span class="dashboard">Dashboard</span></a
         >
       </div>
     </li>
     <li class="demand status-good" [class.open]="demandOpen">
       <div class="icon"></div>
-      <div class="navigation-links">
-        <span (click)="toggleDemandClass()">Demand</span>
+      <div class="navigation-links" [routerLinkActive]="['is-active']">
+        <span class="parent" (click)="toggleDemandClass()">Demand</span>
         <ul>
-          <li><a [routerLink]="['/demandOverview']">Overview</a></li>
-          <li><a [routerLink]="['/demandDiscover']">Discover</a></li>
-          <li><a [routerLink]="['/demandReports']">Reports</a></li>
+          <li>
+            <a
+              [routerLink]="['/demandOverview']"
+              [routerLinkActive]="['is-active']"
+              >Overview</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/demandDiscover']"
+              [routerLinkActive]="['is-active']"
+              >Discover</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/demandReports']"
+              [routerLinkActive]="['is-active']"
+              >Reports</a
+            >
+          </li>
         </ul>
       </div>
     </li>
     <li class="outbound" [class.open]="outboundOpen">
       <div class="icon"></div>
-      <div class="navigation-links">
-        <span (click)="toggleOutboundClass()">Outbound Shipments</span>
+      <div class="navigation-links" [routerLinkActive]="['is-active']">
+        <span class="parent" (click)="toggleOutboundClass()"
+          >Outbound Shipments</span
+        >
         <ul>
-          <li><a [routerLink]="['/outboundOverview']">Overview</a></li>
-          <li><a [routerLink]="['/outboundDiscover']">Discover</a></li>
-          <li><a [routerLink]="['/outboundReports']">Reports</a></li>
+          <li>
+            <a
+              [routerLink]="['/outboundOverview']"
+              [routerLinkActive]="['is-active']"
+              >Overview</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/outboundDiscover']"
+              [routerLinkActive]="['is-active']"
+              >Discover</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/outboundReports']"
+              [routerLinkActive]="['is-active']"
+              >Reports</a
+            >
+          </li>
         </ul>
       </div>
     </li>

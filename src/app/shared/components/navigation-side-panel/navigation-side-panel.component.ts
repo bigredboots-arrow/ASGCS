@@ -1,9 +1,11 @@
 import {
   Component,
+  EventEmitter,
   OnInit,
   OnDestroy,
   Input,
   ViewChild,
+  Output,
   ElementRef
 } from '@angular/core';
 import { Subject } from 'rxjs';

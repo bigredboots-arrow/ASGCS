@@ -25,7 +25,8 @@ export class DashboardComponent implements OnInit {
   //   this.alertDismissible = false;
   // }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   // public loadData(): void {
   //   this._progressBarService.onProgressComplete()

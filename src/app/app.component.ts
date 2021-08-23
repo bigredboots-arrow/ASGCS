@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { GlobalConstants } from './common/global-constants';
 import {
   SidePanelState,
   DashboardLayoutConfiguration,
@@ -12,7 +13,9 @@ import { ProgressBarFill, ProgressBarService } from './library/components';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  breadCrumb = GlobalConstants.breadCrumb;
+
   public configuration: DashboardLayoutConfiguration;
   public links: NavigationLink[];
   public progressFill: ProgressBarFill = ProgressBarFill.INFO;
@@ -22,5 +25,9 @@ export class AppComponent {
       SidePanelPosition.LEFT,
       SidePanelState.OPEN
     );
+  }
+
+  ngOnInit() {
+    console.log(this.breadCrumb);
   }
 }

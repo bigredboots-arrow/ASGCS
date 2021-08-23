@@ -14,3 +14,5 @@ import { Component, Input } from '@angular/core';
   ]
 })
 export class DemandDiscoverComponent {}
+
+export const breadCrumbConstant = `Demand > Discover`;

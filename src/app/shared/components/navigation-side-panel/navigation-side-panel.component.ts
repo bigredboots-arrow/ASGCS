@@ -1,4 +1,11 @@
-import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  Input,
+  ViewChild,
+  ElementRef
+} from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { SidePanelService, SidePanelState } from '../../../core';
@@ -10,6 +17,8 @@ import { NavigationLink } from './navigation-link.model';
   styleUrls: ['./navigation-side-panel.component.scss']
 })
 export class NavigationSidePanelComponent implements OnInit, OnDestroy {
+  @ViewChild('overview') overview: ElementRef;
+
   @Input()
   public links: NavigationLink[];
 
@@ -29,6 +38,9 @@ export class NavigationSidePanelComponent implements OnInit, OnDestroy {
   }
   toggleOutboundClass() {
     this.outboundOpen = !this.outboundOpen;
+  }
+  toggleSidebar() {
+    this.overview.nativeElement.classList.toggle('sidebar-active');
   }
 
   ngOnInit(): void {

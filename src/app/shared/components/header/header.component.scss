@@ -309,8 +309,8 @@
   display: block;
   padding: 10px;
   white-space: nowrap;
-  background: black;
-  border-radius: 10px;
+  // background: black;
+  // border-radius: 10px;
 
   span {
     display: inline-block;
@@ -490,8 +490,7 @@ app-sidebar {
   padding: 15px;
   transition: 0.3s ease-in all;
 }
-.overlayer,
-.overlayer-filter {
+.overlayer {
   background: rgba(50, 50, 50, 0.7);
   position: absolute;
   top: 0;
@@ -506,10 +505,21 @@ app-sidebar {
   .filter-container {
     display: block;
   }
-
+  .overlayer-filter {
+    background: rgba(50, 50, 50, 0.7);
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    display: none;
+  }
   .filter-block.filter-active {
-    width: 300px;
+    width: 320px;
     position: relative;
+    z-index: 2;
+    border-radius: 10px 10px 0px 0px;
 
     .overview-filters {
       position: absolute;
@@ -528,6 +538,7 @@ app-sidebar {
       width: 300px;
       white-space: nowrap;
       position: absolute;
+      background: none;
       z-index: 2;
 
       span {

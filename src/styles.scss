@@ -47,7 +47,9 @@ a {
 .sidebar-active .overlayer {
   display: block !important;
 }
-
+.filter-active .overlayer-filter {
+  display: block !important;
+}
 /*mobile collapsed nav-menu */
 .left-column.collapse .main-navigation ul li .navigation-links {
   position: absolute;

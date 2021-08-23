@@ -25,6 +25,7 @@ export class HeaderComponent implements OnInit {
   }
   toggleFilters() {
     this.filters.nativeElement.classList.toggle('filter-active');
+    this.overview.nativeElement.classList.toggle('filter-active');
   }
 
   ngOnInit(): void {}

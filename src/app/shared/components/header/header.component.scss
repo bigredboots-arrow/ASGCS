@@ -274,9 +274,10 @@
   display: flex;
   padding-top: 3px;
   border-radius: 10px;
-  width: fit-content;
+  width: 130px;
   height: 50px;
   position: relative;
+  transition: 0.3s ease-in all;
 
   &.filter-active {
     width: calc(100% - 35px);
@@ -306,7 +307,7 @@
   font-weight: 500;
   text-transform: uppercase;
   display: block;
-  padding: 10px 12px;
+  padding: 10px;
   white-space: nowrap;
   background: black;
   border-radius: 10px;
@@ -336,8 +337,8 @@
 }
 .overview-filters {
   max-width: 0px;
-  transition: 0.3s ease-in all;
   overflow: hidden;
+  transition: none;
 }
 
 .block-filters {
@@ -489,7 +490,8 @@ app-sidebar {
   padding: 15px;
   transition: 0.3s ease-in all;
 }
-.overlayer {
+.overlayer,
+.overlayer-filter {
   background: rgba(50, 50, 50, 0.7);
   position: absolute;
   top: 0;
@@ -504,8 +506,9 @@ app-sidebar {
   .filter-container {
     display: block;
   }
+
   .filter-block.filter-active {
-    width: fit-content;
+    width: 300px;
     position: relative;
 
     .overview-filters {
@@ -514,18 +517,28 @@ app-sidebar {
       width: 300px !important;
       top: 50px;
       background: black;
-      border: 1px solid #999;
       padding: 10px;
       z-index: 3;
-      border-radius: 0px 10px 10px 10px;
+      border-radius: 0px 0px 10px 10px;
+      overflow: visible;
+      transition: 0.3s ease-in all;
     }
     .filters {
-      border-radius: 10px !important;
+      border-radius: 10px 10px 0px 0px;
+      width: 300px;
+      white-space: nowrap;
+      position: absolute;
+      z-index: 2;
 
       span {
         max-width: 100px;
         color: white;
       }
+    }
+    .close-filters {
+      position: absolute;
+      right: 10px;
+      top: -35px;
     }
   }
 

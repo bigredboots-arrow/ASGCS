@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule, OnInit } from '@angular/core';
+import { Routes, Router, RouterModule } from '@angular/router';
 
 import { DashboardComponent } from './pages/dashboard.component';
 import { DemandOverviewComponent } from './pages/demand/demand-overview/demandOverview.component';
@@ -58,8 +58,19 @@ const routes: Routes = [
   }
 ];
 
+
+
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule implements OnInit {
+  
+  public href: string = '';
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.href = this.router.url;
+    console.log(this.router.url);
+  }
+}

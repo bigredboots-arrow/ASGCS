@@ -18,25 +18,21 @@ export class NavigationBarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._sidePanelService
-      .panelStateChanges
+    this._sidePanelService.panelStateChanges
       .pipe(takeUntil(this._subscriptionsSubject$))
-      .subscribe((state: SidePanelState) => this.currentPanelState = state);
+      .subscribe((state: SidePanelState) => (this.currentPanelState = state));
   }
 
   public handleSingleClick(): void {
-    if (this.currentPanelState === SidePanelState.CLOSE || this.currentPanelState === SidePanelState.COLLAPSE) {
+    const width: number = window.innerWidth;
+    if (width < 768 && this.currentPanelState === SidePanelState.MOBILE) {
+      this._sidePanelService.changeState(SidePanelState.MOBILEOPEN);
+    } else if (this.currentPanelState === SidePanelState.MOBILEOPEN) {
+      this._sidePanelService.changeState(SidePanelState.MOBILE);
+    } else if (this.currentPanelState === SidePanelState.COLLAPSE) {
       this._sidePanelService.changeState(SidePanelState.OPEN);
-    } else { 
-      this._sidePanelService.changeState(SidePanelState.COLLAPSE);
-    }
-  }
-
-  public handleDoubleClick(): void {
-    if (this.currentPanelState === SidePanelState.CLOSE) {
-      this._sidePanelService.changeState(SidePanelState.OPEN)
     } else {
-      this._sidePanelService.changeState(SidePanelState.CLOSE);
+      this._sidePanelService.changeState(SidePanelState.COLLAPSE);
     }
   }
 

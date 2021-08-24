@@ -33,12 +33,26 @@ export class DashboardLayoutComponent implements OnInit {
     this._sidePanelService.changeState(
       this.configuration.initialSidePanelState
     );
+    if (this.currentPanelState === SidePanelState.MOBILE) {
+      this._sidePanelService.changeState(SidePanelState.MOBILEOPEN);
+    } else {
+      this._sidePanelService.changeState(SidePanelState.MOBILE);
+    }
+  }
+  public handleSingleClick(): void {
+    if (this.currentPanelState === SidePanelState.MOBILE) {
+      this._sidePanelService.changeState(SidePanelState.MOBILEOPEN);
+    } else if (this.currentPanelState === SidePanelState.MOBILEOPEN) {
+      this._sidePanelService.changeState(SidePanelState.MOBILE);
+    } else {
+      this._sidePanelService.changeState(SidePanelState.MOBILE);
+    }
   }
 
   ngOnInit(): void {
     const width: number = window.innerWidth;
-    if (width < 768) this._sidePanelService.changeState(SidePanelState.CLOSE);
-    else if (width < 1200)
+    if (width < 768) this._sidePanelService.changeState(SidePanelState.MOBILE);
+    else if (width < 1200 && width > 769)
       this._sidePanelService.changeState(SidePanelState.COLLAPSE);
     else this._sidePanelService.changeState(SidePanelState.OPEN);
 
@@ -52,8 +66,8 @@ export class DashboardLayoutComponent implements OnInit {
   onResize(event) {
     // @@@ May have to rethink
     const width: number = window.innerWidth;
-    if (width < 768) this._sidePanelService.changeState(SidePanelState.CLOSE);
-    else if (width < 1200)
+    if (width < 768) this._sidePanelService.changeState(SidePanelState.MOBILE);
+    else if (width < 1200 && width > 769)
       this._sidePanelService.changeState(SidePanelState.COLLAPSE);
     else this._sidePanelService.changeState(SidePanelState.OPEN);
   }

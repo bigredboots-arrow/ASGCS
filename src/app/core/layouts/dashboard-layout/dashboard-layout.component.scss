@@ -21,6 +21,14 @@
       flex: 0 0 0px;
       transition: 0.3s ease-in all;
     }
+    &.mobile {
+      position: absolute;
+      width: 300px;
+      background: green;
+      height: 100vh;
+      padding: 5px 15px;
+      transition: 0.3s ease-in all;
+    }
   }
 
   .right-column {

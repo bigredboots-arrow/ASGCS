@@ -32,10 +32,6 @@ export class HeaderComponent implements OnInit {
   }
 
   myBreadCrumb = this.breadCrumb;
-  
-  ngOnInit(
-    
-  ): void {
-    
-  }
+
+  ngOnInit(): void {}
 }

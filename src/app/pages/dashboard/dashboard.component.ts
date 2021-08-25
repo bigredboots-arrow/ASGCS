@@ -9,9 +9,5 @@ import { take } from 'rxjs/operators';
 export class DashboardComponent implements OnInit {
   public isUpdating: boolean;
 
-  ngOnInit(
-  ) {
-  }
-
-
+  ngOnInit() {}
 }

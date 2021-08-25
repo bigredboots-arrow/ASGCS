@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 
-import { DashboardComponent } from './pages/dashboard.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 import { DemandOverviewComponent } from './pages/demand/demand-overview/demandOverview.component';
 import { DemandDiscoverComponent } from './pages/demand/demand-discover/demandDiscover.component';

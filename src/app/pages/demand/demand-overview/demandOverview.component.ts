@@ -1,16 +1,8 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-demand',
-  template: `
-    <div style="padding: 1.5rem;"><h1>Manufacturing Sites Overview</h1></div>
-  `,
-  styles: [
-    `
-      h1 {
-        font-family: Lato;
-      }
-    `
-  ]
+  selector: 'demand-overview',
+   templateUrl: './demandOverview.component.html',
+  styleUrls: ['./demandOverview.component.scss']
 })
 export class DemandOverviewComponent {}

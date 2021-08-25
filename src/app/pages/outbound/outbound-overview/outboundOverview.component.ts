@@ -1,16 +1,8 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-outbound',
-  template: `
-    <div style="padding: 1.5rem;"><h1>Outbound Shipping Overview</h1></div>
-  `,
-  styles: [
-    `
-      h1 {
-        font-family: Lato;
-      }
-    `
-  ]
+  selector: 'outbound-overview',
+  templateUrl: './outboundOverview.component.html',
+  styleUrls: ['./outboundOverview.component.scss']
 })
 export class OutboundOverviewComponent {}

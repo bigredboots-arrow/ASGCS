@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { take } from 'rxjs/operators';
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -9,9 +8,5 @@ import { take } from 'rxjs/operators';
 export class DashboardComponent implements OnInit {
   public isUpdating: boolean;
 
-  ngOnInit(
-  ) {
-  }
-
-
+  ngOnInit() {}
 }

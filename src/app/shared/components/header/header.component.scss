@@ -17,8 +17,7 @@
   color: $grey-lighter;
   opacity: 1;
   max-width: 100%;
-  overflow: hidden;
-  position: absolute;
+
   left: 0;
   flex-grow: 1;
 
@@ -54,6 +53,7 @@
 #toggle-search {
   opacity: 0;
   position: absolute;
+  top: -99px;
 }
 .site-search {
   cursor: pointer;
@@ -566,5 +566,46 @@ app-sidebar {
     &:first-child {
       margin-top: 0px;
     }
+  }
+}
+.hamburger {
+  position: relative;
+  background: $blue-color;
+  width: 30px;
+  height: 29px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  span {
+    left: 8px;
+    top: 14px;
+    height: 2px;
+    width: 15px;
+    background: $white;
+    position: absolute;
+    display: block;
+    content: '';
+  }
+  span:before {
+    @extend span;
+    top: -8px;
+    left: 0px;
+  }
+  span:after {
+    @extend span;
+    top: 8px;
+    left: 0px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .overlayer-navigation {
+    background: rgba(50, 50, 50, 0.7);
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    display: none;
   }
 }

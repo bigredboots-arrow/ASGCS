@@ -47,7 +47,10 @@ a {
 .sidebar-active .overlayer {
   display: block !important;
 }
-.filter-active .overlayer-filter {
+.mobile-open .overlayer-navigation {
+  display: block !important;
+}
+.nav-active .navigation-filter {
   display: block !important;
 }
 /*mobile collapsed nav-menu */

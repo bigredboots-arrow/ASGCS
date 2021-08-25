@@ -1,3 +1,5 @@
+@import '../../../scss/variables';
+
 .container {
   display: flex;
   overflow: hidden;
@@ -23,11 +25,23 @@
     }
     &.mobile {
       position: absolute;
-      width: 300px;
-      background: green;
+      width: 290px;
+      background: $grey-color;
       height: 100vh;
-      padding: 5px 15px;
+      padding: 10px;
       transition: 0.3s ease-in all;
+      z-index: 2;
+      left: -300px;
+    }
+    &.mobile-open {
+      position: absolute;
+      width: 290px;
+      background: $grey-color;
+      height: 100vh;
+      padding: 10px;
+      transition: 0.3s ease-in all;
+      z-index: 2;
+      left: 0px;
     }
   }
 

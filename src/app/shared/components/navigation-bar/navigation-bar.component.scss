@@ -18,16 +18,17 @@
     text-indent: -999px;
     overflow: hidden;
     background-repeat: no-repeat;
-    width: calc(100% - 30px);
     height: 30px;
     opacity: 1;
-    transition: 0.2s ease-in all;
+    transition: 0.3s ease-in all;
     background-size: contain;
+    min-width: 0px;
+    background-position-x: right;
   }
   .hamburger {
     position: relative;
     background: $blue-color;
-    width: 30px;
+    width: 31px;
     height: 29px;
     cursor: pointer;
     border-radius: 5px;

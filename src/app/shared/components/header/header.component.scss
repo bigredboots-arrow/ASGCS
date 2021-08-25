@@ -571,31 +571,22 @@ app-sidebar {
 .hamburger {
   position: relative;
   background: $blue-color;
-  width: 30px;
+  min-width: 0px;
   height: 29px;
   cursor: pointer;
   border-radius: 5px;
-
-  span {
-    left: 8px;
-    top: 14px;
-    height: 2px;
-    width: 15px;
-    background: $white;
-    position: absolute;
-    display: block;
-    content: '';
-  }
-  span:before {
-    @extend span;
-    top: -8px;
-    left: 0px;
-  }
-  span:after {
-    @extend span;
-    top: 8px;
-    left: 0px;
-  }
+  max-width: 0px;
+}
+.company-logo {
+  text-indent: -999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  height: 30px;
+  opacity: 1;
+  transition: 0.3s ease-in all;
+  background-size: contain;
+  max-width: 0px;
+  background-position-x: right;
 }
 @media only screen and (max-width: 768px) {
   .overlayer-navigation {
@@ -607,5 +598,51 @@ app-sidebar {
     right: 0px;
     z-index: 1;
     display: none;
+    transition: $default-transition;
+  }
+  .hamburger {
+    position: relative;
+    background: $blue-color;
+    min-width: 31px;
+    max-width: 31px;
+    height: 29px;
+    cursor: pointer;
+    border-radius: 5px;
+
+    span {
+      left: 8px;
+      top: 14px;
+      height: 2px;
+      width: 15px;
+      background: $white;
+      position: absolute;
+      display: block;
+      content: '';
+    }
+    span:before {
+      top: 14px;
+      height: 2px;
+      width: 15px;
+      background: $white;
+      position: absolute;
+      display: block;
+      content: '';
+      top: -8px;
+      left: 0px;
+    }
+    span:after {
+      height: 2px;
+      width: 15px;
+      background: $white;
+      position: absolute;
+      display: block;
+      content: '';
+      top: 8px;
+      left: 0px;
+    }
+  }
+  .company-logo {
+    max-width: 110px;
+    min-width: 110px;
   }
 }

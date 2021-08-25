@@ -99,3 +99,14 @@ a {
 .left-column.collapse .main-navigation ul ul {
   margin: 0px;
 }
+.left-column.open .home-logo .company-logo {
+  width: calc(100% - 35px) !important;
+}
+.left-column.mobile-open .home-logo .company-logo {
+  min-width: 110px !important;
+  max-width: 110px !important;
+}
+.left-column.collapse .home-logo .company-logo {
+  min-width: 0px !important;
+  max-width: 0px !important;
+}

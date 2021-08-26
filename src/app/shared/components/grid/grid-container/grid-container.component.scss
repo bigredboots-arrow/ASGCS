@@ -10,7 +10,7 @@
 
 :host ::ng-deep [gridCell] {
   display: block;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 10px;
 
   .card-title {
@@ -50,6 +50,7 @@
   }
   .card-icons {
     display: flex;
+    position: relative;
   }
   .maximize-icon {
     content: '';
@@ -90,6 +91,21 @@
     padding: 2px 10px;
     top: -3px;
     border-radius: 3px;
+  }
+  .moreinfo-block {
+    position: absolute;
+    width: 190px;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    padding: 10px 10px;
+    background: #191818;
+    top: -10px;
+    right: -15px;
+    font-size: 13px;
+  }
+
+  .moreinfo-block .title {
+    font-weight: 600;
   }
 }
 

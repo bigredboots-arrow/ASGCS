@@ -6,6 +6,19 @@
         <div class="card-icons">
           <a class="maximize-icon" [routerLink]="['/demandReports']"></a>
           <div class="moreinfo-icon"></div>
+
+          <div class="moreinfo-block">
+            <div class="title">More Information</div>
+            <div class="data">
+              <ul>
+                <li>Data Point 1: <span>236</span></li>
+                <li>Data Point 2: <span>11</span></li>
+                <li>Data Point 3: <span>4,322</span></li>
+              </ul>
+            </div>
+            <a class="moredetails" [routerLink]="['/demandReports']">More Details</a>
+          </div>
+
         </div>
       </div>
       <h2>Circle</h2>
@@ -29,7 +42,7 @@
       </div>
       <h4>$4.2M</h4>
     </div>
-    <div gridCell gcColSpan="2" class="card card-body">
+    <div gridCell gcColSpan="3" class="card card-body">
       <div class="card-title">
         <div class="card-title-text">Fulfillment locations</div>
         <div>
@@ -41,14 +54,6 @@
         </div>
       </div>
       <h4>map</h4>
-    </div>
-    <div gridCell class="card card-body">
-      <div class="card-title">
-        <div class="card-title-text">KPIs</div>
-        <div class="card-icons">
-        </div>
-      </div>
-      <h4>KPIs</h4>
     </div>
   </app-grid-container>
 </div>

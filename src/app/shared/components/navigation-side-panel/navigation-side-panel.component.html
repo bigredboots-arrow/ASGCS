@@ -1,18 +1,10 @@
 <nav role="navigation" class="main-navigation">
   <ul>
     <li class="dashboard">
-      <a
-        class="icon"
-        [routerLink]="['/dashboard']"
-        routerLinkActive="active"
-      ></a>
+      <a class="icon" [routerLink]="['/dashboard']" routerLinkActive="active"></a>
       <div class="navigation-links">
-        <a
-          [routerLink]="['/dashboard']"
-          routerLinkActive="active"
-          [routerLinkActive]="['is-active']"
-          ><span class="dashboard">Dashboard</span></a
-        >
+        <a [routerLink]="['/dashboard']" routerLinkActive="active"
+          [routerLinkActive]="['is-active']"><span class="dashboard">Dashboard</span></a>
       </div>
     </li>
     <li class="demand status-good" [class.open]="demandOpen">
@@ -21,25 +13,13 @@
         <span class="parent" (click)="toggleDemandClass()">Demand</span>
         <ul>
           <li>
-            <a
-              [routerLink]="['/demandOverview']"
-              [routerLinkActive]="['is-active']"
-              >Overview</a
-            >
+            <a [routerLink]="['/demandOverview']" [routerLinkActive]="['is-active']">Overview</a>
           </li>
           <li>
-            <a
-              [routerLink]="['/demandDiscover']"
-              [routerLinkActive]="['is-active']"
-              >Discover</a
-            >
+            <a [routerLink]="['/demandReports']" [routerLinkActive]="['is-active']">Reports</a>
           </li>
           <li>
-            <a
-              [routerLink]="['/demandReports']"
-              [routerLinkActive]="['is-active']"
-              >Reports</a
-            >
+            <a [routerLink]="['/demandDiscover']" [routerLinkActive]="['is-active']">Discover</a>
           </li>
         </ul>
       </div>
@@ -48,29 +28,16 @@
       <div class="icon"></div>
       <div class="navigation-links" [routerLinkActive]="['is-active']">
         <span class="parent" (click)="toggleOutboundClass()"
-          >Outbound Shipments</span
-        >
+          >Outbound Shipments</span>
         <ul>
           <li>
-            <a
-              [routerLink]="['/outboundOverview']"
-              [routerLinkActive]="['is-active']"
-              >Overview</a
-            >
+            <a [routerLink]="['/outboundOverview']" [routerLinkActive]="['is-active']">Overview</a>
           </li>
           <li>
-            <a
-              [routerLink]="['/outboundDiscover']"
-              [routerLinkActive]="['is-active']"
-              >Discover</a
-            >
+            <a [routerLink]="['/outboundReports']" [routerLinkActive]="['is-active']">Reports</a>
           </li>
           <li>
-            <a
-              [routerLink]="['/outboundReports']"
-              [routerLinkActive]="['is-active']"
-              >Reports</a
-            >
+            <a [routerLink]="['/outboundDiscover']" [routerLinkActive]="['is-active']">Discover</a>
           </li>
         </ul>
       </div>

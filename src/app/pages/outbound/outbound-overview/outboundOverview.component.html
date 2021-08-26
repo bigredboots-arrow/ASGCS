@@ -1,2 +1,46 @@
-<h1>outbound overview</h1>
-drhrthrtrthrtht
+<div class="page-container">
+  <app-grid-container>
+    <div gridCell gcColSpan="2" gcRowSpan="3" class="card card-body">
+      <div class="card-title">
+        <div class="card-title-text">Fulfillment locations</div>
+        <div>
+          TO: FROM:
+        </div>
+        <div class="card-icons">
+          <a class="maximize-icon" [routerLink]="['/demandReports']"></a>
+          <div class="moreinfo-icon"></div>
+        </div>
+      </div>
+      <h4>map</h4>
+    </div>
+    <div gridCell class="card card-body">
+      <div class="card-title">
+        <div class="card-title-text">Part Overview</div>
+        <div class="card-icons">
+          <a class="maximize-icon" [routerLink]="['/demandReports']"></a>
+          <div class="moreinfo-icon"></div>
+        </div>
+      </div>
+      <h2>Circle</h2>
+    </div>
+    <div gridCell class="card card-body">
+      <div class="card-title">
+        <div class="card-title-text">Fulfillment Site overview</div>
+        <div class="card-icons">
+          <a class="maximize-icon" [routerLink]="['/demandReports']"></a>
+          <div class="moreinfo-icon"></div>
+        </div>
+      </div>
+      <h4>Circle</h4>
+    </div>
+    <div gridCell class="card card-body">
+      <div class="card-title">
+        <div class="card-title-text">Total Demand</div>
+        <div class="card-icons">
+          <div class="moreinfo-icon"></div>
+        </div>
+      </div>
+      <h4>$4.2M</h4>
+    </div>
+  </app-grid-container>
+</div>

@@ -2,16 +2,53 @@
   position: relative;
   max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-template-rows: minmax(10px, auto);
-  grid-auto-flow: dense;
-  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
 }
 
-:host ::ng-deep  [gridCell] {
+:host ::ng-deep [gridCell] {
   display: block;
-  font-size: 20px;
-  padding: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+
+  .card-title {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card-title-text {
+    font-weight: 800;
+  }
+  .moreinfo-icon {
+    display: block;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 9px;
+    cursor: pointer;
+  }
+  .moreinfo-icon::before {
+    display: block;
+    width: 2px;
+    height: 2px;
+    content: '';
+    background-color: white;
+    position: absolute;
+    top: -5px;
+  }
+  .moreinfo-icon::after {
+    display: block;
+    width: 2px;
+    height: 2px;
+    content: '';
+    background-color: white;
+    position: absolute;
+    top: 5px;
+  }
+  .card-icons {
+    display: flex;
+  }
 }
 
 @media only screen and (max-width: 767px) {

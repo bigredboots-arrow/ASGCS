@@ -5,6 +5,7 @@ import { DashboardComponent } from './pages/dashboard.component';
 import { DemandOverviewComponent } from './pages/demand/demand-overview/demandOverview.component';
 import { DemandDiscoverComponent } from './pages/demand/demand-discover/demandDiscover.component';
 import { DemandReportsComponent } from './pages/demand/demand-reports/demandReports.component';
+import { DemandReportsWavechartComponent } from './pages/demand/demand-reports-wavechart/demandReportsWavechart.component';
 
 import { OutboundOverviewComponent } from './pages/outbound/outbound-overview/outboundOverview.component';
 import { OutboundDiscoverComponent } from './pages/outbound/outbound-discover/outboundDiscover.component';
@@ -40,6 +41,13 @@ const routes: Routes = [
     }
   },
   {
+    path: 'demandReportsWavechart',
+    component: DemandReportsWavechartComponent,
+    data: {
+      breadcrumb: 'Manufacturing Sites > Reports'
+    }
+  },
+  {
     path: 'outboundOverview',
     component: OutboundOverviewComponent
   },
@@ -58,14 +66,11 @@ const routes: Routes = [
   }
 ];
 
-
-
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule implements OnInit {
-  
   public href: string = '';
   constructor(private router: Router) {}
 

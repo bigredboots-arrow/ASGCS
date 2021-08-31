@@ -1,5 +1,5 @@
-import { NgModule, OnInit } from '@angular/core';
-import { Routes, Router, RouterModule } from '@angular/router';
+import { NgModule, OnInit, Renderer2 } from '@angular/core';
+import { Routes, Router, RouterModule, NavigationStart } from '@angular/router';
 
 import { DashboardComponent } from './pages/dashboard.component';
 import { DemandOverviewComponent } from './pages/demand/demand-overview/demandOverview.component';
@@ -14,38 +14,23 @@ import { OutboundReportsComponent } from './pages/outbound/outbound-reports/outb
 const routes: Routes = [
   {
     path: 'dashboard',
-    component: DashboardComponent,
-    data: {
-      breadcrumb: 'Dashydash'
-    }
+    component: DashboardComponent
   },
   {
     path: 'demandOverview',
-    component: DemandOverviewComponent,
-    data: {
-      breadcrumb: 'Manufacturing Sites > Overview'
-    }
+    component: DemandOverviewComponent
   },
   {
     path: 'demandDiscover',
-    component: DemandDiscoverComponent,
-    data: {
-      breadcrumb: 'Manufacturing Sites > Discover'
-    }
+    component: DemandDiscoverComponent
   },
   {
     path: 'demandReports',
-    component: DemandReportsComponent,
-    data: {
-      breadcrumb: 'Manufacturing Sites > Reports'
-    }
+    component: DemandReportsComponent
   },
   {
     path: 'demandReportsWavechart',
-    component: DemandReportsWavechartComponent,
-    data: {
-      breadcrumb: 'Manufacturing Sites > Reports'
-    }
+    component: DemandReportsWavechartComponent
   },
   {
     path: 'outboundOverview',
@@ -65,7 +50,24 @@ const routes: Routes = [
     pathMatch: 'full'
   }
 ];
+export class AppComponent {
+  previousUrl: string;
 
+  constructor(private renderer: Renderer2, private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        if (this.previousUrl) {
+          this.renderer.removeClass(document.body, this.previousUrl);
+        }
+        let currentUrlSlug = event.url.slice(1);
+        if (currentUrlSlug) {
+          this.renderer.addClass(document.body, currentUrlSlug);
+        }
+        this.previousUrl = currentUrlSlug;
+      }
+    });
+  }
+}
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
@@ -76,6 +78,5 @@ export class AppRoutingModule implements OnInit {
 
   ngOnInit() {
     this.href = this.router.url;
-    console.log(this.router.url);
   }
 }

@@ -5,12 +5,12 @@
         <div class="card-title-text">Part Overview</div>
         <div class="card-icons">
           <a class="maximize-icon" [routerLink]="['/demandReports']"></a>
-          <div class="moreinfo-icon" (click)="toggleMoreInfo()"><span></span></div>
+          <div class="moreinfo-icon" (click)="PartOverviewtoggleMoreInfo()"><span></span></div>
 
-          <div class="moreinfo-block" #overview>
+          <div class="moreinfo-block" #partoverview>
             <div class="moreinfo-header">
               <div class="title"><span>More Information</span></div>
-              <a class="close-more" (click)="toggleMoreInfo()">+</a>
+              <a class="close-more" (click)="PartOverviewtoggleMoreInfo()">+</a>
             </div>
             <div class="data">
               <ul>
@@ -19,7 +19,7 @@
                 <li>Data Point 3: <span>4,322</span></li>
               </ul>
             </div>
-            <button class="blue">Add to custom Dashboard</button>
+            <button class="blue"><span>+</span> My Dashboards</button>
           </div>
 
         </div>
@@ -31,7 +31,22 @@
         <div class="card-title-text">Fulfillment Site overview</div>
         <div class="card-icons">
           <a class="maximize-icon" [routerLink]="['/demandReports']"></a>
-          <div class="moreinfo-icon"></div>
+          <div class="moreinfo-icon" (click)="FsitetoggleMoreInfo()"><span></span></div>
+
+          <div class="moreinfo-block" #fsiteoverview>
+            <div class="moreinfo-header">
+              <div class="title"><span>More Information</span></div>
+              <a class="close-more" (click)="FsitetoggleMoreInfo()">+</a>
+            </div>
+            <div class="data">
+              <ul>
+                <li>Data Point 1: <span>36</span></li>
+                <li>Data Point 2: <span>1</span></li>
+                <li>Data 3: <span>322</span></li>
+              </ul>
+            </div>
+            <button class="blue"><span>+</span> My Dashboards</button>
+          </div>
         </div>
       </div>
       <h4>Circle</h4>
@@ -40,7 +55,22 @@
       <div class="card-title">
         <div class="card-title-text">Total Demand</div>
         <div class="card-icons">
-          <div class="moreinfo-icon"></div>
+        <div class="moreinfo-icon" (click)="TotalDemandMoreInfo()"><span></span></div>
+
+        <div class="moreinfo-block" #totaldemandoverview>
+          <div class="moreinfo-header">
+            <div class="title"><span>More Information</span></div>
+            <a class="close-more" (click)="TotalDemandMoreInfo()">+</a>
+          </div>
+          <div class="data">
+            <ul>
+              <li>Data Point 1: <span>316</span></li>
+              <li>Data Point 2: <span>10</span></li>
+              <li>Data 3: <span>32</span></li>
+            </ul>
+          </div>
+          <button class="blue"><span>+</span> My Dashboards</button>
+        </div>
         </div>
       </div>
       <h4>$4.2M</h4>
@@ -53,7 +83,22 @@
         </div>
         <div class="card-icons">
           <a class="maximize-icon" [routerLink]="['/demandReports']"></a>
-          <div class="moreinfo-icon"></div>
+          <div class="moreinfo-icon" (click)="FLocationsMoreInfo()"><span></span></div>
+
+        <div class="moreinfo-block" #flocationsoverview>
+          <div class="moreinfo-header">
+            <div class="title"><span>More Information</span></div>
+            <a class="close-more" (click)="FLocationsMoreInfo()">+</a>
+          </div>
+          <div class="data">
+            <ul>
+              <li>Data Point 1: <span>316</span></li>
+              <li>Data Point 2: <span>10</span></li>
+              <li>Data 3: <span>32</span></li>
+            </ul>
+          </div>
+          <button class="blue"><span>+</span> My Dashboards</button>
+        </div>
         </div>
       </div>
       <h4>map</h4>

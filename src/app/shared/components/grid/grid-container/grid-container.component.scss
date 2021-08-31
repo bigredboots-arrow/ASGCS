@@ -21,14 +21,22 @@
     font-weight: 800;
   }
   .moreinfo-icon {
-    display: block;
-    width: 2px;
-    height: 2px;
-    background-color: white;
+    display: flex;
+    width: 10px;
     position: relative;
-    margin-left: 10px;
-    margin-top: 9px;
+    margin-left: 3px;
     cursor: pointer;
+    justify-content: flex-end;
+    top: 4px;
+
+    span {
+      display: block;
+      width: 2px;
+      height: 2px;
+      background-color: white;
+      top: 10px;
+      position: absolute;
+    }
   }
   .moreinfo-icon::before {
     display: block;
@@ -37,7 +45,6 @@
     content: '';
     background-color: white;
     position: absolute;
-    top: -5px;
   }
   .moreinfo-icon::after {
     display: block;
@@ -94,18 +101,44 @@
   }
   .moreinfo-block {
     position: absolute;
-    width: 190px;
+    width: 0px;
+    height: 0px;
     border: 1px solid #f2f2f2;
     border-radius: 10px;
-    padding: 10px 10px;
+    padding: 0px 0px;
     background: #191818;
     top: -10px;
     right: -15px;
     font-size: 13px;
-  }
+    transition: 0.3s ease-out all;
+    overflow: hidden;
+    border-color: #29272a;
 
+    button {
+      font-size: 14px;
+    }
+  }
+  .moreinfo-active {
+    width: 190px;
+    padding: 5px 10px 10px;
+    height: inherit;
+    border-color: $grey-lightest;
+  }
   .moreinfo-block .title {
     font-weight: 600;
+  }
+  .moreinfo-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  a.close-more {
+    transform: rotate(45deg);
+    font-size: 22px;
+    position: relative;
+    top: -5px;
+    right: -2px;
+    font-weight: bold;
   }
 }
 

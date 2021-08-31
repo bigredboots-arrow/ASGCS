@@ -5,10 +5,13 @@
         <div class="card-title-text">Part Overview</div>
         <div class="card-icons">
           <a class="maximize-icon" [routerLink]="['/demandReports']"></a>
-          <div class="moreinfo-icon"></div>
+          <div class="moreinfo-icon" (click)="toggleMoreInfo()"><span></span></div>
 
-          <div class="moreinfo-block">
-            <div class="title">More Information</div>
+          <div class="moreinfo-block" #overview>
+            <div class="moreinfo-header">
+              <div class="title"><span>More Information</span></div>
+              <a class="close-more" (click)="toggleMoreInfo()">+</a>
+            </div>
             <div class="data">
               <ul>
                 <li>Data Point 1: <span>236</span></li>
@@ -16,7 +19,7 @@
                 <li>Data Point 3: <span>4,322</span></li>
               </ul>
             </div>
-            <a class="moredetails" [routerLink]="['/demandReports']">More Details</a>
+            <button class="blue">Add to custom Dashboard</button>
           </div>
 
         </div>

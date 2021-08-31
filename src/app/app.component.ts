@@ -6,7 +6,6 @@ import {
   SidePanelPosition
 } from './core';
 import { NavigationLink } from './shared';
-import { ProgressBarFill, ProgressBarService } from './library/components';
 
 @Component({
   selector: 'my-app',
@@ -18,16 +17,13 @@ export class AppComponent implements OnInit {
 
   public configuration: DashboardLayoutConfiguration;
   public links: NavigationLink[];
-  public progressFill: ProgressBarFill = ProgressBarFill.INFO;
 
-  constructor(private _progressBarService: ProgressBarService) {
+  constructor() {
     this.configuration = new DashboardLayoutConfiguration(
       SidePanelPosition.LEFT,
       SidePanelState.OPEN
     );
   }
 
-  ngOnInit() {
-    console.log(this.breadCrumb);
-  }
+  ngOnInit() {}
 }

@@ -1,6 +1,5 @@
-import { NgModule, OnInit, Renderer2 } from '@angular/core';
-import { Routes, Router, RouterModule, NavigationStart } from '@angular/router';
-
+import { NgModule, OnInit } from '@angular/core';
+import { Routes, Router, RouterModule, NavigationEnd } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard.component';
 import { DemandOverviewComponent } from './pages/demand/demand-overview/demandOverview.component';
 import { DemandDiscoverComponent } from './pages/demand/demand-discover/demandDiscover.component';
@@ -14,35 +13,43 @@ import { OutboundReportsComponent } from './pages/outbound/outbound-reports/outb
 const routes: Routes = [
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
+    data: { title: '8Main Page' }
   },
   {
     path: 'demandOverview',
-    component: DemandOverviewComponent
+    component: DemandOverviewComponent,
+    data: { title: '1Main Page' }
   },
   {
     path: 'demandDiscover',
-    component: DemandDiscoverComponent
+    component: DemandDiscoverComponent,
+    data: { title: '2Main Page' }
   },
   {
     path: 'demandReports',
-    component: DemandReportsComponent
+    component: DemandReportsComponent,
+    data: { title: '3Main Page' }
   },
   {
     path: 'demandReportsWavechart',
-    component: DemandReportsWavechartComponent
+    component: DemandReportsWavechartComponent,
+    data: { title: '4Main Page' }
   },
   {
     path: 'outboundOverview',
-    component: OutboundOverviewComponent
+    component: OutboundOverviewComponent,
+    data: { title: '5Main Page' }
   },
   {
     path: 'outboundDiscover',
-    component: OutboundDiscoverComponent
+    component: OutboundDiscoverComponent,
+    data: { title: '7Main Page' }
   },
   {
     path: 'outboundReports',
-    component: OutboundReportsComponent
+    component: OutboundReportsComponent,
+    data: { title: '6Main Page' }
   },
   {
     path: '**',
@@ -50,31 +57,24 @@ const routes: Routes = [
     pathMatch: 'full'
   }
 ];
-export class AppComponent {
-  previousUrl: string;
-
-  constructor(private renderer: Renderer2, private router: Router) {
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationStart) {
-        if (this.previousUrl) {
-          this.renderer.removeClass(document.body, this.previousUrl);
-        }
-        let currentUrlSlug = event.url.slice(1);
-        if (currentUrlSlug) {
-          this.renderer.addClass(document.body, currentUrlSlug);
-        }
-        this.previousUrl = currentUrlSlug;
-      }
-    });
-  }
-}
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule implements OnInit {
   public href: string = '';
-  constructor(private router: Router) {}
+  public url = '';
+
+  constructor(private router: Router) {
+    router.events.subscribe(route => {
+      if (route instanceof NavigationEnd) {
+        this.url = route.url;
+        if (this.url && this.url.length > 0) {
+          this.url = this.url.slice(1);
+        }
+      }
+    });
+  }
 
   ngOnInit() {
     this.href = this.router.url;

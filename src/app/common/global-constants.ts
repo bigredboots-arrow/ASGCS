@@ -1,4 +1,3 @@
 export class GlobalConstants {
-  public static breadCrumb: string = 'Static > ForNow';
+  public static breadCrumb: string = 'Static > forNow';
 }
-//export let breadCrumbConstant = `Demand > Overview`;

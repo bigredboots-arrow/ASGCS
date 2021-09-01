@@ -14,6 +14,7 @@ import { DemandOverviewComponent } from './pages/demand/demand-overview/demandOv
 import { DemandDiscoverComponent } from './pages/demand/demand-discover/demandDiscover.component';
 import { DemandReportsComponent } from './pages/demand/demand-reports/demandReports.component';
 import { DemandReportsWavechartComponent } from './pages/demand/demand-reports-wavechart/demandReportsWavechart.component';
+import { DemandReportsTotalDemandComponent } from './pages/demand/demand-reports-totaldemand/demandReportsTotalDemand.component';
 
 import { OutboundOverviewComponent } from './pages/outbound/outbound-overview/outboundOverview.component';
 import { OutboundDiscoverComponent } from './pages/outbound/outbound-discover/outboundDiscover.component';
@@ -35,6 +36,7 @@ import { OutboundReportsComponent } from './pages/outbound/outbound-reports/outb
     DemandDiscoverComponent,
     DemandReportsComponent,
     DemandReportsWavechartComponent,
+    DemandReportsTotalDemandComponent,
     OutboundOverviewComponent,
     OutboundDiscoverComponent,
     OutboundReportsComponent

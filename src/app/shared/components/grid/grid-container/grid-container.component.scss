@@ -161,6 +161,38 @@
     right: -8px;
     cursor: pointer;
   }
+  .menu-list ul {
+    margin: 10px 0px;
+    padding: 0px;
+    border: 1px solid #333;
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .menu-list ul li {
+    list-style: none;
+    padding: 5px 5px;
+    font-size: 14px;
+    background-color: $black;
+  }
+  .menu-list ul li:nth-child(odd) {
+    background-color: #111111;
+  }
+  .menu-list ul li:nth-child(1) a {
+    font-weight: 600;
+  }
+  .menu-list ul li.active {
+    background-color: $blue-color;
+
+    a {
+      font-weight: bold;
+      color: white;
+    }
+  }
+  .menu-list ul li:hover {
+    background: darken($blue-color, 25%);
+  }
 }
 
 @media only screen and (max-width: 767px) {

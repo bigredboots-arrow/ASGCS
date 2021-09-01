@@ -18,8 +18,11 @@ const routes: Routes = [
       { path: 'overview', component: DemandOverviewComponent },
       { path: 'discover', component: DemandDiscoverComponent },
       { path: 'reports', component: DemandReportsComponent },
-      { path: 'reportsWavechart', component: DemandReportsWavechartComponent }
-      { path: 'reportsTotalDemand', component: DemandReportsTotalDemandComponent }
+      { path: 'reportsWavechart', component: DemandReportsWavechartComponent },
+      {
+        path: 'reportsTotalDemand',
+        component: DemandReportsTotalDemandComponent
+      }
     ]
   }
 ];
@@ -29,4 +32,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class DemandRoutingModule {}
- 

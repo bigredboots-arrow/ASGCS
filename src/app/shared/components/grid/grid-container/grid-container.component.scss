@@ -16,9 +16,27 @@
   .card-title {
     display: flex;
     justify-content: space-between;
+    position: relative;
+
+    &.left {
+      justify-content: left;
+    }
   }
   .card-title-text {
     font-weight: 800;
+  }
+  .my-reports {
+    color: $blue-color;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  .my-reports::before {
+    content: '';
+    border-left: 1px solid $white;
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    margin-left: -10px;
   }
   .moreinfo-icon {
     display: flex;
@@ -165,14 +183,13 @@
     margin: 10px 0px;
     padding: 0px;
     border: 1px solid #333;
-    height: 200px;
+    height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
   }
 
   .menu-list ul li {
     list-style: none;
-    padding: 5px 5px;
     font-size: 14px;
     background-color: $black;
   }
@@ -181,6 +198,11 @@
   }
   .menu-list ul li:nth-child(1) a {
     font-weight: 600;
+  }
+  .menu-list ul li a {
+    width: 100%;
+    display: block;
+    padding: 5px;
   }
   .menu-list ul li.active {
     background-color: $blue-color;

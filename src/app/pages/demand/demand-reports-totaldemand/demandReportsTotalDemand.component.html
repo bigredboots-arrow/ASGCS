@@ -1,21 +1,34 @@
 <div class="page-container">
   <app-grid-container>
     <div gridCell gcColSpan="2" class="card card-body">
-      <div class="card-title">
-        <div class="card-title-text">Custom Reports</div>
+      <div class="card-title left">
+        <div class="custom-reports card-title-text">Custom Reports</div>
+        <div class="my-reports card-title-text">My Reports</div>
       </div>
       <div class="menu-list">
         <ul>
-          <li><a>VIEW COMPLETE REPORTS</a></li>
-          <li><a>Demand Activity</a></li>
+          <li>
+            <a
+              [routerLink]="['/demandReports']"
+              [routerLinkActive]="['is-active']"
+              >VIEW COMPLETE REPORTS</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/demandReportsWavechart']"
+              [routerLinkActive]="['is-active']"
+              >Demand Activity</a
+            >
+          </li>
           <li class="active"><a>Demand Status</a></li>
-          <li>Dummy list item 1</li>
-          <li>Dummy list item 2</li>
-          <li>Dummy list item 3</li>
-          <li>Dummy list item 4</li>
-          <li>Dummy list item 5</li>
-          <li>Dummy list item 6</li>
-          <li>Dummy list item 7</li>
+          <li><a>Dummy list item 1</a></li>
+          <li><a>Dummy list item 2</a></li>
+          <li><a>Dummy list item 3</a></li>
+          <li><a>Dummy list item 4</a></li>
+          <li><a>Dummy list item 5</a></li>
+          <li><a>Dummy list item 6</a></li>
+          <li><a>Dummy list item 7</a></li>
         </ul>
       </div>
     </div>
@@ -23,7 +36,7 @@
       <div class="card-title">
         <div class="card-title-text">Demand Status</div>
       </div>
-      <h4>Treemap</h4>
+      <img src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/treemap.png">
     </div>
     <div gridCell gcColSpan="3" class="card card-body">
       <div class="card-title">

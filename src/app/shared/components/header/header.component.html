@@ -54,7 +54,10 @@
 </div>
 <!--filters -->
 <div class="filter-block" #filters>
-  <div class="filters" (click)="toggleFilters()"><span>Filters</span></div>
+  <div class="filters" (click)="toggleFilters()">
+    <span class="filter-title">Filters</span>
+    <span class="filter-close">+</span>
+  </div>
   <div class="overview-filters">
     <div class="filter-container">
       <div class="block-filters">

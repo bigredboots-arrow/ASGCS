@@ -112,3 +112,29 @@ a {
   min-width: 0px !important;
   max-width: 0px !important;
 }
+
+// /* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $grey-light $grey-darker;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $black;
+  border: 1px solid $grey-light;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $grey-lighter;
+  border-radius: 0px;
+  border: 1px solid $grey-light;
+}
+*::-webkit-scrollbar-button {
+  background: $blue-color;
+  color: $white;
+}

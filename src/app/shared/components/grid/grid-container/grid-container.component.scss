@@ -155,17 +155,16 @@
 
   a.close-more {
     transform: rotate(45deg);
-    font-size: 22px;
+    font-size: 30px;
     position: relative;
-    top: -5px;
-    right: -2px;
-    font-weight: bold;
+    top: -11px;
+    right: -8px;
     cursor: pointer;
   }
 }
 
 @media only screen and (max-width: 767px) {
   :host ::ng-deep [gridCell] {
-    grid-column: span 2 !important;
+    grid-column: span 3 !important;
   }
 }

@@ -4,8 +4,6 @@
   top: 0px;
   right: -300px;
   width: 270px;
-  background: $grey-lighter;
-  color: $black;
   height: 100vh;
   z-index: 1;
   transition: 0.3s ease-in all;
@@ -38,6 +36,5 @@
     grid-column: 2;
     font-size: 15px;
     font-weight: 600;
-    color: $black;
   }
 }

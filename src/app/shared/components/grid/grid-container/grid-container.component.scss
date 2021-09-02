@@ -23,7 +23,8 @@
     }
   }
   .card-title-text {
-    font-weight: 800;
+    font-weight: 600;
+    letter-spacing: 0.5px;
   }
   .my-reports {
     color: $blue-color;
@@ -46,6 +47,8 @@
     cursor: pointer;
     justify-content: flex-end;
     top: 4px;
+    padding-right: 10px;
+    margin-right: -10px;
 
     span {
       display: block;
@@ -88,7 +91,7 @@
     top: 4px;
   }
   .maximize-icon::before {
-    content: 'detailed report';
+    content: 'View Detailed Report';
     display: block;
     position: absolute;
     right: 22px;
@@ -106,11 +109,11 @@
     white-space: nowrap;
   }
   .maximize-icon:hover::before {
-    content: 'detailed report';
+    content: 'View Detailed Report';
     display: block;
     position: absolute;
     right: 22px;
-    max-width: 80px;
+    max-width: 120px;
     font-size: 12px;
     background: $blue-color;
     padding: 2px 10px;
@@ -183,9 +186,9 @@
     margin: 10px 0px;
     padding: 0px;
     border: 1px solid #333;
-    height: 100%;
+    max-height: 240px;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   .menu-list ul li {

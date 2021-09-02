@@ -37,4 +37,22 @@
     font-size: 15px;
     font-weight: 600;
   }
+  label {
+    font-size: 18px;
+    padding-bottom: 3px;
+    display: inline;
+  }
+}
+.input-block {
+  margin: 20px 0;
+
+  .k-input {
+    width: 100%;
+  }
+}
+
+.logout {
+  position: absolute;
+  bottom: 50px;
+  width: 270px;
 }

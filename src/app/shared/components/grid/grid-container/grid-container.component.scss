@@ -219,7 +219,10 @@
     background: darken($blue-color, 25%);
   }
 }
-
+.card-element {
+  display: block;
+  text-align: center;
+}
 @media only screen and (max-width: 767px) {
   :host ::ng-deep [gridCell] {
     grid-column: span 3 !important;

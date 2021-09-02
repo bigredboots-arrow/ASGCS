@@ -15,47 +15,47 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    data: { title: '8Main Page' }
+    data: { title: '8Main Page', breadcrumb: 'Dashboard' }
   },
   {
     path: 'demandOverview',
     component: DemandOverviewComponent,
-    data: { title: '1Main Page' }
+    data: { title: '1Main Page', breadcrumb: 'Overview' }
   },
   {
     path: 'demandDiscover',
     component: DemandDiscoverComponent,
-    data: { title: '2Main Page' }
+    data: { title: '2Main Page', breadcrumb: 'Discover' }
   },
   {
     path: 'demandReports',
     component: DemandReportsComponent,
-    data: { title: '3Main Page' }
+    data: { title: '3Main Page', breadcrumb: 'Reports' }
   },
   {
     path: 'demandReportsWavechart',
     component: DemandReportsWavechartComponent,
-    data: { title: '9Main Page' }
+    data: { title: '9Main Page', breadcrumb: 'Reports Wave Chart' }
   },
   {
     path: 'demandReportsTotalDemand',
     component: DemandReportsTotalDemandComponent,
-    data: { title: '4Main Page' }
+    data: { title: '4Main Page', breadcrumb: 'Report Total Demand' }
   },
   {
     path: 'outboundOverview',
     component: OutboundOverviewComponent,
-    data: { title: '5Main Page' }
+    data: { title: '5Main Page', breadcrumb: 'Overview' }
   },
   {
     path: 'outboundDiscover',
     component: OutboundDiscoverComponent,
-    data: { title: '7Main Page' }
+    data: { title: '7Main Page', breadcrumb: 'Discover' }
   },
   {
     path: 'outboundReports',
     component: OutboundReportsComponent,
-    data: { title: '6Main Page' }
+    data: { title: '6Main Page', breadcrumb: 'Reports' }
   },
   {
     path: '**',

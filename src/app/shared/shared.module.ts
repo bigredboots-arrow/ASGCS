@@ -9,6 +9,7 @@ import { NavigationSidePanelComponent } from './components/navigation-side-panel
 import { SingleDoubleClickDirective } from './directives/single-double-click.directive';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     NavigationSidePanelComponent,
     SingleDoubleClickDirective,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    BreadcrumbComponent
   ],
   imports: [CommonModule, RouterModule],
   exports: [

@@ -41,6 +41,7 @@ a {
       width: 100%;
       border-radius: 10px;
       margin-top: 10px;
+      height: calc(100% - 35px);
     }
   }
   &.empty-card-body {
@@ -207,6 +208,7 @@ a {
   justify-content: center;
   text-align: center;
   cursor: pointer;
+  border-left: 1px solid $grey-darkest;
 }
 .close-filters {
   transform: rotate(45deg);

@@ -24,9 +24,18 @@
 
         </div>
       </div>
-      <img
-        src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/.png"
-      />
+      <div class="card-items">
+        <img
+        src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/partoverview.png"
+        style="height:180px; width: 180px"/>
+        <div class="legend">
+          <ul>
+            <li class="blue-color">All Parts</li>
+            <li class="orange-color">Parts w/ Demand</li>
+            <li class="red-color">Late Parts w/ Demand</li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div gridCell class="card card-body">
       <div class="card-title">
@@ -51,31 +60,34 @@
           </div>
         </div>
       </div>
-      <h4>Circle</h4>
+      <div class="card-items">
+        <img
+        src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/partoverview.png"
+        style="height:180px; width: 180px"/>
+        <div class="legend">
+          <ul>
+            <li class="blue-color">All Fulfillment Sites</li>
+            <li class="orange-color">Fulfillment Sites w/ Demand</li>
+            <li class="red-color">Late Fulfillment Sites w/ Demand</li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div gridCell class="card card-body">
       <div class="card-title">
         <div class="card-title-text">Total Demand</div>
-        <div class="card-icons">
-          <div class="moreinfo-icon" (click)="TotalDemandMoreInfo()"><span></span></div>
-
-          <div class="moreinfo-block" #totaldemandoverview>
-            <div class="moreinfo-header">
-              <div class="title"><span>More Information</span></div>
-              <a class="close-more" (click)="TotalDemandMoreInfo()">+</a>
-            </div>
-            <div class="data">
-              <ul>
-                <li>Data Point 1: <span>316</span></li>
-                <li>Data Point 2: <span>10</span></li>
-                <li>Data 3: <span>32</span></li>
-              </ul>
-            </div>
-            <button class="blue"><span>+</span> Add to My Dashboards</button>
-          </div>
+      </div>
+      <div class="card-element">
+        <div class="lines-shipped">
+          <div class="title">Title</div>
+          <div class="numbers">446.3K</div>
+        </div>
+        <div class="gridline"></div>
+        <div class="lines-value">
+          <div class="title">Value</div>
+          <div class="numbers">$4.2M</div>
         </div>
       </div>
-      <h4>$4.2M</h4>
     </div>
     <div gridCell gcColSpan="3" class="card card-body">
       <div class="card-title">

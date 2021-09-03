@@ -43,6 +43,12 @@ a {
       margin-top: 10px;
     }
   }
+  &.empty-card-body {
+    background: transparent;
+    color: transparent;
+    display: block;
+    height: 160px;
+  }
 }
 
 .sidebar-active app-sidebar {
@@ -152,7 +158,15 @@ a {
 .filter-item {
   border-width: 0;
 }
-
+.left-side-content .filter-item {
+  position: relative;
+  top: 0px;
+  margin-left: 20px;
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  gap: 5px;
+}
 .k-i-arrow-s::before {
   color: #dcdcdc;
 }

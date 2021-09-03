@@ -242,6 +242,10 @@
     margin-top: 20px;
   }
 }
+.left-side-content {
+  display: flex;
+}
+
 @media only screen and (max-width: 767px) {
   :host ::ng-deep [gridCell] {
     grid-column: span 3 !important;

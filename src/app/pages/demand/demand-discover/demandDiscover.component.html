@@ -1,6 +1,6 @@
 <div class="page-container">
   <app-grid-container>
-    <div gridCell gcColSpan="2" class="card card-body">
+    <div gridCell gcColSpan="2" gcRowSpan="2" class="card card-body">
       <div class="card-title">
         <div class="card-title-text">Fulfillment locations</div>
         <div>
@@ -11,11 +11,16 @@
           <div class="moreinfo-icon"></div>
         </div>
       </div>
-      <h4>map</h4>
+      <img
+        src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/map1.jpg"
+      />
     </div>
+    <div gridCell class="card empty-card-body"></div>
     <div gridCell class="card card-body">
       <div class="card-title">
-        <div class="card-title-text">Demand Status</div>
+        <div class="left-side-content">
+          <div class="card-title-text">Demand Status</div>
+        </div>
         <div class="card-icons">
           <a
             class="maximize-icon"
@@ -30,7 +35,27 @@
     </div>
     <div gridCell gcColSpan="3" class="card card-body">
       <div class="card-title">
-        <div class="card-title-text">Demand Profile</div>
+        <div class="left-side-content">
+          <div class="card-title-text">Demand Profile</div>
+          <div class="filter-item">
+            <label class="filter-label">Group By</label>
+            <span class="k-dropdown-wrap">
+              <span class="k-input">Orders</span>
+              <span class="k-select">
+                <span class="k-icon k-i-arrow-s"></span>
+              </span>
+            </span>
+          </div>
+          <div class="filter-item">
+            <label class="filter-label">Display By</label>
+            <span class="k-dropdown-wrap">
+              <span class="k-input">$USD</span>
+              <span class="k-select">
+                <span class="k-icon k-i-arrow-s"></span>
+              </span>
+            </span>
+          </div>
+        </div>
         <div class="card-icons">
           <a class="maximize-icon" [routerLink]="['/demandReports']"></a>
           <div class="moreinfo-icon"></div>
@@ -42,7 +67,27 @@
     </div>
     <div gridCell gcColSpan="3" class="card card-body">
       <div class="card-title">
-        <div class="card-title-text">Demand Activity</div>
+        <div class="left-side-content">
+          <div class="card-title-text">Demand Profile</div>
+          <div class="filter-item">
+            <label class="filter-label">Group By</label>
+            <span class="k-dropdown-wrap">
+              <span class="k-input">Orders</span>
+              <span class="k-select">
+                <span class="k-icon k-i-arrow-s"></span>
+              </span>
+            </span>
+          </div>
+          <div class="filter-item">
+            <label class="filter-label">Display By</label>
+            <span class="k-dropdown-wrap">
+              <span class="k-input">$USD</span>
+              <span class="k-select">
+                <span class="k-icon k-i-arrow-s"></span>
+              </span>
+            </span>
+          </div>
+        </div>
         <div class="card-icons">
           <a
             class="maximize-icon"

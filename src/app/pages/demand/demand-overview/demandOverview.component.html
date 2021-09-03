@@ -30,9 +30,9 @@
         style="height:180px; width: 180px"/>
         <div class="legend">
           <ul>
-            <li class="blue-color">All Parts</li>
-            <li class="orange-color">Parts w/ Demand</li>
-            <li class="red-color">Late Parts w/ Demand</li>
+            <li class="all-color">All Parts</li>
+            <li class="demand-color">Parts w/ Demand</li>
+            <li class="late-color">Late Parts w/ Demand</li>
           </ul>
         </div>
       </div>
@@ -66,9 +66,9 @@
         style="height:180px; width: 180px"/>
         <div class="legend">
           <ul>
-            <li class="blue-color">All Fulfillment Sites</li>
-            <li class="orange-color">Fulfillment Sites w/ Demand</li>
-            <li class="red-color">Late Fulfillment Sites w/ Demand</li>
+            <li class="all-color">All Fulfillment Sites</li>
+            <li class="demand-color">Fulfillment Sites w/ Demand</li>
+            <li class="late-color">Late Fulfillment Sites w/ Demand</li>
           </ul>
         </div>
       </div>
@@ -91,9 +91,12 @@
     </div>
     <div gridCell gcColSpan="3" class="card card-body">
       <div class="card-title">
-        <div class="card-title-text">Fulfillment locations</div>
-        <div>
-          TO: FROM:
+        <div class="left-side-content">
+          <div class="card-title-text">Fulfillment locations</div>
+          <div>
+            <span class="map-to">TO:</span>
+            <span class="map-from">FROM:</span>
+          </div>
         </div>
         <div class="card-icons">
           <a class="maximize-icon" [routerLink]="['/demandReports']"></a>
@@ -115,7 +118,9 @@
           </div>
         </div>
       </div>
-      <h4>map</h4>
+      <img
+      src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/map1.jpg"
+    />
     </div>
   </app-grid-container>
 </div>

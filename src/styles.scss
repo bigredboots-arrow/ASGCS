@@ -233,6 +233,13 @@ a {
 
   li {
     padding: 10px 0;
+
+    &.late-color {
+      color: $red-color;
+    }
+    &.demand-color {
+      color: $orange-color;
+    }
   }
 }
 .k-dropdown-wrap {

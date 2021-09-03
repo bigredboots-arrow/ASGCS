@@ -26,6 +26,44 @@
     font-weight: 600;
     letter-spacing: 0.5px;
   }
+  .map-to {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 12px;
+
+    &:after {
+      content: '';
+      width: 7px;
+      height: 7px;
+      display: inline-block;
+      border-width: 4px;
+      border-style: solid;
+      border-radius: 10px;
+      position: relative;
+      top: 3px;
+      margin-left: 3px;
+      border-color: $blue-color;
+    }
+  }
+  .map-from {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 12px;
+
+    &:after {
+      content: '';
+      width: 7px;
+      height: 7px;
+      display: inline-block;
+      border-width: 4px;
+      border-style: solid;
+      border-radius: 10px;
+      position: relative;
+      top: 3px;
+      margin-left: 3px;
+      border-color: $orange-color;
+    }
+  }
   .my-reports {
     color: $blue-color;
     cursor: pointer;

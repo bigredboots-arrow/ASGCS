@@ -160,16 +160,21 @@ a {
 }
 .left-side-content {
   display: flex;
-}
-
-.left-side-content .filter-item {
-  position: relative;
-  top: 0px;
-  margin-left: 20px;
-  display: flex;
-  white-space: nowrap;
-  align-items: center;
-  gap: 5px;
+  .filter-item {
+    position: relative;
+    top: 0px;
+    margin-left: 20px;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    gap: 5px;
+  }
+  .k-input {
+    font-size: 12px;
+  }
+  .k-select {
+    height: 20px
+  }
 }
 .k-i-arrow-s::before {
   color: #dcdcdc;
@@ -193,7 +198,7 @@ a {
   align-items: center;
 }
 .k-select {
-  background: $white;
+  background: #dcdcdc;
   height: 24px;
   border-radius: 0 5px 5px 0;
   width: 24px;
@@ -265,6 +270,7 @@ a {
   height: calc(100vh - 120px);
   transition: 0.3s ease-in all;
 }
+
 @media only screen and (max-width: 768px) {
   .empty-card-body {
     display: none !important;

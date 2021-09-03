@@ -1,3 +1,4 @@
+import { BreadcrumbService } from './../../../services/breadcrumb.service';
 import {
   Component,
   OnInit,
@@ -23,8 +24,10 @@ export class DashboardLayoutComponent implements OnInit {
 
   private _subscriptionsSubject$: Subject<void>;
   public currentPanelState: SidePanelState;
+  public hideFilter = false;
 
-  constructor(private _sidePanelService: SidePanelService) {
+  constructor(private _sidePanelService: SidePanelService, 
+    private _breadcrumbService: BreadcrumbService) {
     this._subscriptionsSubject$ = new Subject<void>();
     this.configuration = new DashboardLayoutConfiguration(
       SidePanelPosition.LEFT,
@@ -60,6 +63,10 @@ export class DashboardLayoutComponent implements OnInit {
     this._sidePanelService.panelStateChanges
       .pipe(takeUntil(this._subscriptionsSubject$))
       .subscribe((state: SidePanelState) => (this.currentPanelState = state));
+
+      this._breadcrumbService.filter$.subscribe(hideFilter => {
+        this.hideFilter = hideFilter;
+      })
   }
 
   @HostListener('window:resize', ['$event'])

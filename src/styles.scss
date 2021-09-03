@@ -219,7 +219,22 @@ a {
   top: 5px;
   cursor: pointer;
 }
+.card-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 21px;
+}
+.legend ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: 14px;
 
+  li {
+    padding: 10px 0;
+  }
+}
 .k-dropdown-wrap {
   padding: 0;
   width: 100%;

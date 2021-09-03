@@ -257,6 +257,14 @@ a {
     margin-top: 20px;
   }
 }
+.reportscreen .header {
+  height: 120px;
+  transition: 0.3s ease-in all;
+}
+.reportscreen .main-content {
+  height: calc(100vh - 120px);
+  transition: 0.3s ease-in all;
+}
 @media only screen and (max-width: 768px) {
   .empty-card-body {
     display: none !important;

@@ -53,10 +53,12 @@
 }
 .header {
   height: 190px;
+  transition: 0.3s ease-in all;
 }
 .main-content {
   margin: 0px 25px 0px 0px;
   overflow-y: auto;
   padding-right: 10px;
   height: calc(100vh - 190px);
+  transition: 0.3s ease-in all;
 }

@@ -1,6 +1,6 @@
 <div class="page-container">
   <app-grid-container>
-    <div gridCell gcColSpan="2" class="card card-body">
+    <div gridCell class="card card-body">
       <div class="card-title left">
         <div class="custom-reports card-title-text">Custom Reports</div>
         <div class="my-reports card-title-text">My Reports</div>
@@ -8,21 +8,13 @@
       <div class="menu-list">
         <ul>
           <li>
-            <a
-              [routerLink]="['/demandReports']"
-              [routerLinkActive]="['is-active']"
-              >VIEW COMPLETE REPORTS</a
-            >
+            <a [routerLink]="['/demandReports']" [routerLinkActive]="['is-active']">VIEW COMPLETE REPORTS</a>
           </li>
           <li class="active">
             <a>Demand Activity</a>
           </li>
           <li>
-            <a
-              [routerLink]="['/demandReportsTotalDemand']"
-              [routerLinkActive]="['is-active']"
-              >Demand Status</a
-            >
+            <a [routerLink]="['/demandReportsTotalDemand']" [routerLinkActive]="['is-active']">Demand Status</a>
           </li>
           <li><a>Dummy list item 1</a></li>
           <li><a>Dummy list item 2</a></li>
@@ -43,7 +35,23 @@
       </div>
       <img
         src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/wavechart-sm.png"
-      />
+       style="height: 165px" />
+    </div>
+    <div gridCell class="card card-body">
+      <div class="card-title">
+        <div class="card-title-text">Total Demand</div>
+      </div>
+      <div class="card-element">
+        <div class="lines-shipped">
+          <div class="title">Title</div>
+          <div class="numbers">446.3K</div>
+        </div>
+        <div class="gridline"></div>
+        <div class="lines-value">
+          <div class="title">Value</div>
+          <div class="numbers">$4.2M</div>
+        </div>
+      </div>
     </div>
     <div gridCell gcColSpan="3" class="card card-body">
       <div class="card-title">

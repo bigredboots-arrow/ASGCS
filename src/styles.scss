@@ -173,7 +173,7 @@ a {
     font-size: 12px;
   }
   .k-select {
-    height: 20px
+    height: 20px;
   }
 }
 .k-i-arrow-s::before {
@@ -263,11 +263,11 @@ a {
   }
 }
 .reportscreen .header {
-  height: 120px;
+  height: 120px !important;
   transition: 0.3s ease-in all;
 }
 .reportscreen .main-content {
-  height: calc(100vh - 120px);
+  height: calc(100vh - 120px) !important;
   transition: 0.3s ease-in all;
 }
 

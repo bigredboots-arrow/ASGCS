@@ -308,6 +308,9 @@
       transition: $default-transition;
     }
   }
+  &.d-none {
+    display:  none;
+  }
 }
 .filters {
   border: none;

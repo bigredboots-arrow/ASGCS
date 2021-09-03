@@ -1,3 +1,4 @@
+import { filter } from 'rxjs/operators';
 import { NgModule, OnInit } from '@angular/core';
 import { Routes, Router, RouterModule, NavigationEnd } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard.component';
@@ -30,17 +31,17 @@ const routes: Routes = [
   {
     path: 'demandReports',
     component: DemandReportsComponent,
-    data: { title: '3Main Page', breadcrumb: 'Reports' }
+    data: { title: '3Main Page', breadcrumb: 'Reports', filter: true }
   },
   {
     path: 'demandReportsWavechart',
     component: DemandReportsWavechartComponent,
-    data: { title: '9Main Page', breadcrumb: 'Reports Wave Chart' }
+    data: { title: '9Main Page', breadcrumb: 'Reports Wave Chart', filter: true }
   },
   {
     path: 'demandReportsTotalDemand',
     component: DemandReportsTotalDemandComponent,
-    data: { title: '4Main Page', breadcrumb: 'Report Total Demand' }
+    data: { title: '4Main Page', breadcrumb: 'Report Total Demand', filter: true }
   },
   {
     path: 'outboundOverview',

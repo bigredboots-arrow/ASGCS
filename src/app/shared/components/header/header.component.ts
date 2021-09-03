@@ -1,13 +1,12 @@
+import { BreadcrumbService } from './../../../services/breadcrumb.service';
 import {
   Component,
   OnInit,
   ViewChild,
   ElementRef,
-  OnDestroy,
-  Input
 } from '@angular/core';
 import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { takeUntil, filter } from 'rxjs/operators';
 import { GlobalConstants } from '../../../common/global-constants';
 import { SidePanelService } from '../../../core/';
 import { SidePanelState } from '../../../core/';
@@ -21,7 +20,8 @@ export class HeaderComponent implements OnInit {
   private _subscriptionsSubject$: Subject<void>;
   public currentPanelState: SidePanelState;
 
-  constructor(private _sidePanelService: SidePanelService) {
+  constructor(private _sidePanelService: SidePanelService, 
+    private breadcrumbService: BreadcrumbService) {
     this._subscriptionsSubject$ = new Subject<void>();
   }
 
@@ -39,11 +39,17 @@ export class HeaderComponent implements OnInit {
   }
 
   myBreadCrumb = this.breadCrumb;
+  hideFilters: boolean = false;
 
   ngOnInit(): void {
     this._sidePanelService.panelStateChanges
       .pipe(takeUntil(this._subscriptionsSubject$))
       .subscribe((state: SidePanelState) => (this.currentPanelState = state));
+
+      this.breadcrumbService.filter$.subscribe(hideFilters => {
+        this.hideFilters = hideFilters;
+      })
+
   }
 
   public handleSingleClicks(): void {

@@ -9,7 +9,9 @@ import { Breadcrumb } from '../models/breadcrumb.model';
 })
 export class BreadcrumbService {
   private readonly _breadcrumbs$ = new BehaviorSubject<Breadcrumb[]>([]);
+  private _filters$ = new BehaviorSubject<boolean>(false);
   readonly breadcrumbs$ = this._breadcrumbs$.asObservable();
+  readonly filter$ = this._filters$.asObservable();
 
   constructor(private router: Router) {
     this.router.events
@@ -24,6 +26,9 @@ export class BreadcrumbService {
 
   private addBreadcrumb(route: ActivatedRouteSnapshot, breadcrumbs: any[]) {
     if (route) {
+      
+      this._filters$.next(!!route.data.filter);
+
       if (route.data.breadcrumb) {
         const breadcrumb = {
           label: this.getLabel(route.data)

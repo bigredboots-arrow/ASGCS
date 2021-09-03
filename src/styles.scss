@@ -193,7 +193,7 @@ a {
   align-items: center;
 }
 .k-select {
-  background: #009ddc;
+  background: $white;
   height: 24px;
   border-radius: 0 5px 5px 0;
   width: 24px;
@@ -232,7 +232,7 @@ a {
   height: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-top: 6px solid white;
+  border-top: 6px solid $grey-light;
 }
 .card-element {
   display: flex;

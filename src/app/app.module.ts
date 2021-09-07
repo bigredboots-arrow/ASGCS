@@ -16,6 +16,7 @@ import { DemandReportsComponent } from './pages/demand/demand-reports/demandRepo
 import { DemandReportsWavechartComponent } from './pages/demand/demand-reports-wavechart/demandReportsWavechart.component';
 import { DemandReportsTotalDemandComponent } from './pages/demand/demand-reports-totaldemand/demandReportsTotalDemand.component';
 import { DemandReportsLocationsComponent } from './pages/demand/demand-reports-locations/demandReportsLocations.component';
+import { DemandReportsProfileComponent } from './pages/demand/demand-reports-profile/demandReportsProfile.component';
 
 import { OutboundOverviewComponent } from './pages/outbound/outbound-overview/outboundOverview.component';
 import { OutboundDiscoverComponent } from './pages/outbound/outbound-discover/outboundDiscover.component';
@@ -42,6 +43,7 @@ import { HubsComponent } from './pages/hubs/hubs/hubs.component';
     DemandReportsTotalDemandComponent,
     HubsComponent,
     DemandReportsLocationsComponent,
+    DemandReportsProfileComponent,
     OutboundOverviewComponent,
     OutboundDiscoverComponent,
     OutboundReportsComponent

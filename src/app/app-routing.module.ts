@@ -8,6 +8,7 @@ import { DemandReportsComponent } from './pages/demand/demand-reports/demandRepo
 import { DemandReportsWavechartComponent } from './pages/demand/demand-reports-wavechart/demandReportsWavechart.component';
 import { DemandReportsTotalDemandComponent } from './pages/demand/demand-reports-totaldemand/demandReportsTotalDemand.component';
 import { DemandReportsLocationsComponent } from './pages/demand/demand-reports-locations/demandReportsLocations.component';
+import { DemandReportsProfileComponent } from './pages/demand/demand-reports-profile/demandReportsProfile.component';
 
 import { OutboundOverviewComponent } from './pages/outbound/outbound-overview/outboundOverview.component';
 import { OutboundDiscoverComponent } from './pages/outbound/outbound-discover/outboundDiscover.component';
@@ -51,6 +52,15 @@ const routes: Routes = [
     data: {
       title: '11Main Page',
       breadcrumb: 'Reports Locations',
+      filter: true
+    }
+  },
+  {
+    path: 'demandReportsProfile',
+    component: DemandReportsProfileComponent,
+    data: {
+      title: '14Main Page',
+      breadcrumb: 'Reports Profile',
       filter: true
     }
   },

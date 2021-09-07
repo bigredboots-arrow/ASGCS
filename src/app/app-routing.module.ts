@@ -13,6 +13,8 @@ import { OutboundOverviewComponent } from './pages/outbound/outbound-overview/ou
 import { OutboundDiscoverComponent } from './pages/outbound/outbound-discover/outboundDiscover.component';
 import { OutboundReportsComponent } from './pages/outbound/outbound-reports/outboundReports.component';
 
+import { HubsComponent } from './pages/hubs/hubs/hubs.component';
+
 const routes: Routes = [
   {
     path: 'dashboard',
@@ -75,6 +77,11 @@ const routes: Routes = [
     path: 'outboundReports',
     component: OutboundReportsComponent,
     data: { title: '6Main Page', breadcrumb: 'Outbound - Reports' }
+  },
+  {
+    path: 'hubs',
+    component: HubsComponent,
+    data: { title: '12Main Page', breadcrumb: 'Hubs' }
   },
   {
     path: '**',

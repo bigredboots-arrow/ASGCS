@@ -69,7 +69,7 @@ const routes: Routes = [
     component: DemandReportsTotalDemandComponent,
     data: {
       title: '4Main Page',
-      breadcrumb: 'Report Total Demand',
+      breadcrumb: 'Demand Status',
       filter: true
     }
   },

@@ -8,34 +8,50 @@
       <div class="menu-list">
         <ul>
           <li>
-            <a [routerLink]="['/demandReports']" [routerLinkActive]="['is-active']">VIEW COMPLETE REPORTS</a>
+            <a
+              [routerLink]="['/demandReports']"
+              [routerLinkActive]="['is-active']"
+              >VIEW COMPLETE REPORT</a
+            >
           </li>
           <li class="active">
             <a>Demand Activity</a>
           </li>
           <li>
-            <a [routerLink]="['/demandReportsTotalDemand']" [routerLinkActive]="['is-active']">Demand Status</a>
+            <a
+              [routerLink]="['/demandReportsLocations']"
+              [routerLinkActive]="['is-active']"
+              >Demand Locations</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/demandReportsProfile']"
+              [routerLinkActive]="['is-active']"
+              >Demand Profile</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/demandReportsTotalDemand']"
+              [routerLinkActive]="['is-active']"
+              >Demand Status</a
+            >
           </li>
           <li><a>Dummy list item 1</a></li>
           <li><a>Dummy list item 2</a></li>
           <li><a>Dummy list item 3</a></li>
-          <li><a>Dummy list item 4</a></li>
-          <li><a>Dummy list item 5</a></li>
-          <li><a>Dummy list item 6</a></li>
-          <li><a>Dummy list item 7</a></li>
-          <li><a>Dummy list item 8</a></li>
-          <li><a>Dummy list item 9</a></li>
-          <li><a>Dummy list item 10</a></li>
         </ul>
       </div>
     </div>
     <div gridCell class="card card-body">
       <div class="card-title">
-        <div class="card-title-text">Fulfillment Site Details</div>
+        <div class="card-title-text">Demand Activity</div>
       </div>
       <img
         src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/wavechart-sm.png"
-       style="height: 165px" />
+        style="height: 165px"
+      />
     </div>
     <div gridCell class="card card-body">
       <div class="card-title">
@@ -55,7 +71,7 @@
     </div>
     <div gridCell gcColSpan="3" class="card card-body">
       <div class="card-title">
-        <div class="card-title-text">Demand Details</div>
+        <div class="card-title-text">Demand Activity Details</div>
       </div>
       <h4>GRID</h4>
     </div>

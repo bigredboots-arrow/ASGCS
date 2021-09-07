@@ -8,22 +8,39 @@
       <div class="menu-list">
         <ul>
           <li>
-            <a [routerLink]="['/demandReports']" [routerLinkActive]="['is-active']">VIEW COMPLETE REPORTS</a>
+            <a
+              [routerLink]="['/demandReports']"
+              [routerLinkActive]="['is-active']"
+              >VIEW COMPLETE REPORT</a
+            >
           </li>
           <li>
-            <a [routerLink]="['/demandReportsWavechart']" [routerLinkActive]="['is-active']">Demand Activity</a>
+            <a
+              [routerLink]="['/demandReportsWavechart']"
+              [routerLinkActive]="['is-active']"
+              >Demand Activity</a
+            >
           </li>
-          <li class="active"><a>Demand Status</a></li>
+          <li>
+            <a
+              [routerLink]="['/demandReportsLocations']"
+              [routerLinkActive]="['is-active']"
+              >Demand Locations</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/demandReportsProfile']"
+              [routerLinkActive]="['is-active']"
+              >Demand Profile</a
+            >
+          </li>
+          <li class="active">
+            <a>Demand Status</a>
+          </li>
           <li><a>Dummy list item 1</a></li>
           <li><a>Dummy list item 2</a></li>
           <li><a>Dummy list item 3</a></li>
-          <li><a>Dummy list item 4</a></li>
-          <li><a>Dummy list item 5</a></li>
-          <li><a>Dummy list item 6</a></li>
-          <li><a>Dummy list item 7</a></li>
-          <li><a>Dummy list item 8</a></li>
-          <li><a>Dummy list item 9</a></li>
-          <li><a>Dummy list item 10</a></li>
         </ul>
       </div>
     </div>
@@ -33,7 +50,8 @@
       </div>
       <img
         src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/treemap.png"
-        style="height: 165px"/>
+        style="height: 165px"
+      />
     </div>
     <div gridCell class="card card-body">
       <div class="card-title">

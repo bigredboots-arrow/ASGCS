@@ -8,7 +8,7 @@
       <div class="menu-list">
         <ul>
           <li class="active">
-            <a>DEMAND REPORTS</a>
+            <a>VIEW COMPLETE REPORT</a>
           </li>
           <li>
             <a
@@ -19,20 +19,28 @@
           </li>
           <li>
             <a
+              [routerLink]="['/demandReportsLocations']"
+              [routerLinkActive]="['is-active']"
+              >Demand Locations</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/demandReportsProfile']"
+              [routerLinkActive]="['is-active']"
+              >Demand Profile</a
+            >
+          </li>
+          <li>
+            <a
               [routerLink]="['/demandReportsTotalDemand']"
               [routerLinkActive]="['is-active']"
               >Demand Status</a
             >
           </li>
-          <li><a [routerLink]="['/demandReportsLocations']"
-            [routerLinkActive]="['is-active']"
-            >Demand Locations</a></li>
+          <li><a>Dummy list item 1</a></li>
           <li><a>Dummy list item 2</a></li>
           <li><a>Dummy list item 3</a></li>
-          <li><a>Dummy list item 4</a></li>
-          <li><a>Dummy list item 5</a></li>
-          <li><a>Dummy list item 6</a></li>
-          <li><a>Dummy list item 7</a></li>
         </ul>
       </div>
     </div>
@@ -42,7 +50,7 @@
       </div>
       <div class="card-element">
         <div class="lines-shipped">
-        <div class="title">Count</div>
+          <div class="title">Count</div>
           <div class="numbers">446.3K</div>
         </div>
         <div class="gridline"></div>

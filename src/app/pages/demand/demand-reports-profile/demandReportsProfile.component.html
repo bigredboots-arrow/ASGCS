@@ -11,7 +11,7 @@
             <a
               [routerLink]="['/demandReports']"
               [routerLinkActive]="['is-active']"
-              >VIEW COMPLETE REPORTS</a
+              >VIEW COMPLETE REPORT</a
             >
           </li>
           <li>
@@ -21,17 +21,26 @@
               >Demand Activity</a
             >
           </li>
-          <li class="active"><a>Demand Status</a></li>
+          <li>
+            <a
+              [routerLink]="['/demandReportsLocations']"
+              [routerLinkActive]="['is-active']"
+              >Demand Locations</a
+            >
+          </li>
+          <li class="active">
+            <a>Demand Profile</a>
+          </li>
+          <li>
+            <a
+              [routerLink]="['/demandReportsTotalDemand']"
+              [routerLinkActive]="['is-active']"
+              >Demand Status</a
+            >
+          </li>
           <li><a>Dummy list item 1</a></li>
           <li><a>Dummy list item 2</a></li>
           <li><a>Dummy list item 3</a></li>
-          <li><a>Dummy list item 4</a></li>
-          <li><a>Dummy list item 5</a></li>
-          <li><a>Dummy list item 6</a></li>
-          <li><a>Dummy list item 7</a></li>
-          <li><a>Dummy list item 8</a></li>
-          <li><a>Dummy list item 9</a></li>
-          <li><a>Dummy list item 10</a></li>
         </ul>
       </div>
     </div>

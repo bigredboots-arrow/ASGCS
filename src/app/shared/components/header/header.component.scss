@@ -628,14 +628,13 @@ app-sidebar {
   }
   .top-navigation-block {
     display: grid;
-    grid-template-columns: 35px 115px auto auto;
+    grid-template-columns: 35px 115px calc(50% - 100px) calc(50% - 100px);
     grid-template-rows: 40px auto;
     width: 100%;
-    justify-content: left;
 
     .top-fields {
       grid-row: 2;
-      grid-column: 2 / 4;
+      grid-column: 4 / 5;
     }
     .site-search {
       margin-right: 7px;
@@ -645,7 +644,7 @@ app-sidebar {
     }
     .user-block {
       grid-row: 2;
-      grid-column: 4;
+      grid-column: 5;
 
       .avatar {
         margin-right: 0px;

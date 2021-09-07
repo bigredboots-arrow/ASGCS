@@ -21,42 +21,50 @@ const routes: Routes = [
   {
     path: 'demandOverview',
     component: DemandOverviewComponent,
-    data: { title: '1Main Page', breadcrumb: 'Overview' }
+    data: { title: '1Main Page', breadcrumb: 'Demand - Overview' }
   },
   {
     path: 'demandDiscover',
     component: DemandDiscoverComponent,
-    data: { title: '2Main Page', breadcrumb: 'Discover' }
+    data: { title: '2Main Page', breadcrumb: 'Demand - Discover' }
   },
   {
     path: 'demandReports',
     component: DemandReportsComponent,
-    data: { title: '3Main Page', breadcrumb: 'Reports', filter: true }
+    data: { title: '3Main Page', breadcrumb: 'Demand - Reports', filter: true }
   },
   {
     path: 'demandReportsWavechart',
     component: DemandReportsWavechartComponent,
-    data: { title: '9Main Page', breadcrumb: 'Reports Wave Chart', filter: true }
+    data: {
+      title: '9Main Page',
+      breadcrumb: 'Reports Wave Chart',
+      filter: true
+    }
   },
   {
     path: 'demandReportsTotalDemand',
     component: DemandReportsTotalDemandComponent,
-    data: { title: '4Main Page', breadcrumb: 'Report Total Demand', filter: true }
+    data: {
+      title: '4Main Page',
+      breadcrumb: 'Report Total Demand',
+      filter: true
+    }
   },
   {
     path: 'outboundOverview',
     component: OutboundOverviewComponent,
-    data: { title: '5Main Page', breadcrumb: 'Overview' }
+    data: { title: '5Main Page', breadcrumb: 'Outbound - Overview' }
   },
   {
     path: 'outboundDiscover',
     component: OutboundDiscoverComponent,
-    data: { title: '7Main Page', breadcrumb: 'Discover' }
+    data: { title: '7Main Page', breadcrumb: 'Outbound - Discover' }
   },
   {
     path: 'outboundReports',
     component: OutboundReportsComponent,
-    data: { title: '6Main Page', breadcrumb: 'Reports' }
+    data: { title: '6Main Page', breadcrumb: 'Outbound - Reports' }
   },
   {
     path: '**',

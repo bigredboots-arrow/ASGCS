@@ -9,6 +9,7 @@ import { DemandDiscoverComponent } from './demand-discover/demandDiscover.compon
 import { DemandReportsComponent } from './demand-reports/demandReports.component';
 import { DemandReportsWavechartComponent } from './demand-reports-wavechart/demandReportsWavechart.component';
 import { DemandReportsTotalDemandComponent } from './demand-reports-totaldemand/demandReportsTotalDemand.component';
+import { DemandReportsLocationsComponent } from './demand-reports-locations/demandReportsLocations.component';
 
 @NgModule({
   imports: [CommonModule, DemandRoutingModule],
@@ -16,6 +17,7 @@ import { DemandReportsTotalDemandComponent } from './demand-reports-totaldemand/
     DemandOverviewComponent,
     DemandDiscoverComponent,
     DemandReportsComponent,
+    DemandReportsLocationsComponent,
     DemandReportsWavechartComponent,
     DemandReportsTotalDemandComponent
   ]

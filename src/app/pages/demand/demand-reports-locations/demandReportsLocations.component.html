@@ -1,0 +1,61 @@
+<div class="page-container">
+<app-grid-container>
+  <div gridCell class="card card-body">
+    <div class="card-title left">
+      <div class="custom-reports card-title-text">Custom Reports</div>
+      <div class="my-reports card-title-text">My Reports</div>
+    </div>
+    <div class="menu-list">
+      <ul>
+        <li>
+          <a [routerLink]="['/demandReports']" [routerLinkActive]="['is-active']">VIEW COMPLETE REPORTS</a>
+        </li>
+        <li>
+          <a [routerLink]="['/demandReportsWavechart']" [routerLinkActive]="['is-active']">Demand Activity</a>
+        </li>
+        <li class="active"><a>Demand Status</a></li>
+        <li><a>Dummy list item 1</a></li>
+        <li><a>Dummy list item 2</a></li>
+        <li><a>Dummy list item 3</a></li>
+        <li><a>Dummy list item 4</a></li>
+        <li><a>Dummy list item 5</a></li>
+        <li><a>Dummy list item 6</a></li>
+        <li><a>Dummy list item 7</a></li>
+        <li><a>Dummy list item 8</a></li>
+        <li><a>Dummy list item 9</a></li>
+        <li><a>Dummy list item 10</a></li>
+      </ul>
+    </div>
+  </div>
+  <div gridCell class="card card-body">
+    <div class="card-title">
+      <div class="card-title-text">Demand Locations</div>
+    </div>
+    <img
+    src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/map1.jpg"
+      style="height: 165px"/>
+  </div>
+  <div gridCell class="card card-body">
+    <div class="card-title">
+      <div class="card-title-text">Total Demand</div>
+    </div>
+    <div class="card-element">
+      <div class="lines-shipped">
+        <div class="title">Title</div>
+        <div class="numbers">446.3K</div>
+      </div>
+      <div class="gridline"></div>
+      <div class="lines-value">
+        <div class="title">Value</div>
+        <div class="numbers">$4.2M</div>
+      </div>
+    </div>
+  </div>
+  <div gridCell gcColSpan="3" class="card card-body">
+    <div class="card-title">
+      <div class="card-title-text">Demand Locations Details</div>
+    </div>
+    <h4>GRID</h4>
+  </div>
+</app-grid-container>
+</div>

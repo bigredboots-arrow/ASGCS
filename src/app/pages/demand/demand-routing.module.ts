@@ -7,6 +7,7 @@ import { DemandDiscoverComponent } from './demand-discover/demandDiscover.compon
 import { DemandReportsComponent } from './demand-reports/demandReports.component';
 import { DemandReportsWavechartComponent } from './demand-reports-wavechart/demandReportsWavechart.component';
 import { DemandReportsTotalDemandComponent } from './demand-reports-totaldemand/demandReportsTotalDemand.component';
+import { DemandReportsLocationsComponent } from './demand-reports-locations/demandReportsLocations.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'demand', pathMatch: 'full' },
@@ -19,10 +20,8 @@ const routes: Routes = [
       { path: 'discover', component: DemandDiscoverComponent },
       { path: 'reports', component: DemandReportsComponent },
       { path: 'reportsWavechart', component: DemandReportsWavechartComponent },
-      {
-        path: 'reportsTotalDemand',
-        component: DemandReportsTotalDemandComponent
-      }
+      { path: 'reportsTotalDemand', component: DemandReportsTotalDemandComponent},
+      { path: 'reportsLocations', component: DemandReportsLocationsComponent}
     ]
   }
 ];

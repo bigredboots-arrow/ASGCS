@@ -44,6 +44,15 @@ const routes: Routes = [
     }
   },
   {
+    path: 'demandReportsLocations',
+    component: DemandReportsLocationsComponent,
+    data: {
+      title: '11Main Page',
+      breadcrumb: 'Reports Locations',
+      filter: true
+    }
+  },
+  {
     path: 'demandReportsTotalDemand',
     component: DemandReportsTotalDemandComponent,
     data: {

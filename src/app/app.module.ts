@@ -21,6 +21,8 @@ import { OutboundOverviewComponent } from './pages/outbound/outbound-overview/ou
 import { OutboundDiscoverComponent } from './pages/outbound/outbound-discover/outboundDiscover.component';
 import { OutboundReportsComponent } from './pages/outbound/outbound-reports/outboundReports.component';
 
+import { HubsComponent } from './pages/hubs/hubs/hubs.component';
+
 @NgModule({
   imports: [
     AppRoutingModule,
@@ -38,6 +40,7 @@ import { OutboundReportsComponent } from './pages/outbound/outbound-reports/outb
     DemandReportsComponent,
     DemandReportsWavechartComponent,
     DemandReportsTotalDemandComponent,
+    HubsComponent,
     DemandReportsLocationsComponent,
     OutboundOverviewComponent,
     OutboundDiscoverComponent,

@@ -2,13 +2,22 @@
   <app-sidebar></app-sidebar>
   <div class="overlayer" (click)="toggleSidebar()"></div>
   <div class="overlayer-filter" (click)="toggleFilters()"></div>
-  <div class="overlayer-navigation" singleDoubleClick (onSingleClick)="handleSingleClicks()"></div>
+  <div
+    class="overlayer-navigation"
+    singleDoubleClick
+    (onSingleClick)="handleSingleClicks()"
+  ></div>
 </div>
 
 <div class="main-header">
   <div id="dash-header">
     <div class="top-navigation-block">
-      <div role="button" class="hamburger toggler" singleDoubleClick (onSingleClick)="handleSingleClicks()">
+      <div
+        role="button"
+        class="hamburger toggler"
+        singleDoubleClick
+        (onSingleClick)="handleSingleClicks()"
+      >
         <span></span>
       </div>
       <div class="company-logo ciena"></div>
@@ -32,11 +41,13 @@
         </div>
         <div class="header-events">
           <label for="toggle-search" class="icon site-search"
-            >Search Field</label>
+            >Search Field</label
+          >
           <div class="notifications">
             <input type="checkbox" id="toggle-notifications" />
             <label for="toggle-notifications" class="icon active"
-              >Notifications</label>
+              >Notifications</label
+            >
             <div class="notifications-popup">
               <span class="notifications-title">Notifications</span>
               <ul>
@@ -57,7 +68,12 @@
   </div>
 </div>
 <!--filters -->
-<div class="filter-block" [ngClass]="{'d-none': hideFilters}" #filters>
+<div
+  class="filter-block"
+  [ngClass]="{'d-none': hideFilters}"
+  #filters
+  style="display: none"
+>
   <div class="filters" (click)="toggleFilters()">
     <span class="filter-title">Filters</span>
     <span class="filter-close">+</span>
@@ -69,9 +85,9 @@
           <div class="filter-label">Status</div>
           <span class="k-dropdown-wrap">
             <span class="k-input">Status</span>
-          <span class="k-select">
+            <span class="k-select">
               <span class="k-icon k-i-arrow-s"></span>
-          </span>
+            </span>
           </span>
         </div>
         <div class="filter-item">
@@ -94,8 +110,9 @@
           <div class="filter-label">Type</div>
           <span class="k-dropdown-wrap">
             <span class="k-input">Type</span>
-          <span class="k-select"
-              ><span class="k-icon k-i-arrow-s"></span></span>
+            <span class="k-select"
+              ><span class="k-icon k-i-arrow-s"></span
+            ></span>
           </span>
         </div>
 
@@ -103,17 +120,79 @@
           <div class="filter-label">sites</div>
           <span class="k-dropdown-wrap"
             ><span class="k-input">Manufacturing Sites</span>
-          <span class="k-select"
-              ><span class="k-icon k-i-arrow-s"></span></span></span>
+            <span class="k-select"
+              ><span class="k-icon k-i-arrow-s"></span></span
+          ></span>
         </div>
 
         <div class="filter-item">
           <div class="filter-label">Supplier</div>
           <span class="k-dropdown-wrap">
             <span class="k-input">Supplier</span>
-          <span class="k-select"
-              ><span class="k-icon k-i-arrow-s"></span></span>
+            <span class="k-select"
+              ><span class="k-icon k-i-arrow-s"></span
+            ></span>
           </span>
+        </div>
+      </div>
+
+      <div class="block-filterbuttons">
+        <button kendobutton="" class="secondary">Reset</button>
+        <button kendobutton="" class="blue">Apply</button>
+        <div class="close-filters" (click)="toggleFilters()">+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Hub filter -->
+<div
+  class="filter-block hubfilters"
+  [ngClass]="{'d-none': hideFilters}"
+  #hubfilters
+>
+  <div class="filters" (click)="toggleHubFilters()">
+    <span class="filter-title">Filters</span>
+    <span class="filter-close">+</span>
+  </div>
+  <div class="overview-filters">
+    <div class="filter-container">
+      <div class="block-filters">
+        <div class="filter-item">
+          <div class="filter-label">Supplier</div>
+          <span class="k-dropdown-wrap">
+            <span class="k-input">Supplier</span>
+            <span class="k-select">
+              <span class="k-icon k-i-arrow-s"></span>
+            </span>
+          </span>
+        </div>
+        <div class="filter-item">
+          <div class="filter-label">Dates</div>
+          <span class="k-dropdown-wrap">
+            <span class="k-input">1 year</span>
+            <span class="k-select">
+              <span class="k-icon k-i-arrow-s"></span>
+            </span>
+          </span>
+        </div>
+
+        <div class="filter-item">
+          <div class="filter-label">Type</div>
+          <span class="k-dropdown-wrap">
+            <span class="k-input">Type</span>
+            <span class="k-select"
+              ><span class="k-icon k-i-arrow-s"></span
+            ></span>
+          </span>
+        </div>
+
+        <div class="filter-item">
+          <div class="filter-label">Warehouse Name</div>
+          <span class="k-dropdown-wrap"
+            ><span class="k-input">All Warehouses</span>
+            <span class="k-select"
+              ><span class="k-icon k-i-arrow-s"></span></span
+          ></span>
         </div>
       </div>
 

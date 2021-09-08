@@ -4,9 +4,9 @@
       <div class="card-title">
         <div class="card-title-text">Part Overview</div>
         <div class="card-icons">
-          <a class="maximize-icon" [routerLink]="['/demandReports']"></a>
-          <div class="moreinfo-icon" (click)="PartOverviewtoggleMoreInfo()"><span></span></div>
-
+          <div class="moreinfo-icon" (click)="PartOverviewtoggleMoreInfo()">
+            <span></span>
+          </div>
           <div class="moreinfo-block" #partoverview>
             <div class="moreinfo-header">
               <div class="title"><span>More Information</span></div>
@@ -21,13 +21,13 @@
             </div>
             <button class="blue"><span>+</span> Add to My Dashboards</button>
           </div>
-
         </div>
       </div>
       <div class="card-items">
         <img
-        src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/partoverview.png"
-        style="height:180px; width: 180px"/>
+          src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/partoverview.png"
+          style="height:180px; width: 180px"
+        />
         <div class="legend">
           <ul>
             <li class="all-color">All Parts</li>
@@ -41,8 +41,9 @@
       <div class="card-title">
         <div class="card-title-text">Demand Site Overview</div>
         <div class="card-icons">
-          <a class="maximize-icon" [routerLink]="['/demandReports']"></a>
-          <div class="moreinfo-icon" (click)="FsitetoggleMoreInfo()"><span></span></div>
+          <div class="moreinfo-icon" (click)="FsitetoggleMoreInfo()">
+            <span></span>
+          </div>
 
           <div class="moreinfo-block" #fsiteoverview>
             <div class="moreinfo-header">
@@ -62,8 +63,9 @@
       </div>
       <div class="card-items">
         <img
-        src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/partoverview.png"
-        style="height:180px; width: 180px"/>
+          src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/partoverview.png"
+          style="height:180px; width: 180px"
+        />
         <div class="legend">
           <ul>
             <li class="all-color">All Demand Sites</li>
@@ -79,12 +81,12 @@
       </div>
       <div class="card-element">
         <div class="lines-shipped">
-          <div class="title">Count</div>
+          <div class="title">Count:</div>
           <div class="numbers">446.3K</div>
         </div>
         <div class="gridline"></div>
         <div class="lines-value">
-          <div class="title">Value</div>
+          <div class="title">Value:</div>
           <div class="numbers">$4.2M</div>
         </div>
       </div>
@@ -99,8 +101,13 @@
           </div>
         </div>
         <div class="card-icons">
-          <a class="maximize-icon" [routerLink]="['/demandReportsLocations']"></a>
-          <div class="moreinfo-icon" (click)="FLocationsMoreInfo()"><span></span></div>
+          <a
+            class="maximize-icon"
+            [routerLink]="['/demandReportsLocations']"
+          ></a>
+          <div class="moreinfo-icon" (click)="FLocationsMoreInfo()">
+            <span></span>
+          </div>
 
           <div class="moreinfo-block" #flocationsoverview>
             <div class="moreinfo-header">
@@ -119,8 +126,8 @@
         </div>
       </div>
       <img
-      src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/map1.jpg"
-    />
+        src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/map1.jpg"
+      />
     </div>
   </app-grid-container>
 </div>

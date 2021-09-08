@@ -265,12 +265,25 @@
   flex-direction: column;
   justify-content: center;
 
+  .lines-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .lines-shipped {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
   .numbers {
     font-size: 40px;
-    font-weight: 800;
+    font-weight: 400;
     letter-spacing: 1.5px;
   }
   .title {
+    font-weight: 200;
     font-size: 18px;
     letter-spacing: 1px;
   }

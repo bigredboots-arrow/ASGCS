@@ -233,7 +233,9 @@ a {
 
   li {
     padding: 10px 0;
-
+    &.all-color {
+      color: $blue-color;
+    }
     &.late-color {
       color: $red-color;
     }

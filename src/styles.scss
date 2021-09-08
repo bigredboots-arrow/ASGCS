@@ -275,12 +275,26 @@ a {
 
   .numbers {
     font-size: 40px;
-    font-weight: 800;
+    font-weight: 400;
     letter-spacing: 1.5px;
+  }
+  .lines-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .lines-shipped {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
   }
   .title {
     font-size: 18px;
     letter-spacing: 1px;
+    font-weight: 200;
   }
   .gridline {
     border-top: 1px solid white;

@@ -42,7 +42,7 @@
       position: relative;
       top: 3px;
       margin-left: 3px;
-      border-color: $blue-color;
+      border-color: $tertiary-color-c;
     }
   }
   .map-from {
@@ -61,7 +61,7 @@
       position: relative;
       top: 3px;
       margin-left: 3px;
-      border-color: $orange-color;
+      border-color: $tertiary-color-a;
     }
   }
   .my-reports {
@@ -270,13 +270,13 @@
     align-items: center;
     justify-content: center;
   }
-  
+
   .lines-shipped {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  
+
   .numbers {
     font-size: 40px;
     font-weight: 400;

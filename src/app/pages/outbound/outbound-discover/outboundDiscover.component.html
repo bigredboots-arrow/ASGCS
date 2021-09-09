@@ -3,7 +3,7 @@
     <div gridCell gcColSpan="2" gcRowSpan="2" class="card card-body">
       <div class="card-title">
         <div class="left-side-content">
-          <div class="card-title-text">Outbound Shipment Locations</div>
+          <div class="card-title-text">Outbound Locations</div>
           <div>
             <span class="map-to">TO:</span>
             <span class="map-from">FROM:</span>
@@ -30,21 +30,21 @@
         </div>
       </div>
       <img
-      src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/map1.jpg"
+      src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/map-two-spots-line.png"
     />
     </div>
     <div gridCell class="card card-body">
       <div class="card-title">
-        <div class="card-title-text">Total Outbound Shipments</div>
+        <div class="card-title-text">Total Outbound</div>
       </div>
       <div class="card-element">
         <div class="lines-shipped">
-          <div class="title">Count</div>
+          <div class="title">Count: </div>
           <div class="numbers">446.3K</div>
         </div>
         <div class="gridline"></div>
         <div class="lines-value">
-          <div class="title">Value</div>
+          <div class="title">Value: </div>
           <div class="numbers">$4.2M</div>
         </div>
       </div>
@@ -52,7 +52,13 @@
     <div gridCell class="card card-body">
       <div class="card-title">
         <div class="left-side-content">
-          <div class="card-title-text">Outbound Shipment Status</div>
+          <div class="card-title-text">Outbound Status</div>
+          <div class="legend">
+            <div class="good">On Time</div>
+            <div class="warn">1-3 Day</div>
+            <div class="caution">4-15 D</div>
+            <div class="late">+15 D</div>
+          </div>
         </div>
         <div class="card-icons">
           <a class="maximize-icon" [routerLink]="['/demandReportsTotalDemand']"></a>
@@ -75,13 +81,13 @@
         </div>
       </div>
       <img
-      src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/treemap.png"
+      src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/treemap2.png"
     />
     </div>
     <div gridCell gcColSpan="3" class="card card-body">
       <div class="card-title">
         <div class="left-side-content">
-          <div class="card-title-text">Outbound Shipment Profile</div>
+          <div class="card-title-text">Outbound Profile</div>
           <div class="filter-item">
             <span class="k-dropdown-wrap">
             <span class="k-input">Group By: Orders</span>
@@ -120,13 +126,13 @@
         </div>
       </div>
       <img
-      src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/barchart.png"
+      src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/stackbarchart.png"
     />
     </div>
     <div gridCell gcColSpan="3" class="card card-body">
       <div class="card-title">
         <div class="left-side-content">
-          <div class="card-title-text">Outbound Shipment Activity</div>
+          <div class="card-title-text">Outbound Activity</div>
           <div class="filter-item">
             <label class="filter-label">Group By</label>
             <span class="k-dropdown-wrap">
@@ -167,7 +173,7 @@
         </div>
       </div>
       <img
-      src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/wavechart.png"
+      src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/wavechart2.png"
     />
     </div>
   </app-grid-container>

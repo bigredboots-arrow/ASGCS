@@ -2,38 +2,63 @@
   <app-grid-container>
     <div gridCell class="card card-body">
       <div class="card-title left">
-        <div class="custom-reports card-title-text">Custom Reports</div>
+        <div
+          class="custom-reports card-title-text"
+          [routerLink]="['/outboundReports']"
+          [routerLinkActive]="['is-active']"
+        >
+          Custom Reports
+        </div>
         <div class="my-reports card-title-text">My Reports</div>
       </div>
       <div class="menu-list">
         <ul>
           <li>
-            <a [routerLink]="['/outboundReports']" [routerLinkActive]="['is-active']">VIEW ALL REPORTS</a>
+            <a
+              [routerLink]="['/outboundReports']"
+              [routerLinkActive]="['is-active']"
+              >OUTBOUND SHIPMENTS FULL REPORT</a
+            >
           </li>
           <li>
-            <a [routerLink]="['/outboundReportsWavechart']" [routerLinkActive]="['is-active']">Outbound Shipping
-              Activity</a>
+            <a
+              [routerLink]="['/outboundReportsWavechart']"
+              [routerLinkActive]="['is-active']"
+              >Outbound Shipping Activity</a
+            >
           </li>
           <li class="active"><a>Outbound Shipping Locations</a></li>
           <li>
-            <a [routerLink]="['/outboundReportsProfile']" [routerLinkActive]="['is-active']">Outbound Shipping
-              Profile</a>
+            <a
+              [routerLink]="['/outboundReportsProfile']"
+              [routerLinkActive]="['is-active']"
+              >Outbound Shipping Profile</a
+            >
           </li>
           <li>
-            <a [routerLink]="['/outboundReportsTotaldemand']" [routerLinkActive]="['is-active']">Outbound Shipping
-              Status</a>
+            <a
+              [routerLink]="['/outboundReportsTotaldemand']"
+              [routerLinkActive]="['is-active']"
+              >Outbound Shipping Status</a
+            >
           </li>
         </ul>
       </div>
     </div>
     <div gridCell class="card card-body">
       <div class="card-title">
-        <div class="card-title-text">Outbound Shipping Locations</div>
+        <div class="left-side-content">
+          <div class="card-title-text">Outbound Shipment Locations</div>
+          <div>
+            <span class="map-to">TO:</span>
+            <span class="map-from">FROM:</span>
+          </div>
+        </div>
       </div>
       <img
-      src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/map-two-spots-line.png"
-      style="height: 235px"
-    />
+        src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/map-two-spots-line.jpg"
+        style="height: 235px"
+      />
     </div>
     <div gridCell class="card card-body">
       <div class="card-title">
@@ -41,12 +66,12 @@
       </div>
       <div class="card-element">
         <div class="lines-shipped">
-          <div class="title">Count: </div>
+          <div class="title">Count:</div>
           <div class="numbers">446.3K</div>
         </div>
         <div class="gridline"></div>
         <div class="lines-value">
-          <div class="title">Value: </div>
+          <div class="title">Value:</div>
           <div class="numbers">$4.2M</div>
         </div>
       </div>

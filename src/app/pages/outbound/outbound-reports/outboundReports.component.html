@@ -2,25 +2,41 @@
   <app-grid-container>
     <div gridCell gcColSpan="2" class="card card-body">
       <div class="card-title left">
-        <div class="custom-reports card-title-text">Custom Reports</div>
+        <div class="custom-reports card-title-text">Report List</div>
         <div class="my-reports card-title-text">My Reports</div>
       </div>
       <div class="menu-list">
         <ul>
           <li class="active">
-            <a>VIEW ALL REPORTS</a>
+            <a>OUTBOUND SHIPMENTS FULL REPORT</a>
           </li>
           <li>
-            <a [routerLink]="['/outboundReportsWavechart']" [routerLinkActive]="['is-active']">Outbound Shipment
-              Activity</a>
+            <a
+              [routerLink]="['/outboundReportsWavechart']"
+              [routerLinkActive]="['is-active']"
+              >Outbound Shipment Activity</a
+            >
           </li>
-          <li><a [routerLink]="['/outboundReportsLocations']" [routerLinkActive]="['is-active']">Outbound Shipment
-              Locations</a></li>
-          <li><a [routerLink]="['/outboundReportsProfile']" [routerLinkActive]="['is-active']">Outbound Shipment
-              Profile</a></li>
           <li>
-            <a [routerLink]="['/outboundReportsTotaldemand']" [routerLinkActive]="['is-active']">Outbound Shipment
-              Status</a>
+            <a
+              [routerLink]="['/outboundReportsLocations']"
+              [routerLinkActive]="['is-active']"
+              >Outbound Shipment Locations</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/outboundReportsProfile']"
+              [routerLinkActive]="['is-active']"
+              >Outbound Shipment Profile</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/outboundReportsTotaldemand']"
+              [routerLinkActive]="['is-active']"
+              >Outbound Shipment Status</a
+            >
           </li>
         </ul>
       </div>
@@ -31,12 +47,12 @@
       </div>
       <div class="card-element">
         <div class="lines-shipped">
-          <div class="title">Count: </div>
+          <div class="title">Count:</div>
           <div class="numbers">446.3K</div>
         </div>
         <div class="gridline"></div>
         <div class="lines-value">
-          <div class="title">Value: </div>
+          <div class="title">Value:</div>
           <div class="numbers">$4.2M</div>
         </div>
       </div>
@@ -45,7 +61,7 @@
       <div class="card-title">
         <div class="card-title-text">Outbound Shipment Details</div>
       </div>
-      <h4>GRID</h4>
+      <h4>VERTICAL GRID</h4>
     </div>
   </app-grid-container>
 </div>

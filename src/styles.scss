@@ -319,3 +319,13 @@ a {
     display: block !important;
   }
 }
+
+.coming-soon {
+  position: absolute;
+  background: white;
+  transform: rotate(40deg);
+  padding: 0 30px;
+  color: black;
+  right: -30px;
+  top: 38px;
+}

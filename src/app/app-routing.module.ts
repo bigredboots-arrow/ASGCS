@@ -13,6 +13,10 @@ import { DemandReportsProfileComponent } from './pages/demand/demand-reports-pro
 import { OutboundOverviewComponent } from './pages/outbound/outbound-overview/outboundOverview.component';
 import { OutboundDiscoverComponent } from './pages/outbound/outbound-discover/outboundDiscover.component';
 import { OutboundReportsComponent } from './pages/outbound/outbound-reports/outboundReports.component';
+import { OutboundReportsLocationsComponent } from './pages/outbound/outbound-reports-locations/outboundReportsLocations.component';
+import { OutboundReportsTotaldemandComponent } from './pages/outbound/outbound-reports-totaldemand/outboundReportsTotaldemand.component';
+import { OutboundReportsWavechartComponent } from './pages/outbound/outbound-reports-wavechart/outboundReportsWavechart.component';
+import { OutboundReportsProfileComponent } from './pages/outbound/outbound-reports-profile/outboundReportsProfile.component';
 
 import { HubsComponent } from './pages/hubs/hubs/hubs.component';
 
@@ -88,6 +92,44 @@ const routes: Routes = [
     component: OutboundReportsComponent,
     data: { title: '6Main Page', breadcrumb: 'Outbound - Reports' }
   },
+
+  {
+    path: 'outboundReportsWavechart',
+    component: OutboundReportsWavechartComponent,
+    data: {
+      title: '6Main Page',
+      breadcrumb: 'Outbound - Reports Wavechart',
+      filter: true
+    }
+  },
+  {
+    path: 'outboundReportsLocations',
+    component: OutboundReportsLocationsComponent,
+    data: {
+      title: '6Main Page',
+      breadcrumb: 'Outbound - Reports Loations',
+      filter: true
+    }
+  },
+  {
+    path: 'outboundReportsProfile',
+    component: OutboundReportsProfileComponent,
+    data: {
+      title: '6Main Page',
+      breadcrumb: 'Outbound - Reports profile',
+      filter: true
+    }
+  },
+  {
+    path: 'outboundReportsTotaldemand',
+    component: OutboundReportsTotaldemandComponent,
+    data: {
+      title: '6Main Page',
+      breadcrumb: 'Outbound - Reports totaldemand',
+      filter: true
+    }
+  },
+
   {
     path: 'hubs',
     component: HubsComponent,

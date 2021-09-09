@@ -21,6 +21,10 @@ import { DemandReportsProfileComponent } from './pages/demand/demand-reports-pro
 import { OutboundOverviewComponent } from './pages/outbound/outbound-overview/outboundOverview.component';
 import { OutboundDiscoverComponent } from './pages/outbound/outbound-discover/outboundDiscover.component';
 import { OutboundReportsComponent } from './pages/outbound/outbound-reports/outboundReports.component';
+import { OutboundReportsLocationsComponent } from './pages/outbound/outbound-reports-locations/outboundReportsLocations.component';
+import { OutboundReportsTotaldemandComponent } from './pages/outbound/outbound-reports-totaldemand/outboundReportsTotaldemand.component';
+import { OutboundReportsWavechartComponent } from './pages/outbound/outbound-reports-wavechart/outboundReportsWavechart.component';
+import { OutboundReportsProfileComponent } from './pages/outbound/outbound-reports-profile/outboundReportsProfile.component';
 
 import { HubsComponent } from './pages/hubs/hubs/hubs.component';
 
@@ -46,7 +50,11 @@ import { HubsComponent } from './pages/hubs/hubs/hubs.component';
     DemandReportsProfileComponent,
     OutboundOverviewComponent,
     OutboundDiscoverComponent,
-    OutboundReportsComponent
+    OutboundReportsComponent,
+    OutboundReportsWavechartComponent,
+    OutboundReportsTotaldemandComponent,
+    OutboundReportsLocationsComponent,
+    OutboundReportsProfileComponent
   ],
   bootstrap: [AppComponent]
 })

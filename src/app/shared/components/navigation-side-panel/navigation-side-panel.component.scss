@@ -9,6 +9,7 @@
     margin: 0px 0px 0px 10px;
     max-height: 0px;
     overflow-y: hidden;
+    width: 100%;
     transition: $default-transition;
 
     li {
@@ -99,10 +100,20 @@
 .is-active .parent {
   color: $white;
 }
+a {
+  transform: scale(1);
+  left: 0px;
+  transition: $fast-transition;
+  letter-spacing: 0px;
+  position: relative;
+}
 a.is-active {
   color: $white;
   font-weight: 600;
-  transition: $default-transition;
+  transform: scale(1);
+  left: 5px;
+  letter-spacing: 0.5px;
+  transition: $fast-transition;
 }
 .dashboard {
   font-weight: 600;

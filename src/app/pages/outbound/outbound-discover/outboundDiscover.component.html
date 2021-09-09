@@ -10,8 +10,13 @@
           </div>
         </div>
         <div class="card-icons">
-          <a class="maximize-icon" [routerLink]="['/outboundReportsLocations']"></a>
-          <div class="moreinfo-icon" (click)="FMapMoreInfo()"><span></span></div>
+          <a
+            class="maximize-icon"
+            [routerLink]="['/outboundReportsLocations']"
+          ></a>
+          <div class="moreinfo-icon" (click)="FMapMoreInfo()">
+            <span></span>
+          </div>
 
           <div class="moreinfo-block" #mapmoreinfo>
             <div class="moreinfo-header">
@@ -30,8 +35,8 @@
         </div>
       </div>
       <img
-      src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/map-two-spots-line.png"
-    />
+        src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/map-two-spots-line.png"
+      />
     </div>
     <div gridCell class="card card-body">
       <div class="card-title">
@@ -39,12 +44,12 @@
       </div>
       <div class="card-element">
         <div class="lines-shipped">
-          <div class="title">Count: </div>
+          <div class="title">Count:</div>
           <div class="numbers">446.3K</div>
         </div>
         <div class="gridline"></div>
         <div class="lines-value">
-          <div class="title">Value: </div>
+          <div class="title">Value:</div>
           <div class="numbers">$4.2M</div>
         </div>
       </div>
@@ -55,17 +60,21 @@
           <div class="card-title-text">Outbound Status</div>
           <div class="filter-item">
             <span class="k-dropdown-wrap">
-          <span class="k-input">Display By: $USD</span>
-            <span class="k-select">
-            <span class="k-icon k-i-arrow-s"></span>
-            </span>
+              <span class="k-input">Display By: $USD</span>
+              <span class="k-select">
+                <span class="k-icon k-i-arrow-s"></span>
+              </span>
             </span>
           </div>
-
         </div>
         <div class="card-icons">
-          <a class="maximize-icon" [routerLink]="['/outboundReportsTotaldemand']"></a>
-          <div class="moreinfo-icon" (click)="TreeMapMoreInfo()"><span></span></div>
+          <a
+            class="maximize-icon"
+            [routerLink]="['/outboundReportsTotaldemand']"
+          ></a>
+          <div class="moreinfo-icon" (click)="TreeMapMoreInfo()">
+            <span></span>
+          </div>
 
           <div class="moreinfo-block" #treemapmoreinfo>
             <div class="moreinfo-header">
@@ -82,7 +91,7 @@
             <button class="blue"><span>+</span> Add to My Dashboards</button>
           </div>
         </div>
-        <div class="total-legend">
+        <div class="total-legend treemap">
           <div class="good">On Time</div>
           <div class="warn">1-3 Day</div>
           <div class="caution">4-15 D</div>
@@ -90,8 +99,8 @@
         </div>
       </div>
       <img
-      src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/treemap2.png"
-    />
+        src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/treemap2.png"
+      />
     </div>
     <div gridCell gcColSpan="3" class="card card-body">
       <div class="card-title">
@@ -99,24 +108,29 @@
           <div class="card-title-text">Outbound Profile</div>
           <div class="filter-item">
             <span class="k-dropdown-wrap">
-            <span class="k-input">Group By: Orders</span>
-            <span class="k-select">
-              <span class="k-icon k-i-arrow-s"></span>
-            </span>
+              <span class="k-input">Group By: Orders</span>
+              <span class="k-select">
+                <span class="k-icon k-i-arrow-s"></span>
+              </span>
             </span>
           </div>
           <div class="filter-item">
             <span class="k-dropdown-wrap">
-            <span class="k-input">Display By: $USD</span>
-            <span class="k-select">
-              <span class="k-icon k-i-arrow-s"></span>
-            </span>
+              <span class="k-input">Display By: $USD</span>
+              <span class="k-select">
+                <span class="k-icon k-i-arrow-s"></span>
+              </span>
             </span>
           </div>
         </div>
         <div class="card-icons">
-          <a class="maximize-icon" [routerLink]="['/outboundReportsProfile']"></a>
-          <div class="moreinfo-icon" (click)="DProfileMoreInfo()"><span></span></div>
+          <a
+            class="maximize-icon"
+            [routerLink]="['/outboundReportsProfile']"
+          ></a>
+          <div class="moreinfo-icon" (click)="DProfileMoreInfo()">
+            <span></span>
+          </div>
 
           <div class="moreinfo-block" #dprofilemoreinfo>
             <div class="moreinfo-header">
@@ -135,8 +149,8 @@
         </div>
       </div>
       <img
-      src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/stackbarchart.png"
-    />
+        src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/stackbarchart.png"
+      />
     </div>
     <div gridCell gcColSpan="3" class="card card-body">
       <div class="card-title">
@@ -145,25 +159,30 @@
           <div class="filter-item">
             <label class="filter-label">Group By</label>
             <span class="k-dropdown-wrap">
-            <span class="k-input">Orders</span>
-            <span class="k-select">
-              <span class="k-icon k-i-arrow-s"></span>
-            </span>
+              <span class="k-input">Orders</span>
+              <span class="k-select">
+                <span class="k-icon k-i-arrow-s"></span>
+              </span>
             </span>
           </div>
           <div class="filter-item">
             <label class="filter-label">Display By</label>
             <span class="k-dropdown-wrap">
-            <span class="k-input">$USD</span>
-            <span class="k-select">
-              <span class="k-icon k-i-arrow-s"></span>
-            </span>
+              <span class="k-input">$USD</span>
+              <span class="k-select">
+                <span class="k-icon k-i-arrow-s"></span>
+              </span>
             </span>
           </div>
         </div>
         <div class="card-icons">
-          <a class="maximize-icon" [routerLink]="['/outboundReportsWavechart']"></a>
-          <div class="moreinfo-icon" (click)="DActivityMoreInfo()"><span></span></div>
+          <a
+            class="maximize-icon"
+            [routerLink]="['/outboundReportsWavechart']"
+          ></a>
+          <div class="moreinfo-icon" (click)="DActivityMoreInfo()">
+            <span></span>
+          </div>
 
           <div class="moreinfo-block" #dactivitymoreinfo>
             <div class="moreinfo-header">
@@ -182,8 +201,8 @@
         </div>
       </div>
       <img
-      src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/wavechart2.png"
-    />
+        src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/wavechart2.png"
+      />
     </div>
   </app-grid-container>
 </div>

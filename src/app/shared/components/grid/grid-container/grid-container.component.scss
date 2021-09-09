@@ -32,18 +32,21 @@
     color: $white;
     display: flex;
     gap: 5px;
-    bottom: 15px;
-    position: absolute;
     background: rgba(0, 0, 0, 0.8);
     padding: 5px;
-    width: 230px;
     justify-content: center;
-    left: calc(50% - 115px);
-    border-radius: 10px 10px 0px 0px;
+
+    &.treemap {
+      left: calc(50% - 115px);
+      border-radius: 10px 10px 0px 0px;
+      bottom: 15px;
+      position: absolute;
+      width: 230px;
+    }
 
     div {
       border-radius: 3px;
-      color: black;
+      color: $white;
       display: flex;
       align-self: center;
       padding: 1px 4px;
@@ -60,6 +63,15 @@
     }
     .late {
       background-color: $red-color;
+    }
+    .firm {
+      background-color: $tertiary-color-b;
+    }
+    .forecast {
+      background-color: $tertiary-color-a;
+    }
+    .buffer {
+      background-color: $tertiary-color-c;
     }
   }
   .legend {

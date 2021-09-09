@@ -1,0 +1,60 @@
+<div class="page-container">
+<app-grid-container>
+  <div gridCell class="card card-body">
+    <div class="card-title left">
+      <div class="custom-reports card-title-text">Custom Reports</div>
+      <div class="my-reports card-title-text">My Reports</div>
+    </div>
+    <div class="menu-list">
+      <ul>
+        <li>
+          <a [routerLink]="['/demandReports']" [routerLinkActive]="['is-active']">VIEW COMPLETE REPORT</a>
+        </li>
+        <li class="active">
+          <a>Outbound Shipping Activity</a>
+        </li>
+        <li>
+          <a [routerLink]="['/demandReportsLocations']" [routerLinkActive]="['is-active']">Outbound Shipping Locations</a>
+        </li>
+        <li>
+          <a [routerLink]="['/demandReportsProfile']" [routerLinkActive]="['is-active']">Outbound Shipping Profile</a>
+        </li>
+        <li>
+          <a [routerLink]="['/demandReportsTotalDemand']" [routerLinkActive]="['is-active']">Outbound Shipping Status</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div gridCell class="card card-body">
+    <div class="card-title">
+      <div class="card-title-text">Outbound Shipping Activity</div>
+    </div>
+    <img
+      src="https://stackblitz.com/files/asgcs/github/bigredboots-arrow/angular-component-library-example-part-3-progress-45zjbr/master/src/assets/images/wavechart2-sm.png"
+      style="height: 235px"
+    />
+  </div>
+  <div gridCell class="card card-body">
+    <div class="card-title">
+      <div class="card-title-text">Total Outbound Shipping</div>
+    </div>
+    <div class="card-element">
+      <div class="lines-shipped">
+        <div class="title">Count: </div>
+        <div class="numbers">446.3K</div>
+      </div>
+      <div class="gridline"></div>
+      <div class="lines-value">
+        <div class="title">Value: </div>
+        <div class="numbers">$4.2M</div>
+      </div>
+    </div>
+  </div>
+  <div gridCell gcColSpan="3" class="card card-body">
+    <div class="card-title">
+      <div class="card-title-text">Outbound Shipping Activity Details</div>
+    </div>
+    <h4>GRID</h4>
+  </div>
+</app-grid-container>
+</div>

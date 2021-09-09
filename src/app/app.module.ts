@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 
+import { HTMLEscapeUnescapeModule } from 'html-escape-unescape';
+
 import { DashboardComponent } from './pages/dashboard.component';
 
 import { DemandOverviewComponent } from './pages/demand/demand-overview/demandOverview.component';
@@ -37,6 +39,7 @@ import { SettingsComponent } from './pages/settings/settings/settings.component'
     BrowserAnimationsModule,
     FormsModule,
     CoreModule,
+    HTMLEscapeUnescapeModule,
     SharedModule
   ],
   declarations: [

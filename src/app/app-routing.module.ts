@@ -141,7 +141,7 @@ const routes: Routes = [
   },
   {
     path: 'settings',
-    component: HubsComponent,
+    component: SettingsComponent,
     data: { title: 'settings Page', breadcrumb: 'Settings', filter: true }
   },
   {

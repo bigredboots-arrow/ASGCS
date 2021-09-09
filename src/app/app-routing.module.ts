@@ -19,6 +19,7 @@ import { OutboundReportsWavechartComponent } from './pages/outbound/outbound-rep
 import { OutboundReportsProfileComponent } from './pages/outbound/outbound-reports-profile/outboundReportsProfile.component';
 
 import { HubsComponent } from './pages/hubs/hubs/hubs.component';
+import { SettingsComponent } from './pages/settings/settings/settings.component';
 
 const routes: Routes = [
   {
@@ -133,11 +134,15 @@ const routes: Routes = [
       filter: true
     }
   },
-
   {
     path: 'hubs',
     component: HubsComponent,
     data: { title: '12Main Page', breadcrumb: 'Hubs' }
+  },
+  {
+    path: 'settings',
+    component: HubsComponent,
+    data: { title: 'settings Page', breadcrumb: 'Settings', filter: true }
   },
   {
     path: '**',

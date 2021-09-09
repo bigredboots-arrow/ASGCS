@@ -28,6 +28,8 @@ import { OutboundReportsProfileComponent } from './pages/outbound/outbound-repor
 
 import { HubsComponent } from './pages/hubs/hubs/hubs.component';
 
+import { SettingsComponent } from './pages/settings/settings/settings.component';
+
 @NgModule({
   imports: [
     AppRoutingModule,
@@ -46,6 +48,7 @@ import { HubsComponent } from './pages/hubs/hubs/hubs.component';
     DemandReportsWavechartComponent,
     DemandReportsTotalDemandComponent,
     HubsComponent,
+    SettingsComponent,
     DemandReportsLocationsComponent,
     DemandReportsProfileComponent,
     OutboundOverviewComponent,

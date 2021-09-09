@@ -1,104 +1,71 @@
 <nav role="navigation" class="main-navigation">
-<ul>
-  <li class="dashboard">
-    <a
-      class="icon"
-      [routerLink]="['/dashboard']"
-      routerLinkActive="active"
-    ></a>
-    <div class="navigation-links">
-      <a
-        [routerLink]="['/dashboard']"
-        routerLinkActive="active"
-        [routerLinkActive]="['is-active']"
-        ><span class="dashboard">Dashboard</span></a
-      >
-    </div>
-  </li>
-  <li class="demand status-good" [class.open]="demandOpen">
-    <div class="icon"></div>
-    <div class="navigation-links" [routerLinkActive]="['is-active']">
-      <span class="parent" (click)="toggleDemandClass()">Demand</span>
-      <ul>
-        <li>
-          <a
-            [routerLink]="['/demandOverview']"
-            [routerLinkActive]="['is-active']"
-            >Overview</a
-          >
-        </li>
-        <li>
-          <a
-            [routerLink]="['/demandDiscover']"
-            [routerLinkActive]="['is-active']"
-            >Discover</a
-          >
-        </li>
-        <li>
-          <a
-            [routerLink]="['/demandReports']"
-            [routerLinkActive]="['is-active']"
-            >Reports</a
-          >
-        </li>
-      </ul>
-    </div>
-  </li>
-  <li class="outbound" [class.open]="outboundOpen">
-    <div class="icon"></div>
-    <div class="navigation-links" [routerLinkActive]="['is-active']">
-      <span class="parent" (click)="toggleOutboundClass()"
-        >Outbound Shipments</span
-      >
-      <ul>
-        <li>
-          <a
-            [routerLink]="['/outboundOverview']"
-            [routerLinkActive]="['is-active']"
-            >Overview</a
-          >
-        </li>
-        <li>
-          <a
-            [routerLink]="['/outboundDiscover']"
-            [routerLinkActive]="['is-active']"
-            >Discover</a
-          >
-        </li>
-        <li>
-          <a
-            [routerLink]="['/outboundReports']"
-            [routerLinkActive]="['is-active']"
-            >Reports</a
-          >
-        </li>
-      </ul>
-    </div>
-  </li>
-  <li class="hubs">
-    <div class="icon"></div>
-    <div class="navigation-links">
-      <a class="no-child" [routerLink]="['/hubs']" [routerLinkActive]="['is-active']">Hubs</a>
-    </div>
-  </li>
-  <li class="inbound status-disabled">
-    <div class="icon"></div>
-    <div class="navigation-links"><span>Inbound-Shipments</span></div>
-  </li>
-  <li class="suppliers status-disabled">
-    <div class="icon"></div>
-    <div class="navigation-links"><span>Suppliers</span></div>
-  </li>
-  <li class="subtiers status-disabled">
-    <div class="icon"></div>
-    <div class="navigation-links"><span>Sub Tiers</span></div>
-  </li>
-  <!-- <li class="raw status-disabled"><div class="icon"></div><div class="navigation-links"><span>Raw materials</span></div></li> -->
-  <li class="settings" (click)="toggleSidebar()">
-    <div class="icon"></div>
-    <div class="navigation-links">
-      <a>Settings</a>
-    </div>
-  </li>
-</ul>
+  <ul>
+    <li class="dashboard">
+      <a class="icon" [routerLink]="['/dashboard']" routerLinkActive="active"></a>
+      <div class="navigation-links">
+        <a [routerLink]="['/dashboard']" routerLinkActive="active"
+          [routerLinkActive]="['is-active']"><span class="dashboard">Dashboard</span></a>
+      </div>
+    </li>
+    <li class="demand status-good" [class.open]="demandOpen">
+      <div class="icon"></div>
+      <div class="navigation-links" [routerLinkActive]="['is-active']">
+        <span class="parent" (click)="toggleDemandClass()">Demand</span>
+        <ul>
+          <li>
+            <a [routerLink]="['/demandOverview']" [routerLinkActive]="['is-active']">Overview</a>
+          </li>
+          <li>
+            <a [routerLink]="['/demandDiscover']" [routerLinkActive]="['is-active']">Discover</a>
+          </li>
+          <li>
+            <a [routerLink]="['/demandReports']" [routerLinkActive]="['is-active']">Reports</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="outbound" [class.open]="outboundOpen">
+      <div class="icon"></div>
+      <div class="navigation-links" [routerLinkActive]="['is-active']">
+        <span class="parent" (click)="toggleOutboundClass()"
+        >Outbound Shipments</span>
+        <ul>
+          <li>
+            <a [routerLink]="['/outboundOverview']" [routerLinkActive]="['is-active']">Overview</a>
+          </li>
+          <li>
+            <a [routerLink]="['/outboundDiscover']" [routerLinkActive]="['is-active']">Discover</a>
+          </li>
+          <li>
+            <a [routerLink]="['/outboundReports']" [routerLinkActive]="['is-active']">Reports</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="hubs">
+      <div class="icon"></div>
+      <div class="navigation-links">
+        <a class="no-child" [routerLink]="['/hubs']" [routerLinkActive]="['is-active']">Hubs</a>
+      </div>
+    </li>
+    <li class="inbound status-disabled">
+      <div class="icon"></div>
+      <div class="navigation-links"><span>Inbound-Shipments</span></div>
+    </li>
+    <li class="suppliers status-disabled">
+      <div class="icon"></div>
+      <div class="navigation-links"><span>Suppliers</span></div>
+    </li>
+    <li class="subtiers status-disabled">
+      <div class="icon"></div>
+      <div class="navigation-links"><span>Sub Tiers</span></div>
+    </li>
+    <!-- <li class="raw status-disabled"><div class="icon"></div><div class="navigation-links"><span>Raw materials</span></div></li> -->
+    <li class="settings" (click)="toggleSidebar()">
+      <div class="icon"></div>
+      <div class="navigation-links">
+        <a [routerLink]="['/settings']" [routerLinkActive]="['is-active']">Settings</a>
+      </div>
+    </li>
+  </ul>
 </nav>

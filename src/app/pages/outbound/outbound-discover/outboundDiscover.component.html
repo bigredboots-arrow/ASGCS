@@ -10,7 +10,7 @@
           </div>
         </div>
         <div class="card-icons">
-          <a class="maximize-icon" [routerLink]="['/demandReportsLocations']"></a>
+          <a class="maximize-icon" [routerLink]="['/outboundReportsLocations']"></a>
           <div class="moreinfo-icon" (click)="FMapMoreInfo()"><span></span></div>
 
           <div class="moreinfo-block" #mapmoreinfo>
@@ -53,15 +53,18 @@
       <div class="card-title">
         <div class="left-side-content">
           <div class="card-title-text">Outbound Status</div>
-          <div class="legend">
-            <div class="good">On Time</div>
-            <div class="warn">1-3 Day</div>
-            <div class="caution">4-15 D</div>
-            <div class="late">+15 D</div>
+          <div class="filter-item">
+            <span class="k-dropdown-wrap">
+          <span class="k-input">Display By: $USD</span>
+            <span class="k-select">
+            <span class="k-icon k-i-arrow-s"></span>
+            </span>
+            </span>
           </div>
+
         </div>
         <div class="card-icons">
-          <a class="maximize-icon" [routerLink]="['/demandReportsTotalDemand']"></a>
+          <a class="maximize-icon" [routerLink]="['/outboundReportsTotaldemand']"></a>
           <div class="moreinfo-icon" (click)="TreeMapMoreInfo()"><span></span></div>
 
           <div class="moreinfo-block" #treemapmoreinfo>
@@ -78,6 +81,12 @@
             </div>
             <button class="blue"><span>+</span> Add to My Dashboards</button>
           </div>
+        </div>
+        <div class="total-legend">
+          <div class="good">On Time</div>
+          <div class="warn">1-3 Day</div>
+          <div class="caution">4-15 D</div>
+          <div class="late">+15 D</div>
         </div>
       </div>
       <img
@@ -106,7 +115,7 @@
           </div>
         </div>
         <div class="card-icons">
-          <a class="maximize-icon" [routerLink]="['/demandReports']"></a>
+          <a class="maximize-icon" [routerLink]="['/outboundReportsProfile']"></a>
           <div class="moreinfo-icon" (click)="DProfileMoreInfo()"><span></span></div>
 
           <div class="moreinfo-block" #dprofilemoreinfo>
@@ -153,7 +162,7 @@
           </div>
         </div>
         <div class="card-icons">
-          <a class="maximize-icon" [routerLink]="['/demandReportsWavechart']"></a>
+          <a class="maximize-icon" [routerLink]="['/outboundReportsWavechart']"></a>
           <div class="moreinfo-icon" (click)="DActivityMoreInfo()"><span></span></div>
 
           <div class="moreinfo-block" #dactivitymoreinfo>

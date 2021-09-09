@@ -8,24 +8,20 @@
       <div class="menu-list">
         <ul>
           <li class="active">
-            <a>OUTBOUND SHIPMENT REPORTS</a>
+            <a>VIEW ALL REPORTS</a>
           </li>
           <li>
-            <a [routerLink]="['/demandReportsWavechart']" [routerLinkActive]="['is-active']">Outbound Shipment
+            <a [routerLink]="['/outboundReportsWavechart']" [routerLinkActive]="['is-active']">Outbound Shipment
               Activity</a>
           </li>
+          <li><a [routerLink]="['/outboundReportsLocations']" [routerLinkActive]="['is-active']">Outbound Shipment
+              Locations</a></li>
+          <li><a [routerLink]="['/outboundReportsProfile']" [routerLinkActive]="['is-active']">Outbound Shipment
+              Profile</a></li>
           <li>
-            <a [routerLink]="['/demandReportsTotalDemand']" [routerLinkActive]="['is-active']">Outbound Shipment
+            <a [routerLink]="['/outboundReportsTotaldemand']" [routerLinkActive]="['is-active']">Outbound Shipment
               Status</a>
           </li>
-          <li><a [routerLink]="['/demandReportsLocations']" [routerLinkActive]="['is-active']">Outbound Shipment
-              Locations</a></li>
-          <li><a>Dummy list item 2</a></li>
-          <li><a>Dummy list item 3</a></li>
-          <li><a>Dummy list item 4</a></li>
-          <li><a>Dummy list item 5</a></li>
-          <li><a>Dummy list item 6</a></li>
-          <li><a>Dummy list item 7</a></li>
         </ul>
       </div>
     </div>
@@ -35,12 +31,12 @@
       </div>
       <div class="card-element">
         <div class="lines-shipped">
-          <div class="title">Count</div>
+          <div class="title">Count: </div>
           <div class="numbers">446.3K</div>
         </div>
         <div class="gridline"></div>
         <div class="lines-value">
-          <div class="title">Value</div>
+          <div class="title">Value: </div>
           <div class="numbers">$4.2M</div>
         </div>
       </div>

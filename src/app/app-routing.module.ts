@@ -90,7 +90,11 @@ const routes: Routes = [
   {
     path: 'outboundReports',
     component: OutboundReportsComponent,
-    data: { title: '6Main Page', breadcrumb: 'Outbound - Reports' }
+    data: {
+      title: '6Main Page',
+      breadcrumb: 'Outbound - Reports',
+      filter: true
+    }
   },
 
   {

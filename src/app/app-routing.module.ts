@@ -30,24 +30,28 @@ const routes: Routes = [
   {
     path: 'demandOverview',
     component: DemandOverviewComponent,
-    data: { title: '1Main Page', breadcrumb: 'Demand - Overview' }
+    data: { title: '1Main Page', breadcrumb: 'Demand <span></span> Overview' }
   },
   {
     path: 'demandDiscover',
     component: DemandDiscoverComponent,
-    data: { title: '2Main Page', breadcrumb: 'Demand - Discover' }
+    data: { title: '2Main Page', breadcrumb: 'Demand <span></span> Discover' }
   },
   {
     path: 'demandReports',
     component: DemandReportsComponent,
-    data: { title: '3Main Page', breadcrumb: 'Demand - Reports', filter: true }
+    data: {
+      title: '3Main Page',
+      breadcrumb: 'Demand <span></span> Reports',
+      filter: true
+    }
   },
   {
     path: 'demandReportsWavechart',
     component: DemandReportsWavechartComponent,
     data: {
       title: '9Main Page',
-      breadcrumb: 'Demand Activity Report',
+      breadcrumb: 'Demand <span></span> Activity Report',
       filter: true
     }
   },
@@ -56,7 +60,7 @@ const routes: Routes = [
     component: DemandReportsLocationsComponent,
     data: {
       title: '11Main Page',
-      breadcrumb: 'Demand Locations Report',
+      breadcrumb: 'Demand <span></span> Locations Report',
       filter: true
     }
   },
@@ -65,7 +69,7 @@ const routes: Routes = [
     component: DemandReportsProfileComponent,
     data: {
       title: '14Main Page',
-      breadcrumb: 'Demand Profile Report',
+      breadcrumb: 'Demand <span></span> Profile Report',
       filter: true
     }
   },
@@ -74,26 +78,26 @@ const routes: Routes = [
     component: DemandReportsTotalDemandComponent,
     data: {
       title: '4Main Page',
-      breadcrumb: 'Demand Status',
+      breadcrumb: 'Demand <span></span> Total Demand Report',
       filter: true
     }
   },
   {
     path: 'outboundOverview',
     component: OutboundOverviewComponent,
-    data: { title: '5Main Page', breadcrumb: 'Outbound - Overview' }
+    data: { title: '5Main Page', breadcrumb: 'Outbound <span></span> Overview' }
   },
   {
     path: 'outboundDiscover',
     component: OutboundDiscoverComponent,
-    data: { title: '7Main Page', breadcrumb: 'Outbound - Discover' }
+    data: { title: '7Main Page', breadcrumb: 'Outbound <span></span> Discover' }
   },
   {
     path: 'outboundReports',
     component: OutboundReportsComponent,
     data: {
       title: '6Main Page',
-      breadcrumb: 'Outbound - Reports',
+      breadcrumb: 'Outbound <span></span> Reports',
       filter: true
     }
   },
@@ -103,7 +107,7 @@ const routes: Routes = [
     component: OutboundReportsWavechartComponent,
     data: {
       title: '6Main Page',
-      breadcrumb: 'Outbound - Reports Wavechart',
+      breadcrumb: 'Outbound <span></span> Reports Wavechart',
       filter: true
     }
   },
@@ -112,7 +116,7 @@ const routes: Routes = [
     component: OutboundReportsLocationsComponent,
     data: {
       title: '6Main Page',
-      breadcrumb: 'Outbound - Reports Loations',
+      breadcrumb: 'Outbound <span></span> Reports Locations',
       filter: true
     }
   },
@@ -121,7 +125,7 @@ const routes: Routes = [
     component: OutboundReportsProfileComponent,
     data: {
       title: '6Main Page',
-      breadcrumb: 'Outbound - Reports profile',
+      breadcrumb: 'Outbound <span></span> Reports profile',
       filter: true
     }
   },
@@ -130,7 +134,7 @@ const routes: Routes = [
     component: OutboundReportsTotaldemandComponent,
     data: {
       title: '6Main Page',
-      breadcrumb: 'Outbound - Reports totaldemand',
+      breadcrumb: 'Outbound <span></span> Reports totaldemand',
       filter: true
     }
   },

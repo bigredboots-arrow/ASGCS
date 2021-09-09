@@ -42,7 +42,7 @@ const routes: Routes = [
     component: DemandReportsWavechartComponent,
     data: {
       title: '9Main Page',
-      breadcrumb: 'Reports Wave Chart',
+      breadcrumb: 'Demand Activity Report',
       filter: true
     }
   },
@@ -51,7 +51,7 @@ const routes: Routes = [
     component: DemandReportsLocationsComponent,
     data: {
       title: '11Main Page',
-      breadcrumb: 'Reports Locations',
+      breadcrumb: 'Demand Locations Report',
       filter: true
     }
   },
@@ -60,7 +60,7 @@ const routes: Routes = [
     component: DemandReportsProfileComponent,
     data: {
       title: '14Main Page',
-      breadcrumb: 'Reports Profile',
+      breadcrumb: 'Demand Profile Report',
       filter: true
     }
   },

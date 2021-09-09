@@ -251,9 +251,10 @@
     margin: 10px 0px;
     padding: 0px;
     border: 1px solid #333;
-    max-height: 170px;
+    max-height: 225px;
     overflow-x: hidden;
     overflow-y: auto;
+    border-radius: 10px 0px 0px 10px;
   }
 
   .menu-list ul li {

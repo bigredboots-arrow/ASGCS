@@ -67,12 +67,13 @@
     </div>
   </div>
 </div>
-<!--THESE FILTERS  SHOULD SHOW FOR EVERYTHING BUT HUBS AND REPORTS -->
+
+<!--THIS FILTER SHOULD SHOW FOR DEMAND OVERVIEW and DEMAND DISCOVER SCREENS ONLY -->
 <div
   class="filter-block"
   [ngClass]="{'d-none': hideFilters}"
-  #filters
   style="display: none"
+  #filters
 >
   <div class="filters" (click)="toggleFilters()">
     <span class="filter-title">Filters</span>
@@ -144,10 +145,94 @@
     </div>
   </div>
 </div>
-<!--THESE FILTERS  SHOULD SHOW FOR JUST HUBS -->
+
+<!--THIS FILTER SHOULD SHOW FOR OUTBOUND SHIPPING OVERVIEW and OUTBOUND SHIPPING DISCOVER SCREENS ONLY -->
+<div class="filter-block" [ngClass]="{'d-none': hideFilters}" #outboundfilters>
+  <div class="filters" (click)="toggleOutboundFilters()">
+    <span class="filter-title">Filters</span>
+    <span class="filter-close">+</span>
+  </div>
+  <div class="overview-filters">
+    <div class="filter-container">
+      <div class="block-filters">
+        <div class="filter-item">
+          <div class="filter-label">Customer</div>
+          <span class="k-dropdown-wrap">
+            <span class="k-input">Customer</span>
+            <span class="k-select">
+              <span class="k-icon k-i-arrow-s"></span>
+            </span>
+          </span>
+        </div>
+        <div class="filter-item">
+          <div class="filter-label">Dates</div>
+          <div class="datepicker">
+            <div class="from-date">
+              8/31/2021
+            </div>
+            <div class="text-date">TO</div>
+            <div class="to-date">
+              12/31/2021
+            </div>
+            <span role="button" class="k-select">
+              <span class="k-icon k-i-calendar"></span>
+            </span>
+          </div>
+        </div>
+
+        <div class="filter-item">
+          <div class="filter-label">Supplier</div>
+          <span class="k-dropdown-wrap">
+            <span class="k-input">Supplier</span>
+            <span class="k-select"
+              ><span class="k-icon k-i-arrow-s"></span
+            ></span>
+          </span>
+        </div>
+
+        <div class="filter-item">
+          <div class="filter-label">incoTerms</div>
+          <span class="k-dropdown-wrap"
+            ><span class="k-input">incoTerms</span>
+            <span class="k-select"
+              ><span class="k-icon k-i-arrow-s"></span></span
+          ></span>
+        </div>
+
+        <div class="filter-item">
+          <div class="filter-label">Ship From</div>
+          <span class="k-dropdown-wrap">
+            <span class="k-input">Warehouse</span>
+            <span class="k-select"
+              ><span class="k-icon k-i-arrow-s"></span
+            ></span>
+          </span>
+        </div>
+
+        <div class="filter-item">
+          <div class="filter-label">Ship To</div>
+          <span class="k-dropdown-wrap">
+            <span class="k-input">Warehouse</span>
+            <span class="k-select"
+              ><span class="k-icon k-i-arrow-s"></span
+            ></span>
+          </span>
+        </div>
+      </div>
+
+      <div class="block-filterbuttons">
+        <button kendobutton="" class="secondary">Reset</button>
+        <button kendobutton="" class="blue">Apply</button>
+        <div class="close-filters" (click)="toggleOutboundFilters()">+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--THIS FILTER SHOULD SHOW FOR JUST HUBS -->
 <div
   class="filter-block hubfilters"
   [ngClass]="{'d-none': hideFilters}"
+  style="display: none"
   #hubfilters
 >
   <div class="filters" (click)="toggleHubFilters()">
@@ -199,7 +284,7 @@
       <div class="block-filterbuttons">
         <button kendobutton="" class="secondary">Reset</button>
         <button kendobutton="" class="blue">Apply</button>
-        <div class="close-filters" (click)="toggleFilters()">+</div>
+        <div class="close-filters" (click)="toggleHubFilters()">+</div>
       </div>
     </div>
   </div>

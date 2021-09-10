@@ -26,8 +26,10 @@ export class DashboardLayoutComponent implements OnInit {
   public currentPanelState: SidePanelState;
   public hideFilter = false;
 
-  constructor(private _sidePanelService: SidePanelService, 
-    private _breadcrumbService: BreadcrumbService) {
+  constructor(
+    private _sidePanelService: SidePanelService,
+    private _breadcrumbService: BreadcrumbService
+  ) {
     this._subscriptionsSubject$ = new Subject<void>();
     this.configuration = new DashboardLayoutConfiguration(
       SidePanelPosition.LEFT,
@@ -54,8 +56,8 @@ export class DashboardLayoutComponent implements OnInit {
 
   ngOnInit(): void {
     const width: number = window.innerWidth;
-    if (width < 768) this._sidePanelService.changeState(SidePanelState.MOBILE);
-    else if (width < 1200 && width > 769)
+    if (width < 769) this._sidePanelService.changeState(SidePanelState.MOBILE);
+    else if (width < 1201 && width > 768)
       this._sidePanelService.changeState(SidePanelState.COLLAPSE);
     else this._sidePanelService.changeState(SidePanelState.OPEN);
 
@@ -64,17 +66,17 @@ export class DashboardLayoutComponent implements OnInit {
       .pipe(takeUntil(this._subscriptionsSubject$))
       .subscribe((state: SidePanelState) => (this.currentPanelState = state));
 
-      this._breadcrumbService.filter$.subscribe(hideFilter => {
-        this.hideFilter = hideFilter;
-      })
+    this._breadcrumbService.filter$.subscribe(hideFilter => {
+      this.hideFilter = hideFilter;
+    });
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     // @@@ May have to rethink
     const width: number = window.innerWidth;
-    if (width < 768) this._sidePanelService.changeState(SidePanelState.MOBILE);
-    else if (width < 1200 && width > 769)
+    if (width < 769) this._sidePanelService.changeState(SidePanelState.MOBILE);
+    else if (width < 1201 && width > 768)
       this._sidePanelService.changeState(SidePanelState.COLLAPSE);
     else this._sidePanelService.changeState(SidePanelState.OPEN);
   }

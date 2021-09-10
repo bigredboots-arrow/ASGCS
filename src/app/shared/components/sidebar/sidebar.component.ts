@@ -3,6 +3,8 @@ import {
   OnInit,
   ViewChild,
   ElementRef,
+  EventEmitter,
+  Output,
   OnDestroy,
   Input
 } from '@angular/core';
@@ -17,9 +19,11 @@ import { takeUntil } from 'rxjs/operators';
 export class SidebarComponent implements OnInit {
   @ViewChild('overview') overview: ElementRef;
   constructor() {}
+  @Output() onToggleSidebar = new EventEmitter<string>();
 
   toggleSidebar() {
-    this.overview.nativeElement.classList.toggle('sidebar-active');
+    this.onToggleSidebar.next('hide');
+    // this.overview.nativeElement.classList.toggle('sidebar-active');
   }
 
   ngOnInit(): void {}

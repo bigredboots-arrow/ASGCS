@@ -35,13 +35,14 @@
     display: flex;
     gap: 5px;
     background: rgba(0, 0, 0, 0.8);
-    padding: 5px;
+    padding: 0px 5px;
     justify-content: center;
 
     &.treemap {
       left: calc(50% - 115px);
       border-radius: 10px 10px 0px 0px;
       bottom: 15px;
+      padding: 5px;
       position: absolute;
       width: 230px;
     }
@@ -362,5 +363,12 @@
 @media only screen and (max-width: 767px) {
   :host ::ng-deep [gridCell] {
     grid-column: span 3 !important;
+  }
+  :host ::ng-deep [gridCell] .left-side-content .total-legend {
+    display: block;
+
+    div {
+      margin: 5px 0;
+    }
   }
 }

@@ -161,11 +161,12 @@ a {
 }
 .left-side-content {
   display: flex;
-  .filter-item {
-    position: relative;
-    top: 0px;
+  .filter-items {
     margin-left: 20px;
     display: flex;
+    gap: 10px;
+  }
+  .filter-item {
     white-space: nowrap;
     align-items: center;
     gap: 5px;
@@ -310,13 +311,24 @@ a {
   height: calc(100vh - 120px) !important;
   transition: 0.3s ease-in all;
 }
-
+@media (min-width: 768px) and (max-width: 1199px) {
+  .card-items {
+    display: block;
+  }
+  .card-element .lines-shipped {
+    display: block;
+  }
+  .card-element .lines-value {
+    display: block;
+  }
+}
 @media only screen and (max-width: 768px) {
   .empty-card-body {
     display: none !important;
   }
-  .left-side-content .filter-item {
-    display: block !important;
+  .left-side-content .filter-items {
+    flex-direction: column;
+    justify-content: center;
   }
 }
 

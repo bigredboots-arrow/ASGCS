@@ -17,39 +17,13 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-size: $base-font;
 }
-
 a {
   color: $grey-lighter;
   font-weight: 400;
   text-decoration: none;
 }
-
 .page-container {
   margin: 0px;
-}
-
-.card {
-  display: block;
-
-  &.card-body {
-    background: $black;
-    color: $grey-lighter;
-    display: block;
-    transition: background 0.5s;
-
-    img {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 10px;
-      height: calc(100% - 35px);
-    }
-  }
-  &.empty-card-body {
-    background: transparent;
-    color: transparent;
-    display: block;
-    height: 160px;
-  }
 }
 
 .sidebar-active app-sidebar {
@@ -135,7 +109,6 @@ a {
 *::-webkit-scrollbar {
   width: 12px;
 }
-
 *::-webkit-scrollbar-track {
   background: $black;
   border: 1px solid $grey-light;
@@ -151,156 +124,27 @@ a {
   color: $white;
 }
 
-.datepicker .text-date {
-  margin: 4px 3px;
-  font-weight: 600;
-  font-size: 12px;
-}
 .filter-item {
   border-width: 0;
 }
 .left-side-content {
   display: flex;
+
   .filter-items {
-    margin-left: 20px;
     display: flex;
-    gap: 10px;
   }
+
   .filter-item {
     white-space: nowrap;
     align-items: center;
     gap: 5px;
+    margin-left: 10px;
   }
   .k-input {
-    font-size: 12px;
+    font-size: 12px !important;
   }
   .k-select {
-    height: 20px;
-  }
-}
-.k-i-arrow-s::before {
-  color: #dcdcdc;
-}
-.filter-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.filter-label {
-  font-size: 12px;
-  padding-bottom: 1px;
-}
-.k-input {
-  padding: 0px 5px;
-  background: #dcdcdc;
-  color: #000;
-  font-size: 14px;
-  border-radius: 5px 0 0 5px;
-  display: flex;
-  align-items: center;
-}
-.k-select {
-  background: #dcdcdc;
-  height: 24px;
-  border-radius: 0 5px 5px 0;
-  width: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  cursor: pointer;
-  border-left: 1px solid $grey-darkest;
-}
-.close-filters {
-  transform: rotate(45deg);
-  font-size: 30px;
-  line-height: 14px;
-  height: 20px;
-  position: relative;
-  top: 5px;
-  cursor: pointer;
-}
-.card-items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 21px;
-}
-.legend ul {
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-  font-size: 14px;
-
-  li {
-    padding: 10px 0;
-    &.all-color {
-      color: $blue-color;
-    }
-    &.late-color {
-      color: $red-color;
-    }
-    &.demand-color {
-      color: $orange-color;
-    }
-  }
-}
-.k-dropdown-wrap {
-  padding: 0;
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  box-sizing: border-box;
-  position: relative;
-  transition: all 0.1s ease;
-  cursor: pointer;
-  outline: 0;
-  background: #009ddc;
-  background-color: transparent;
-  background-image: none;
-}
-.k-icon {
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid $grey-light;
-}
-.card-element {
-  display: flex;
-  text-align: center;
-  width: 100%;
-  height: 90%;
-  flex-direction: column;
-  justify-content: center;
-
-  .numbers {
-    font-size: 40px;
-    font-weight: 400;
-    letter-spacing: 1.5px;
-  }
-  .lines-value {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .lines-shipped {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-  .title {
-    font-size: 18px;
-    letter-spacing: 1px;
-    font-weight: 200;
-  }
-  .gridline {
-    border-top: 1px solid white;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    height: 20px !important;
   }
 }
 .reportscreen .header {
@@ -323,21 +167,17 @@ a {
   }
 }
 @media only screen and (max-width: 768px) {
-  .empty-card-body {
-    display: none !important;
-  }
   .left-side-content .filter-items {
     flex-direction: column;
     justify-content: center;
-  }
-}
+    margin-left: 10px;
 
-.coming-soon {
-  position: absolute;
-  background: white;
-  transform: rotate(40deg);
-  padding: 0 30px;
-  color: black;
-  right: -30px;
-  top: 38px;
+    .filter-item {
+      margin: 5px 0px;
+    }
+  }
+  .card-title-text {
+    font-size: 14px;
+    letter-spacing: 0px;
+  }
 }

@@ -25,24 +25,24 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    data: { title: '8Main Page', breadcrumb: 'Dashboard' }
+    data: { title: '8Main Page', breadcrumb: '' }
   },
   {
     path: 'demandOverview',
     component: DemandOverviewComponent,
-    data: { title: '1Main Page', breadcrumb: 'Demand <span></span> Overview' }
+    data: { title: '1Main Page', breadcrumb: 'Overview' }
   },
   {
     path: 'demandDiscover',
     component: DemandDiscoverComponent,
-    data: { title: '2Main Page', breadcrumb: 'Demand <span></span> Discover' }
+    data: { title: '2Main Page', breadcrumb: 'Discover' }
   },
   {
     path: 'demandReports',
     component: DemandReportsComponent,
     data: {
       title: '3Main Page',
-      breadcrumb: 'Demand <span></span> Reports',
+      breadcrumb: 'Reports',
       filter: true
     }
   },
@@ -51,7 +51,7 @@ const routes: Routes = [
     component: DemandReportsWavechartComponent,
     data: {
       title: '9Main Page',
-      breadcrumb: 'Demand <span></span> Activity Report',
+      breadcrumb: 'Activity Report',
       filter: true
     }
   },
@@ -60,7 +60,7 @@ const routes: Routes = [
     component: DemandReportsLocationsComponent,
     data: {
       title: '11Main Page',
-      breadcrumb: 'Demand <span></span> Locations Report',
+      breadcrumb: 'Locations Report',
       filter: true
     }
   },
@@ -69,7 +69,7 @@ const routes: Routes = [
     component: DemandReportsProfileComponent,
     data: {
       title: '14Main Page',
-      breadcrumb: 'Demand <span></span> Profile Report',
+      breadcrumb: 'Profile Report',
       filter: true
     }
   },
@@ -78,26 +78,26 @@ const routes: Routes = [
     component: DemandReportsTotalDemandComponent,
     data: {
       title: '4Main Page',
-      breadcrumb: 'Demand <span></span> Total Demand Report',
+      breadcrumb: 'Status Report',
       filter: true
     }
   },
   {
     path: 'outboundOverview',
     component: OutboundOverviewComponent,
-    data: { title: '5Main Page', breadcrumb: 'Outbound <span></span> Overview' }
+    data: { title: '5Main Page', breadcrumb: 'Overview' }
   },
   {
     path: 'outboundDiscover',
     component: OutboundDiscoverComponent,
-    data: { title: '7Main Page', breadcrumb: 'Outbound <span></span> Discover' }
+    data: { title: '7Main Page', breadcrumb: 'Discover' }
   },
   {
     path: 'outboundReports',
     component: OutboundReportsComponent,
     data: {
       title: '6Main Page',
-      breadcrumb: 'Outbound <span></span> Reports',
+      breadcrumb: 'Reports',
       filter: true
     }
   },
@@ -107,7 +107,7 @@ const routes: Routes = [
     component: OutboundReportsWavechartComponent,
     data: {
       title: '6Main Page',
-      breadcrumb: 'Outbound <span></span> Reports Wavechart',
+      breadcrumb: 'Activity Report',
       filter: true
     }
   },
@@ -116,7 +116,7 @@ const routes: Routes = [
     component: OutboundReportsLocationsComponent,
     data: {
       title: '6Main Page',
-      breadcrumb: 'Outbound <span></span> Reports Locations',
+      breadcrumb: 'Locations Report',
       filter: true
     }
   },
@@ -125,7 +125,7 @@ const routes: Routes = [
     component: OutboundReportsProfileComponent,
     data: {
       title: '6Main Page',
-      breadcrumb: 'Outbound <span></span> Reports profile',
+      breadcrumb: 'Profile Report',
       filter: true
     }
   },
@@ -134,19 +134,19 @@ const routes: Routes = [
     component: OutboundReportsTotaldemandComponent,
     data: {
       title: '6Main Page',
-      breadcrumb: 'Outbound <span></span> Reports totaldemand',
+      breadcrumb: 'S Report',
       filter: true
     }
   },
   {
     path: 'hubs',
     component: HubsComponent,
-    data: { title: '12Main Page', breadcrumb: 'Hubs' }
+    data: { title: '12Main Page', breadcrumb: '' }
   },
   {
     path: 'settings',
     component: SettingsComponent,
-    data: { title: 'settings Page', breadcrumb: 'Settings', filter: true }
+    data: { title: 'settings Page', breadcrumb: '', filter: true }
   },
   {
     path: '**',

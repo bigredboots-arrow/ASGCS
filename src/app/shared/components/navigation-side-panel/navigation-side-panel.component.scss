@@ -106,14 +106,36 @@ a {
   transition: $fast-transition;
   letter-spacing: 0px;
   position: relative;
+  &::before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-top: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-left: 0px solid $white;
+    margin-right: 0px;
+    display: inline-block;
+    transition: $fast-transition;
+  }
 }
 a.is-active {
   color: $white;
   font-weight: 600;
   transform: scale(1);
-  left: 5px;
   letter-spacing: 0.5px;
   transition: $fast-transition;
+
+  &::before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid $white;
+    margin-right: 5px;
+    display: inline-block;
+    transition: $fast-transition;
+  }
 }
 .dashboard {
   font-weight: 600;

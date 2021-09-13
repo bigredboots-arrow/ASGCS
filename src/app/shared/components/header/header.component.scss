@@ -29,7 +29,7 @@
     font-size: $largest-font;
     display: inline;
   }
-  span::before {
+  span::after {
     content: '';
     border-left: 2px solid $grey-lighter;
     border-bottom: 2px solid $grey-lighter;
@@ -41,6 +41,9 @@
     top: -2px;
     position: relative;
   }
+  span:empty::after {
+    content: 
+  }
   span::first-of-type {
     margin-left: 10px;
   }
@@ -48,7 +51,11 @@
     content: none;
   }
 }
-
+.mobile-breadcrumb span::before {
+  width: 5px;
+  height: 5px;
+  margin: 0px 7px 0px 3px;
+}
 /*SEARCH */
 #toggle-search {
   opacity: 0;

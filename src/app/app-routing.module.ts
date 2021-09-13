@@ -25,7 +25,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    data: { title: '8Main Page', breadcrumb: '' }
+    data: { title: '8Main Page', breadcrumb: 'Dashboard' }
   },
   {
     path: 'demandOverview',
@@ -134,7 +134,7 @@ const routes: Routes = [
     component: OutboundReportsTotaldemandComponent,
     data: {
       title: '6Main Page',
-      breadcrumb: 'S Report',
+      breadcrumb: 'Status Report',
       filter: true
     }
   },
@@ -146,7 +146,7 @@ const routes: Routes = [
   {
     path: 'settings',
     component: SettingsComponent,
-    data: { title: 'settings Page', breadcrumb: '', filter: true }
+    data: { title: 'settings Page', breadcrumb: 'Settings', filter: true }
   },
   {
     path: '**',

@@ -21,13 +21,13 @@
         <span></span>
       </div>
       <div class="company-logo ciena"></div>
-      <div class="mobile-breadcrumb">
-        <app-breadcrumb></app-breadcrumb>
+      <div class="breadcrumb mobile-breadcrumb">
+        <span>a{{this.myBreadCrumb}}</span><app-breadcrumb></app-breadcrumb>
       </div>
       <input type="checkbox" id="toggle-search" />
       <div class="top-fields">
         <nav aria-label="breadcrumb" role="navigation" class="breadcrumb">
-          {{this.myBreadCrumb}}<span></span><app-breadcrumb></app-breadcrumb>
+          <span>{{this.myBreadCrumb}}</span><app-breadcrumb></app-breadcrumb>
         </nav>
         <div class="search-block">
           <input

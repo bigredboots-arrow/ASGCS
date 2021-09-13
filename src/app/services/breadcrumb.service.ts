@@ -34,6 +34,8 @@ export class BreadcrumbService {
       this._currentRoute$.next('outbound');
     } else if (url.includes('hubs')) {
       this._currentRoute$.next('hubs');
+    } else {
+      this._currentRoute$.next('');
     }
   }
 

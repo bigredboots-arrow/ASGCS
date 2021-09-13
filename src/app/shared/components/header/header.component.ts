@@ -62,7 +62,6 @@ export class HeaderComponent implements OnInit {
       .subscribe((state: SidePanelState) => (this.currentPanelState = state));
     this.breadcrumbService.currentModule$.subscribe(parent => {
       this.myBreadCrumb = parent;
-      console.log(parent);
     });
 
     this.breadcrumbService.filter$.subscribe(hideFilters => {

@@ -294,14 +294,14 @@
   width: 130px;
   height: 50px;
   position: relative;
-  transition: 0.3s ease-in all;
+  transition: $default-transition;
 
   &.filter-active {
     width: calc(100% - 35px);
   }
   &.filter-active .overview-filters {
     max-width: 100%;
-    transition: 0.3s ease-in all;
+    transition: $default-transition;
     width: 100%;
     padding-right: 20px;
   }
@@ -535,9 +535,11 @@ app-sidebar {
   .main-header {
     margin-right: 20px;
   }
+
   .filter-container {
     display: block;
   }
+
   .overlayer-filter {
     background: rgba(25, 25, 25, 0.7);
     position: absolute;
@@ -573,7 +575,6 @@ app-sidebar {
       border-width: 0px 1px 1px 1px;
       border-style: solid;
       left: -1px;
-      top: 30px;
     }
     .filters {
       border-radius: 10px 10px 0px 0px;
@@ -744,5 +745,20 @@ app-sidebar {
     right: 0px;
     width: 97vw;
     border: 1px solid white;
+  }
+  .overview-filters {
+    top: 0px;
+  }
+  .filter-block.filter-active .overview-filters {
+    top: -0px;
+  }
+  .filter-block {
+    top: -50px;
+    height: 30px;
+    transition: $default-transition;
+  }
+  .filters {
+    padding: 0px 0px 0px 10px;
+    transition: $default-transition;
   }
 }

@@ -7,21 +7,21 @@
 
   .left-column {
     top: 0;
-    transition: 0.3s ease-in all;
+    transition: $default-transition;
 
     &.open {
       flex: 0 0 250px;
       padding: 35px 15px 35px 35px;
-      transition: 0.3s ease-in all;
+      transition: $default-transition;
     }
     &.collapse {
       flex: 0 0 55px;
       padding: 35px 15px 35px 20px;
-      transition: 0.3s ease-in all;
+      transition: $default-transition;
     }
     &.close {
       flex: 0 0 0px;
-      transition: 0.3s ease-in all;
+      transition: $default-transition;
     }
     &.mobile {
       position: absolute;
@@ -29,7 +29,7 @@
       background: $grey-color;
       height: 100vh;
       padding: 10px;
-      transition: 0.3s ease-in all;
+      transition: $default-transition;
       z-index: 2;
       left: -300px;
     }
@@ -39,7 +39,7 @@
       background: $grey-color;
       height: 100vh;
       padding: 10px;
-      transition: 0.3s ease-in all;
+      transition: $default-transition;
       z-index: 2;
       left: 0px;
     }
@@ -53,12 +53,21 @@
 }
 .header {
   height: 190px;
-  transition: 0.3s ease-in all;
+  transition: $default-transition;
 }
 .main-content {
   margin: 0px 25px 0px 0px;
   overflow-y: auto;
   padding-right: 10px;
   height: calc(100vh - 190px);
-  transition: 0.3s ease-in all;
+  transition: $default-transition;
+}
+@media only screen and (max-width: 767px) {
+  .header {height: 120px;
+    transition: $default-transition;
+  }
+  .main-content {
+    height: calc(100vh - 120px);
+    transition: $default-transition;
+  }
 }

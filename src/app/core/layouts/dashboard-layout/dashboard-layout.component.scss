@@ -63,7 +63,8 @@
   transition: $default-transition;
 }
 @media only screen and (max-width: 767px) {
-  .header {height: 120px;
+  .header {
+    height: 120px;
     transition: $default-transition;
   }
   .main-content {

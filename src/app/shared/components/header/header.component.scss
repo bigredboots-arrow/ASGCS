@@ -515,6 +515,9 @@ app-sidebar {
     transition: $fast-transition;
     max-width: 130px;
   }
+  .filter-block {
+    display: block;
+  }
   .filter-block.filter-active {
     width: 320px;
     position: relative;

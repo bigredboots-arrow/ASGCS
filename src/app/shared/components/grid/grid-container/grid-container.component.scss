@@ -95,13 +95,13 @@
       li {
         padding: 10px 0;
         &.all-color {
-          color: $blue-color;
+          color: $tertiary-color-;
         }
         &.late-color {
           color: $red-color;
         }
         &.demand-color {
-          color: $orange-color;
+          color: $tertiary-color-a;
         }
       }
     }

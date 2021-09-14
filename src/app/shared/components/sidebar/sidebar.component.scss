@@ -30,6 +30,7 @@
     display: block;
     transform: rotate(45deg);
     font-size: $largest-font;
+    cursor: pointer;
   }
   .name {
     grid-row: 1;

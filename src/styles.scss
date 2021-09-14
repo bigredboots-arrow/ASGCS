@@ -147,6 +147,51 @@ a {
     height: 20px !important;
   }
 }
+
+.k-input {
+  padding: 0px 5px;
+  background: #dcdcdc;
+  color: #000;
+  font-size: 14px;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+}
+.k-select {
+  background: #dcdcdc;
+  height: 24px;
+  border-radius: 0 5px 5px 0;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  border-left: 1px solid $grey-darkest;
+}
+.k-dropdown-wrap {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  box-sizing: border-box;
+  position: relative;
+  transition: all 0.1s ease;
+  cursor: pointer;
+  outline: 0;
+  background: #009ddc;
+  background-color: transparent;
+  background-image: none;
+}
+.k-icon {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid $grey-light;
+}
+
+
 .reportscreen .header {
   height: 120px !important;
   transition: 0.3s ease-in all;

@@ -510,6 +510,11 @@ app-sidebar {
     backdrop-filter: blur(2px);
     display: none;
   }
+  .overview-filters {
+    max-height: 0px;
+    transition: $fast-transition;
+    max-width: 130px;
+  }
   .filter-block.filter-active {
     width: 320px;
     position: relative;
@@ -534,6 +539,7 @@ app-sidebar {
       border-width: 0px 1px 1px 1px;
       border-style: solid;
       left: -1px;
+      max-height: 600px;
     }
     .filters {
       border-radius: 10px 10px 0px 0px;
@@ -707,12 +713,13 @@ app-sidebar {
   }
   .overview-filters {
     top: 0px;
+    max-height: 0px;
   }
   .filter-block.filter-active .overview-filters {
-    top: -0px;
+    top: 30px;
   }
   .filter-block {
-    top: -0px;
+    top: -60px;
     height: 30px;
     transition: $default-transition;
   }

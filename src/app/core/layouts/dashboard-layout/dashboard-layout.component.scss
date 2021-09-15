@@ -62,6 +62,110 @@
   height: calc(100vh - 190px);
   transition: $default-transition;
 }
+::ng-deep {
+  .sidebar-active app-sidebar {
+    right: 0px !important;
+  }
+  .sidebar-active .overlayer,
+  .mobile-open .overlayer-navigation {
+    display: block !important;
+  }
+
+  /* collapsed nav-menu */
+  .left-side-content {
+    display: flex;
+
+    .filter-items {
+      display: flex;
+    }
+
+    .filter-item {
+      white-space: nowrap;
+      align-items: center;
+      gap: 5px;
+      margin-left: 10px;
+    }
+
+    //Temporary theme for Kendo UI drop downs
+    .k-input {
+      font-size: 12px !important;
+
+      span:before {
+        content: ': ';
+      }
+    }
+    .k-select {
+      height: 20px !important;
+    }
+  }
+  .left-column.collapse .main-navigation ul li .navigation-links {
+    position: absolute;
+    z-index: 1;
+    background: $blue-color;
+    margin-left: 40px;
+    padding: 5px 0px;
+    margin-top: 0px !important;
+    max-width: 0px;
+    overflow: hidden;
+    transition: $default-transition;
+    white-space: nowrap;
+    color: $white;
+  }
+  .left-column.collapse .main-navigation ul li:hover .navigation-links {
+    max-width: 300px;
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+
+  .left-column.collapse .main-navigation ul li:hover .navigation-links ul {
+    max-height: 80px;
+  }
+  .left-column.collapse .main-navigation ul li:hover .navigation-links a,
+  .left-column.collapse .main-navigation ul li:hover .navigation-links ul a {
+    color: $white;
+  }
+  .left-column.collapse .main-navigation > ul > li span::after {
+    display: none !important;
+  }
+
+  .left-column.collapse .main-navigation ul li:hover::after {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid $blue-color;
+    display: inline-block;
+    content: '';
+    left: 34px;
+    position: absolute;
+    top: 10px;
+  }
+  .left-column.collapse .main-navigation ul ul li:hover::after {
+    content: none;
+  }
+  .left-column.collapse .main-navigation ul ul {
+    margin: 0px;
+  }
+  .left-column.open .home-logo .company-logo {
+    width: calc(100% - 35px) !important;
+  }
+  .left-column.mobile-open .home-logo .company-logo {
+    min-width: 110px !important;
+    max-width: 110px !important;
+  }
+  .left-column.collapse .home-logo .company-logo {
+    min-width: 0px !important;
+    max-width: 0px !important;
+  }
+}
+.reportscreen .header {
+  height: 120px;
+  transition: 0.3s ease-in all;
+}
+.reportscreen .main-content {
+  height: calc(100vh - 120px);
+  transition: 0.3s ease-in all;
+}
 @media only screen and (max-width: 767px) {
   .header {
     height: 120px;
@@ -70,5 +174,18 @@
   .main-content {
     height: calc(100vh - 120px);
     transition: $default-transition;
+  }
+}
+@media only screen and (max-width: 768px) {
+  ::ng-deep {
+    .left-side-content .filter-items {
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 10px;
+
+      .filter-item {
+        margin: 5px 0px;
+      }
+    }
   }
 }

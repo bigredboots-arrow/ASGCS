@@ -1,41 +1,29 @@
-@import '../../../scss/variables';
-
-.settings-sidebar {
+@import '../../../scss/global';
+::ng-deep app-sidebar {
+  position: absolute;
   top: 0px;
   right: -300px;
   width: 270px;
+  background: #404040;
+  color: $white;
   height: 100vh;
-  transition: 0.3s ease-in all;
+  z-index: 2;
+  padding: 15px;
+  transition: $cubic-transition;
 }
 .sidebar-top {
   display: flex;
   justify-content: space-between;
 
   .user-block {
-    display: flex;
     gap: 10px;
     align-items: center;
-  }
-  .avatar {
-    position: relative;
-    width: 35px;
-    height: 35px;
-    background-repeat: no-repeat;
-    display: block;
-    cursor: pointer;
-    background-size: cover;
   }
   .settings-close {
     display: block;
     transform: rotate(45deg);
     font-size: $largest-font;
     cursor: pointer;
-  }
-  .name {
-    grid-row: 1;
-    grid-column: 2;
-    font-size: 15px;
-    font-weight: 600;
   }
   label {
     font-size: 18px;

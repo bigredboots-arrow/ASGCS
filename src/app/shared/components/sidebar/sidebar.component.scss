@@ -1,15 +1,20 @@
 @import '../../../scss/global';
-::ng-deep app-sidebar {
-  position: absolute;
-  top: 0px;
-  right: -300px;
-  width: 270px;
-  background: #404040;
-  color: $white;
-  height: 100vh;
-  z-index: 2;
-  padding: 15px;
-  transition: $cubic-transition;
+::ng-deep {
+  app-sidebar {
+    position: absolute;
+    top: 0px;
+    right: -330px;
+    width: 270px;
+    background: #404040;
+    color: $white;
+    height: 100vh;
+    z-index: 2;
+    padding: 15px 45px 15px 15px;
+    transition: 0.4s all $cubic-transition;
+  }
+  .sidebar-active app-sidebar {
+    right: -30px !important;
+  }
 }
 .sidebar-top {
   display: flex;

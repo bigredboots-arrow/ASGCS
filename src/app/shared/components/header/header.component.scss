@@ -114,7 +114,7 @@
   max-width: 0%;
   display: flex;
   overflow: hidden;
-  transition: $cubic-transition;
+  transition: 0.2s all $cubic-transition;
 }
 
 /*topnav */
@@ -178,7 +178,7 @@
       width: 300px;
       max-height: 0;
       border-radius: 10px;
-      transition: 0.5s all cubic-bezier(0.15, 0.95, 0.53, 1.64);
+      transition: 0.4s all $cubic-transition;
       overflow: hidden;
       z-index: 1;
       top: 0px;
@@ -247,8 +247,8 @@
     flex-grow: 1;
     display: flex;
     justify-content: space-between;
-    transition: 0.5s all cubic-bezier(0.25, 0.95, 0.62, 1.09);
-    transition-delay: 0.2s;
+    transition: 0.5s all $cubic-transition;
+    transition-delay: 0.3s;
   }
   .site-search:before {
     height: 20px;
@@ -571,7 +571,6 @@
   opacity: 1;
   transition: 0.3s ease-in all;
   background-size: contain;
-  max-width: 0px;
   background-position-x: right;
 }
 .mobile-breadcrumb {

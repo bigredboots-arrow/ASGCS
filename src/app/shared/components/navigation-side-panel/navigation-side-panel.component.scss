@@ -101,7 +101,6 @@
   color: $white;
 }
 a {
-  transform: scale(1);
   left: 0px;
   transition: $fast-transition;
   letter-spacing: 0px;
@@ -121,7 +120,6 @@ a {
 a.is-active {
   color: $white;
   font-weight: 600;
-  transform: scale(1);
   letter-spacing: 0.5px;
   transition: $fast-transition;
 

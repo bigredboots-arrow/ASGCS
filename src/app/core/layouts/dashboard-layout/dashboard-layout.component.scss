@@ -12,12 +12,12 @@
     &.open {
       flex: 0 0 250px;
       padding: 35px 15px 35px 35px;
-      transition: $default-transition;
+      transition: 0.4s all $cubic-transition;
     }
     &.collapse {
       flex: 0 0 55px;
       padding: 35px 15px 35px 20px;
-      transition: $default-transition;
+      transition: 0.4s all $cubic-transition;
     }
     &.close {
       flex: 0 0 0px;
@@ -39,7 +39,7 @@
       background: $grey-color;
       height: 100vh;
       padding: 10px;
-      transition: $default-transition;
+      transition: 0.4s all $cubic-transition;
       z-index: 2;
       left: 0px;
     }
@@ -64,9 +64,6 @@
 }
 
 ::ng-deep {
-  .sidebar-active app-sidebar {
-    right: 0px !important;
-  }
   .sidebar-active .overlayer,
   .mobile-open .overlayer-navigation {
     display: block !important;

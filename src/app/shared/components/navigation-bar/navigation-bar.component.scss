@@ -1,4 +1,4 @@
-@import '../../../scss/variables';
+@import '../../../scss/global';
 
 /*logo block */
 .home-logo {
@@ -9,7 +9,7 @@
   padding: 10px;
   margin-bottom: 35px;
   max-width: 300px;
-  transition: 0.3s ease-in all;
+  transition: $default-transition;
 
   img {
     height: 32px;
@@ -19,9 +19,7 @@
     background-repeat: no-repeat;
     height: 30px;
     opacity: 1;
-    transition: 0.3s ease-in all;
     background-size: contain;
-    min-width: 0px;
     background-position-x: right;
   }
   .hamburger {

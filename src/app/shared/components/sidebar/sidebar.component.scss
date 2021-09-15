@@ -5,7 +5,7 @@
     top: 0px;
     right: -330px;
     width: 270px;
-    background: #404040;
+    background: $grey-darker;
     color: $white;
     height: 100vh;
     z-index: 2;
@@ -13,7 +13,7 @@
     transition: 0.4s all $cubic-transition;
   }
   .sidebar-active app-sidebar {
-    right: -30px !important;
+    right: -30px;
   }
 }
 .sidebar-top {
@@ -31,7 +31,7 @@
     cursor: pointer;
   }
   label {
-    font-size: 18px;
+    font-size: $large-font;
     padding-bottom: 3px;
     display: inline;
   }

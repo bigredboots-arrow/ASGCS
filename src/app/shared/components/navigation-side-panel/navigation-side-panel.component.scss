@@ -1,4 +1,4 @@
-@import '../../../scss/variables';
+@import '../../../scss/global';
 
 .main-navigation ul {
   list-style: none;
@@ -92,14 +92,13 @@
     top: -2px;
   }
 }
-.main-navigation > ul > li.status-disabled {
-  span {
-    cursor: not-allowed;
-  }
+.main-navigation > ul > li.status-disabled span {
+  cursor: not-allowed;
 }
 .is-active .parent {
   color: $white;
 }
+
 a {
   left: 0px;
   transition: $fast-transition;
@@ -121,18 +120,13 @@ a.is-active {
   color: $white;
   font-weight: 600;
   letter-spacing: 0.5px;
-  transition: $fast-transition;
 
   &::before {
     content: '';
-    width: 0px;
-    height: 0px;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 7px solid $white;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 7px;
     margin-right: 5px;
-    display: inline-block;
-    transition: $fast-transition;
   }
 }
 .dashboard {

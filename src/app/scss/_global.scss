@@ -4,7 +4,7 @@ button {
   color: $white;
   border-radius: 5px;
   border: 1px solid $black;
-  font-size: 16px;
+  font-size: $base-font;
   padding: 6px 12px 4px;
   cursor: pointer;
   transition: $default-transition;

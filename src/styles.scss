@@ -22,14 +22,11 @@ a {
   font-weight: 400;
   text-decoration: none;
 }
-.page-container {
-  margin: 0px;
-}
 
 // /* Scrollbar on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: $grey-light $grey-darker;
+  scrollbar-color: $grey-light $grey-darkest;
 }
 /* Scrollbar on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
@@ -52,42 +49,42 @@ a {
 //Temporary theme for Kendo UI drop downs
 .k-input {
   padding: 0px 5px;
-  background: #dcdcdc;
-  color: #000;
-  font-size: 14px;
-  border-radius: 5px 0 0 5px;
+  background: $grey-lightest;
+  color: $black;
+  font-size: $small-font;
+  border-radius: 5px 0px 0px 5px;
   display: flex;
   align-items: center;
 }
 .k-select {
-  background: #dcdcdc;
+  background: $grey-lightest;
   height: 24px;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0px 5px 5px 0px;
   width: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   cursor: pointer;
-  border-left: 1px solid $grey-darkest;
+  border-left: 1px solid $grey-light;
 }
 .k-dropdown-wrap {
-  padding: 0;
+  padding: 0px;
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
   box-sizing: border-box;
   position: relative;
-  transition: all 0.1s ease;
+  transition: $fast-transition;
   cursor: pointer;
   outline: 0;
-  background: #009ddc;
+  background: $blue-color;
   background-color: transparent;
   background-image: none;
 }
 .k-icon {
-  width: 0;
-  height: 0;
+  width: 0px;
+  height: 0px;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 6px solid $grey-light;

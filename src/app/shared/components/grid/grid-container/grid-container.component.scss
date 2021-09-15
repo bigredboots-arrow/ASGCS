@@ -455,7 +455,7 @@
   justify-content: center;
   text-align: center;
   cursor: pointer;
-  border-left: 1px solid $grey-darkest;
+  border-left: 1px solid $grey-light;
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   ::ng-deep .card-items.part-overview {

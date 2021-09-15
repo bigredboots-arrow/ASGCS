@@ -142,6 +142,10 @@ a {
   }
   .k-input {
     font-size: 12px !important;
+
+    span:before {
+      content: ': ';
+    }
   }
   .k-select {
     height: 20px !important;
@@ -191,7 +195,6 @@ a {
   border-top: 6px solid $grey-light;
 }
 
-
 .reportscreen .header {
   height: 120px !important;
   transition: 0.3s ease-in all;
@@ -199,6 +202,11 @@ a {
 .reportscreen .main-content {
   height: calc(100vh - 120px) !important;
   transition: 0.3s ease-in all;
+}
+@media only screen and (max-width: 1200px) {
+  .k-input span {
+    display: none;
+  }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .card-items {

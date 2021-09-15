@@ -176,7 +176,7 @@
       position: absolute;
       background-color: $black;
       width: 0px;
-      max-height: 0;
+      max-height: 0px;
       border-radius: 10px;
       transition: 0.4s all $cubic-transition;
       overflow: hidden;
@@ -192,7 +192,7 @@
       border-bottom: 1px solid $grey-lighter;
       display: block;
       padding: 5px 0px;
-      font-size: 14px;
+      font-size: $small-font;
     }
     .notifications-popup ul li:last-child {
       border-bottom: none;
@@ -214,7 +214,7 @@
     #toggle-notifications:checked ~ .notifications-popup {
       opacity: 1;
       max-height: 200px;
-      width: 3;
+      width: 300px;
     }
     #toggle-notifications:checked ~ .icon {
       background-size: 0px 0px;
@@ -342,7 +342,6 @@
     background-repeat: no-repeat;
   }
 }
-
 #toggle-filters {
   opacity: 0;
   position: absolute;
@@ -362,8 +361,8 @@
 .datepicker {
   display: flex;
   width: auto;
-  background: #dcdcdc;
-  color: #000;
+  background: $grey-lightest;
+  color: $black;
   border-radius: 5px;
 
   div {
@@ -390,7 +389,7 @@
 }
 
 .k-i-arrow-s::before {
-  color: #dcdcdc;
+  color: $grey-lightest;
 }
 .filter-container {
   display: flex;
@@ -398,7 +397,7 @@
   align-items: center;
 }
 .filter-label {
-  font-size: 12px;
+  font-size: $smaller-font;
   padding-bottom: 1px;
 }
 

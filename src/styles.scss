@@ -29,15 +29,12 @@ a {
 .sidebar-active app-sidebar {
   right: 0px !important;
 }
-.sidebar-active .overlayer {
-  display: block !important;
-}
-.mobile-open .overlayer-navigation {
-  display: block !important;
-}
+.sidebar-active .overlayer,
+.mobile-open .overlayer-navigation,
 .nav-active .navigation-filter {
   display: block !important;
 }
+
 /*mobile collapsed nav-menu */
 .left-column.collapse .main-navigation ul li .navigation-links {
   position: absolute;
@@ -140,6 +137,8 @@ a {
     gap: 5px;
     margin-left: 10px;
   }
+
+  //Temporary theme for Kendo UI drop downs
   .k-input {
     font-size: 12px !important;
 
@@ -152,6 +151,7 @@ a {
   }
 }
 
+//Temporary theme for Kendo UI drop downs
 .k-input {
   padding: 0px 5px;
   background: #dcdcdc;
@@ -194,6 +194,11 @@ a {
   border-right: 6px solid transparent;
   border-top: 6px solid $grey-light;
 }
+@media only screen and (max-width: 1200px) {
+  .k-input span {
+    display: none;
+  }
+}
 
 .reportscreen .header {
   height: 120px !important;
@@ -203,15 +208,7 @@ a {
   height: calc(100vh - 120px) !important;
   transition: 0.3s ease-in all;
 }
-@media only screen and (max-width: 1200px) {
-  .k-input span {
-    display: none;
-  }
-}
 @media (min-width: 768px) and (max-width: 1199px) {
-  .card-items {
-    display: block;
-  }
   .card-element .lines-shipped {
     display: block;
   }

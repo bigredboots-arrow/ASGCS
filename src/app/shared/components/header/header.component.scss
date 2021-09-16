@@ -20,10 +20,12 @@
   text-transform: capitalize;
   left: 0;
   flex-grow: 1;
+  display: flex;
+  align-items: center;
 
   .breadcrumb-item {
     display: inline-block;
-    font-size: 24px;
+    font-size: $larger-font;
   }
   .company-title {
     font-size: $largest-font;
@@ -68,7 +70,6 @@
   height: 35px;
   margin-right: 20px;
   position: relative;
-  top: 3px;
 
   &:before {
     background-color: $grey-lightest;
@@ -162,7 +163,10 @@ button.search-submit {
       display: block;
       cursor: pointer;
       background-size: 35px 35px;
-      background-position: 5px 3px;
+      background-position: 5px 0px;
+    }
+    .icon:after {
+      border: 1px solid $white;
     }
     .icon.active:after {
       content: '';
@@ -226,6 +230,7 @@ button.search-submit {
 
       &:after {
         content: '+';
+        border: 0px;
         background: transparent;
         color: $white;
         font-size: $largest-font;
@@ -627,15 +632,15 @@ button.search-submit {
       grid-column: 5;
 
       .avatar {
-        margin-right: 0px;
-        transform: scale(0.8);
+        // margin-right: 0px;
+        // transform: scale(0.8);
       }
     }
     .name {
       display: none;
     }
     .header-events {
-      transform: scale(0.8);
+      // transform: scale(0.8);
     }
   }
   .top-navigation-block

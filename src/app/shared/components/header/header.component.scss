@@ -64,6 +64,9 @@
   position: absolute;
   top: -99px;
 }
+.mobile-search-header {
+  display: none;
+}
 .site-search {
   cursor: pointer;
   width: 35px;
@@ -119,7 +122,7 @@ button.search-submit {
   max-width: 0%;
   display: flex;
   overflow: hidden;
-  transition: 0.2s all $cubic-transition;
+  /transition: 0.2s all $cubic-transition;
 }
 
 /*topnav */
@@ -144,6 +147,7 @@ button.search-submit {
   .user-block {
     .avatar {
       margin-right: 10px;
+      transition: $default-transition;
     }
   }
   .role {
@@ -164,20 +168,21 @@ button.search-submit {
       cursor: pointer;
       background-size: 35px 35px;
       background-position: 5px 0px;
+      transition: $default-transition;
     }
     .icon:after {
       border: 1px solid $white;
-    }
-    .icon.active:after {
       content: '';
       height: 10px;
       width: 10px;
-      background: $blue-color;
       border-radius: 10px;
       position: absolute;
       display: block;
       top: 3px;
       left: 22px;
+    }
+    .icon.active:after {
+      background: $blue-color;
     }
     .notifications-popup {
       right: 20px;
@@ -622,33 +627,77 @@ button.search-submit {
       grid-column: 4 / 5;
     }
     .site-search {
-      margin-right: 7px;
+      margin-right: 15px;
+      width: 30px;
+      height: 30px;
+
+      &::before {
+        left: 22px;
+        top: 17px;
+      }
+      &::after {
+        height: 20px;
+        width: 20px;
+      }
     }
     .notifications .icon {
-      margin-right: 0px;
+      margin-right: 15px;
+      width: 30px;
+      background-size: 30px 30px;
+      background-position: 0px 0px;
+
+      &::after {
+        right: 0px;
+        left: initial;
+      }
     }
     .user-block {
       grid-row: 2;
       grid-column: 5;
 
       .avatar {
-        // margin-right: 0px;
-        // transform: scale(0.8);
+        width: 30px;
       }
     }
     .name {
       display: none;
     }
-    .header-events {
-      // transform: scale(0.8);
+  }
+  #toggle-search:checked ~ .top-fields .search-block {
+    position: absolute;
+    z-index: 3;
+    background: $black;
+    padding: 40px 20px 20px 20px;
+    top: 0;
+    border-radius: 10px;
+    width: calc(100% - 40px);
+    right: 10px;
+    border: 1px solid $white;
+
+    .mobile-search-header {
+      display: flex;
+      position: absolute;
+      width: calc(100% - 40px);
+      justify-content: space-between;
+      color: $grey-lighter;
+      top: 10px;
+      font-weight: 600;
+      font-size: $small-font;
+      letter-spacing: 0.5px;
+
+      label {
+        transform: rotate(45deg);
+        font-size: $largest-font;
+        font-weight: 400;
+        margin-top: -10px;
+      }
     }
   }
   .top-navigation-block
     .notifications
     #toggle-notifications:checked
     ~ .notifications-popup {
-    right: 0px;
-    width: 97vw;
+    right: 10px;
     border: 1px solid $white;
   }
   .overview-filters {

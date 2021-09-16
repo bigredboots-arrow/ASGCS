@@ -274,13 +274,13 @@
   display: flex;
   padding-top: 3px;
   border-radius: 10px;
-  width: 130px;
+  width: 126px;
   height: 50px;
   position: relative;
   transition: $default-transition;
 
   &.filter-active {
-    width: calc(100% - 35px);
+    width: calc(100% - 10px);
   }
   &.filter-active .overview-filters {
     max-width: 100%;
@@ -357,6 +357,10 @@
   display: flex;
   gap: 12px;
   flex-flow: nowrap;
+  margin-top: 2px;
+}
+.block-filterbuttons {
+  margin-top: 6
 }
 .datepicker {
   display: flex;

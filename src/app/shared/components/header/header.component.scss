@@ -53,7 +53,7 @@
     content: none;
   }
 }
-.mobile-breadcrumb span::before {
+.mobile-breadcrumb span::after {
   width: 5px;
   height: 5px;
   margin: 0px 7px 0px 3px;
@@ -122,7 +122,7 @@ button.search-submit {
   max-width: 0%;
   display: flex;
   overflow: hidden;
-  /transition: 0.2s all $cubic-transition;
+  //transition: 0.2s all $cubic-transition;
 }
 
 /*topnav */

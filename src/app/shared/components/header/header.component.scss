@@ -3,7 +3,7 @@
   margin-bottom: 50px;
 }
 .main-header {
-  padding-top: 42px;
+  padding-top: 35px;
   margin-right: 35px;
 }
 .header-events {
@@ -103,11 +103,15 @@
   border-radius: 10px;
 }
 .search-field {
-  width: calc(100% - 120px);
-  border-radius: 10px;
-  padding: 0px 10px;
+  width: calc(100% - 100px);
+  border-radius: 10px 0px 0px 10px;
+  padding: 14px 10px;
   font-size: $large-font;
   outline: 0px;
+  border-width: 0px;
+}
+button.search-submit {
+  border-radius: 0 10px 10px 0px;
 }
 .search-block {
   position: relative;
@@ -251,17 +255,17 @@
   }
   .site-search:before {
     height: 20px;
-    left: 23px;
-    top: 8px;
+    left: 15px;
+    top: 11px;
     width: 2px;
   }
   .site-search:after {
     background-color: $white;
     border: 0px;
-    top: 8px;
+    top: 11px;
     border-radius: 0px;
     height: 20px;
-    left: 23px;
+    left: 15px;
     transform: rotate(45deg);
     width: 2px;
   }

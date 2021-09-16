@@ -13,9 +13,11 @@ button {
     background: $white;
     color: $blue-color;
     font-weight: 400;
+    border-color: $white;
   }
   &.blue {
     background: $blue-color;
     color: $white;
+    border-color: $blue-color;
   }
 }

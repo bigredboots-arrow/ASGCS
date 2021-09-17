@@ -18,6 +18,7 @@
   flex-grow: 1;
   display: flex;
   align-items: center;
+  height: 50px;
 
   .breadcrumb-item {
     display: inline-block;
@@ -427,25 +428,6 @@ button.search-submit {
   backdrop-filter: blur(2px);
   transition: $default-transition;
 }
-.hamburger {
-  position: relative;
-  background: $blue-color;
-  min-width: 0px;
-  height: 29px;
-  cursor: pointer;
-  border-radius: 5px;
-  max-width: 0px;
-  left: 2px;
-}
-.company-logo {
-  overflow: hidden;
-  background-repeat: no-repeat;
-  height: 30px;
-  opacity: 1;
-  transition: $default-transition;
-  background-size: contain;
-  background-position-x: right;
-}
 .mobile-breadcrumb {
   display: none;
 }
@@ -600,10 +582,6 @@ button.search-submit {
         left: 0px;
       }
     }
-  }
-  .company-logo {
-    max-width: 110px;
-    min-width: 110px;
   }
   .breadcrumb {
     display: none;

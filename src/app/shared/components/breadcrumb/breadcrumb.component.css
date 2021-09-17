@@ -1,14 +1,5 @@
 .breadcrumb-label {
   text-decoration: none;
   list-style: none;
-  padding-top: 2px;
   display: inline-flex;
-}
-@media only screen and (max-width: 768px) {
-  .breadcrumb-label {
-    display: block;
-    top: 10px;
-    position: absolute;
-    padding-top: 0px;
-  }
 }

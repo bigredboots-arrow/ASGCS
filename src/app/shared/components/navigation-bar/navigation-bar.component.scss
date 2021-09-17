@@ -14,41 +14,43 @@
   img {
     height: 32px;
   }
-  .company-logo {
-    overflow: hidden;
-    background-repeat: no-repeat;
-    height: 30px;
-    opacity: 1;
-    background-size: contain;
-    background-position-x: right;
-  }
-  .hamburger {
-    position: relative;
-    background: $blue-color;
-    width: 31px;
-    height: 29px;
-    cursor: pointer;
-    border-radius: 5px;
+}
+::ng-deep .company-logo {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  height: 30px;
+  opacity: 1;
+  background-size: contain;
+  background-position-x: right;
+  transition: $default-transition;
+}
+.hamburger {
+  position: relative;
+  background: $blue-color;
+  width: 31px;
+  height: 29px;
+  cursor: pointer;
+  border-radius: 5px;
+  left: 2px;
 
-    span {
-      left: 8px;
-      top: 14px;
-      height: 2px;
-      width: 15px;
-      background: $white;
-      position: absolute;
-      display: block;
-      content: '';
-    }
-    span:before {
-      @extend span;
-      top: -8px;
-      left: 0px;
-    }
-    span:after {
-      @extend span;
-      top: 8px;
-      left: 0px;
-    }
+  span {
+    left: 8px;
+    top: 14px;
+    height: 2px;
+    width: 15px;
+    background: $white;
+    position: absolute;
+    display: block;
+    content: '';
+  }
+  span:before {
+    @extend span;
+    top: -8px;
+    left: 0px;
+  }
+  span:after {
+    @extend span;
+    top: 8px;
+    left: 0px;
   }
 }

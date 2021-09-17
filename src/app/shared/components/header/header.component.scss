@@ -612,6 +612,7 @@ button.search-submit {
     display: flex;
     align-items: center;
     font-size: $large-font;
+    white-space: nowrap;
   }
   .top-navigation-block {
     display: grid;

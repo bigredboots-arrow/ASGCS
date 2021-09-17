@@ -9,7 +9,6 @@
 
 /*breadcrumbs */
 .breadcrumb {
-  white-space: nowrap;
   font-size: $larger-font;
   color: $grey-lighter;
   opacity: 1;
@@ -257,6 +256,7 @@ button.search-submit {
     flex-grow: 1;
     display: flex;
     justify-content: space-between;
+    height: 50px;
     transition: 0.5s all $cubic-transition;
     transition-delay: 0.3s;
   }
@@ -269,7 +269,7 @@ button.search-submit {
   .site-search:after {
     background-color: $white;
     border: 0px;
-    top: 1px;
+    top: 14px;
     border-radius: 0px;
     height: 20px;
     left: 15px;
@@ -626,7 +626,7 @@ button.search-submit {
     .site-search {
       margin-right: 15px;
       width: 30px;
-      height: 30px;
+      height: 35px;
 
       &::before {
         left: 22px;

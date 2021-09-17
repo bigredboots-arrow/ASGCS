@@ -218,6 +218,13 @@
           left: initial !important;
         }
       }
+      .notifications #toggle-notifications:checked ~ .icon {
+        background-size: 0px 0px !important;
+
+        &::after {
+          right: 10px !important;
+        }
+      }
       .user-block .avatar {
         width: 30px !important;
       }

@@ -93,4 +93,7 @@ a {
   .k-input span {
     display: none;
   }
+  .main-content.open [gridCell] {
+    grid-column: span 3 !important;
+  }
 }

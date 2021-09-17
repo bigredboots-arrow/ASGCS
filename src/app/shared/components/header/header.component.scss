@@ -260,21 +260,25 @@ button.search-submit {
     transition: 0.5s all $cubic-transition;
     transition-delay: 0.3s;
   }
-  .site-search:before {
-    height: 20px;
-    left: 15px;
-    top: 14px;
-    width: 2px;
-  }
-  .site-search:after {
-    background-color: $white;
-    border: 0px;
-    top: 14px;
-    border-radius: 0px;
-    height: 20px;
-    left: 15px;
-    transform: rotate(45deg);
-    width: 2px;
+  .site-search {
+    height: 35px;
+
+    &::before {
+      height: 20px;
+      left: 15px;
+      top: 14px;
+      width: 2px;
+    }
+    &::after {
+      background-color: $white;
+      border: 0px;
+      top: 14px;
+      border-radius: 0px;
+      height: 20px;
+      left: 15px;
+      transform: rotate(45deg);
+      width: 2px;
+    }
   }
 }
 
@@ -604,7 +608,7 @@ button.search-submit {
     .site-search {
       margin-right: 15px;
       width: 30px;
-      height: 35px;
+      height: 30px;
 
       &::before {
         left: 22px;

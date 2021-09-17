@@ -96,6 +96,9 @@
       height: 20px !important;
     }
   }
+  .left-column.collapse .main-navigation ul {
+    width: 45px;
+  }
   .left-column.collapse .main-navigation ul li .navigation-links {
     position: absolute;
     z-index: 1;
@@ -121,6 +124,8 @@
   .left-column.collapse .main-navigation ul li:hover .navigation-links a,
   .left-column.collapse .main-navigation ul li:hover .navigation-links ul a {
     color: $white;
+    display: flex;
+    align-items: center;
   }
   .left-column.collapse .main-navigation > ul > li span::after {
     display: none !important;
@@ -174,7 +179,7 @@
     font-weight: 500;
     max-width: 75px;
     text-overflow: ellipsis;
-    overflow-x: h;
+    overflow-x: hidden;
   }
 }
 .reportscreen .header {

@@ -18,6 +18,10 @@
       flex: 0 0 55px;
       padding: 35px 15px 35px 20px;
       transition: 0.4s all $cubic-transition;
+
+      .main-navigation ul {
+        width: 45px;
+      }
     }
     &.close {
       flex: 0 0 0px;
@@ -96,9 +100,7 @@
       height: 20px !important;
     }
   }
-  .left-column.collapse .main-navigation ul {
-    width: 45px;
-  }
+
   .left-column.collapse .main-navigation ul li .navigation-links {
     position: absolute;
     z-index: 1;

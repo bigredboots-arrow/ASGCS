@@ -18,6 +18,7 @@
   flex-grow: 1;
   display: flex;
   align-items: center;
+  max-height: 50px;
 
   .breadcrumb-item {
     display: inline-block;
@@ -118,6 +119,7 @@ button.search-submit {
   max-width: 0%;
   display: flex;
   overflow: hidden;
+  height: 50px;
   //transition: 0.2s all $cubic-transition;
 }
 
@@ -642,6 +644,9 @@ button.search-submit {
       display: none;
     }
   }
+  .search-block {
+    height: 30px;
+  }
   #toggle-search:checked ~ .top-fields .search-block {
     position: absolute;
     z-index: 3;
@@ -652,6 +657,7 @@ button.search-submit {
     width: calc(100% - 40px);
     right: 10px;
     border: 1px solid $white;
+    height: 0px;
 
     .mobile-search-header {
       display: flex;

@@ -1,7 +1,4 @@
 @import '../../../scss/global';
-.header {
-  margin-bottom: 50px;
-}
 .main-header {
   padding-top: 35px;
   margin-right: 35px;
@@ -69,8 +66,8 @@
 }
 .site-search {
   cursor: pointer;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   margin-right: 20px;
   position: relative;
 
@@ -79,10 +76,10 @@
     border-radius: 0px;
     content: '';
     display: inline-block;
-    height: 13px;
-    left: 26px;
+    height: 15px;
+    left: 30px;
     position: absolute;
-    top: 22px;
+    top: 26px;
     transform: rotate(-45deg);
     transition: $fast-transition;
     width: 5px;
@@ -92,13 +89,13 @@
     border-radius: 50%;
     box-sizing: content-box;
     content: '';
-    height: 25px;
+    height: 30px;
     left: 0px;
     position: absolute;
     top: 0px;
     transform-origin: 50% 50%;
     transition: $fast-transition;
-    width: 25px;
+    width: 30px;
   }
 }
 .area-search {
@@ -166,8 +163,8 @@ button.search-submit {
       margin-right: 20px;
       display: block;
       cursor: pointer;
-      background-size: 35px 35px;
-      background-position: 5px 0px;
+      background-size: 35px 50px;
+      background-position: 5px -5px;
       transition: $default-transition;
     }
     .icon:after {
@@ -266,13 +263,13 @@ button.search-submit {
   .site-search:before {
     height: 20px;
     left: 15px;
-    top: 11px;
+    top: 14px;
     width: 2px;
   }
   .site-search:after {
     background-color: $white;
     border: 0px;
-    top: 11px;
+    top: 1px;
     border-radius: 0px;
     height: 20px;
     left: 15px;
@@ -418,7 +415,40 @@ button.search-submit {
   font-size: $smaller-font;
   padding-bottom: 1px;
 }
-
+.overlayer {
+  background: $overlayer;
+  position: absolute;
+  top: 0;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  display: none;
+  backdrop-filter: blur(2px);
+  transition: $default-transition;
+}
+.hamburger {
+  position: relative;
+  background: $blue-color;
+  min-width: 0px;
+  height: 29px;
+  cursor: pointer;
+  border-radius: 5px;
+  max-width: 0px;
+  left: 2px;
+}
+.company-logo {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  height: 30px;
+  opacity: 1;
+  transition: $default-transition;
+  background-size: contain;
+  background-position-x: right;
+}
+.mobile-breadcrumb {
+  display: none;
+}
 @media only screen and (max-width: 1200px) {
   .main-header {
     margin-right: 20px;
@@ -497,7 +527,6 @@ button.search-submit {
       top: -35px;
     }
   }
-
   .block-filters {
     display: block;
   }
@@ -513,39 +542,7 @@ button.search-submit {
     }
   }
 }
-.overlayer {
-  background: $overlayer;
-  position: absolute;
-  top: 0;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  z-index: 1;
-  display: none;
-  backdrop-filter: blur(2px);
-  transition: $default-transition;
-}
-.hamburger {
-  position: relative;
-  background: $blue-color;
-  min-width: 0px;
-  height: 29px;
-  cursor: pointer;
-  border-radius: 5px;
-  max-width: 0px;
-}
-.company-logo {
-  overflow: hidden;
-  background-repeat: no-repeat;
-  height: 30px;
-  opacity: 1;
-  transition: $default-transition;
-  background-size: contain;
-  background-position-x: right;
-}
-.mobile-breadcrumb {
-  display: none;
-}
+
 @media only screen and (max-width: 768px) {
   .overlayer-navigation {
     background: $overlayer;
@@ -677,7 +674,7 @@ button.search-submit {
     .mobile-search-header {
       display: flex;
       position: absolute;
-      width: calc(100% - 40px);
+      width: calc(100% - 30px);
       justify-content: space-between;
       color: $grey-lighter;
       top: 10px;

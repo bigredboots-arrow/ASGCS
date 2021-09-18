@@ -90,7 +90,8 @@ a {
   border-top: 6px solid $grey-darker;
 }
 @media only screen and (max-width: 1200px) {
-  .main-content.open .left-side-content .k-input span {
+  .main-content.open .left-side-content .k-input span,
+  .main-content.mob .left-side-content .k-input span {
     display: none;
   }
   .main-content.open [gridCell] {

@@ -237,6 +237,24 @@
       }
     }
   }
+  ::ng-deep .main-content.open {
+    .left-side-content .filter-items {
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 10px;
+
+      .filter-item {
+        margin: 5px 0px;
+      }
+    }
+    [gridCell] .left-side-content .total-legend {
+      display: block;
+
+      div {
+        margin: 5px 0;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 768px) {

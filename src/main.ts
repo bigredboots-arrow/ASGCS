@@ -4,6 +4,12 @@ import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
+import { ChartsModule } from "@progress/kendo-angular-charts";
+
+enableProdMode();
+
+const platform = platformBrowserDynamic();
+platform.bootstrapModule(AppModule);
 
 platformBrowserDynamic().bootstrapModule(AppModule).then(ref => {
   // Ensure Angular destroys itself on hot reloads.

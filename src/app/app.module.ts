@@ -7,7 +7,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { ChartsModule } from "@progress/kendo-angular-charts";
+import { HttpClientModule } from "@angular/common/http";
 
+import "hammerjs";
 import { HTMLEscapeUnescapeModule } from 'html-escape-unescape';
 
 import { DashboardComponent } from './pages/dashboard.component';
@@ -38,6 +41,8 @@ import { SettingsComponent } from './pages/settings/settings/settings.component'
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    ChartsModule,
+    HttpClientModule,
     CoreModule,
     HTMLEscapeUnescapeModule,
     SharedModule

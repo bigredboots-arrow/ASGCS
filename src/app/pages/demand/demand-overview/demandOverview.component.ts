@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { internetGrowthData } from "./internet-growth-data";
 
 @Component({
   selector: 'demand-overview',
@@ -6,6 +7,12 @@ import { Component, Input, OnInit, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./demandOverview.component.scss']
 })
 export class DemandOverviewComponent implements OnInit {
+  public model: any[] = internetGrowthData;
+
+  public labelContent(e: any): string {
+    return `${e.category}: \n ${e.value}%`;
+  }
+  
   @ViewChild('partoverview') partoverview: ElementRef;
   @ViewChild('fsiteoverview') fsiteoverview: ElementRef;
   @ViewChild('totaldemandoverview') totaldemandoverview: ElementRef;

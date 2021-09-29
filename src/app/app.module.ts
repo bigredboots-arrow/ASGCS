@@ -7,10 +7,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-import { ChartsModule } from "@progress/kendo-angular-charts";
-import { HttpClientModule } from "@angular/common/http";
-
-import "hammerjs";
+import { ChartsModule } from '@progress/kendo-angular-charts';
+import { HttpClientModule } from '@angular/common/http';
 import { HTMLEscapeUnescapeModule } from 'html-escape-unescape';
 
 import { DashboardComponent } from './pages/dashboard.component';
@@ -35,6 +33,8 @@ import { HubsComponent } from './pages/hubs/hubs/hubs.component';
 
 import { SettingsComponent } from './pages/settings/settings/settings.component';
 
+import 'hammerjs';
+
 @NgModule({
   imports: [
     AppRoutingModule,
@@ -45,7 +45,7 @@ import { SettingsComponent } from './pages/settings/settings/settings.component'
     HttpClientModule,
     CoreModule,
     HTMLEscapeUnescapeModule,
-    SharedModule
+    SharedModule,
   ],
   declarations: [
     AppComponent,
@@ -65,8 +65,8 @@ import { SettingsComponent } from './pages/settings/settings/settings.component'
     OutboundReportsWavechartComponent,
     OutboundReportsTotaldemandComponent,
     OutboundReportsLocationsComponent,
-    OutboundReportsProfileComponent
+    OutboundReportsProfileComponent,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

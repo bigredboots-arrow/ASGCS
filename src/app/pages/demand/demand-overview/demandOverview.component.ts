@@ -12,6 +12,15 @@ export class DemandOverviewComponent implements OnInit {
   public labelContent(e: any): string {
     return `${e.category}: \n ${e.value}%`;
   }
+  public borderOptions = {
+    color: '#000000',
+    dashType: 'solid',
+    width: 2,
+    radius: 10,
+  };
+  public seriesDefaults = {
+    overlay: { gradient: 'sharpGlass'}
+  };
 
   @ViewChild('partoverview') partoverview: ElementRef;
   @ViewChild('fsiteoverview') fsiteoverview: ElementRef;

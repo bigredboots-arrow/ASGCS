@@ -1,71 +1,26 @@
 export const internetGrowthData = [
   {
-    name: "2011",
+    name: 'SiteOverview',
     data: [
       {
-        category: "Asia",
-        value: 30.8,
-        color: "#9de219",
+        category: 'Demand Parts',
+        value: 79.6,
+        color: '#009a8c',
       },
       {
-        category: "Europe",
-        value: 21.1,
-        color: "#90cc38",
-      },
-      {
-        category: "Latin America",
-        value: 16.3,
-        color: "#068c35",
-      },
-      {
-        category: "Africa",
-        value: 17.6,
-        color: "#006634",
-      },
-      {
-        category: "Middle East",
-        value: 9.2,
-        color: "#004d38",
-      },
-      {
-        category: "North America",
-        value: 4.6,
-        color: "#033939",
+        category: 'Late Parts',
+        value: 19.4,
+        color: '#e31b23',
       },
     ],
   },
   {
-    name: "2012",
+    name: 'PartOverview',
     data: [
       {
-        category: "Asia",
-        value: 53.8,
-        color: "#9de219",
-      },
-      {
-        category: "Europe",
-        value: 16.1,
-        color: "#90cc38",
-      },
-      {
-        category: "Latin America",
-        value: 11.3,
-        color: "#068c35",
-      },
-      {
-        category: "Africa",
-        value: 9.6,
-        color: "#006634",
-      },
-      {
-        category: "Middle East",
-        value: 5.2,
-        color: "#004d38",
-      },
-      {
-        category: "North America",
-        value: 3.6,
-        color: "#033939",
+        category: 'All Parts',
+        value: 53,
+        color: '#065aa3',
       },
     ],
   },

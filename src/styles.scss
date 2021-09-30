@@ -98,3 +98,10 @@ a {
     grid-column: span 3 !important;
   }
 }
+
+.k-chart-surface {
+  min-height: 200px;
+}
+.k-chart-surface svg {
+  overflow: visible !important;
+}

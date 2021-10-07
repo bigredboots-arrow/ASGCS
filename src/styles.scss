@@ -105,3 +105,12 @@ a {
 .k-chart-surface svg {
   overflow: visible !important;
 }
+.external-ui-link {
+  position: absolute;
+  background: rgba(0, 0, 255, .7);
+  border: 1px solid white;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  transform: rotate(-12deg);
+}

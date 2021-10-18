@@ -2,24 +2,33 @@
   <app-sidebar (onToggleSidebar)="toggleSidebar()"></app-sidebar>
   <div class="overlayer" (click)="toggleSidebar()"></div>
   <div class="overlayer-filter" (click)="toggleFilters()"></div>
-  <div class="overlayer-navigation" singleDoubleClick (onSingleClick)="handleSingleClicks()"></div>
+  <div
+    class="overlayer-navigation"
+    singleDoubleClick
+    (onSingleClick)="handleSingleClicks()"
+  ></div>
 </div>
 
 <div class="main-header">
   <div id="dash-header">
     <div class="top-navigation-block">
-      <div role="button" class="hamburger toggler" singleDoubleClick (onSingleClick)="handleSingleClicks()">
+      <div
+        role="button"
+        class="hamburger toggler"
+        singleDoubleClick
+        (onSingleClick)="handleSingleClicks()"
+      >
         <span></span>
       </div>
       <div class="company-logo ciena"></div>
       <div class="breadcrumb mobile-breadcrumb">
-        <span>{{this.myBreadCrumb}}</span>
+        <span>{{ this.myBreadCrumb }}</span>
         <app-breadcrumb></app-breadcrumb>
       </div>
       <input type="checkbox" id="toggle-search" />
       <div class="top-fields">
         <nav aria-label="breadcrumb" role="navigation" class="breadcrumb">
-          <span>{{this.myBreadCrumb}}</span>
+          <span>{{ this.myBreadCrumb }}</span>
           <app-breadcrumb></app-breadcrumb>
         </nav>
         <div class="search-block">
@@ -38,11 +47,13 @@
         </div>
         <div class="header-events">
           <label for="toggle-search" class="icon site-search"
-            >Search Field</label>
+            >Search Field</label
+          >
           <div class="notifications">
             <input type="checkbox" id="toggle-notifications" />
             <label for="toggle-notifications" class="icon active"
-              >Notifications</label>
+              >Notifications</label
+            >
             <div class="notifications-popup">
               <span class="notifications-title">Notifications</span>
               <ul>
@@ -55,16 +66,19 @@
       <div class="mobile-header-events"></div>
       <div class="user-block" (click)="toggleSidebar()">
         <div class="avatar"></div>
-        <div class="name">
-          LongFirstNameWithNoBreakingSpace V.
-        </div>
+        <div class="name">Super Level User</div>
       </div>
     </div>
   </div>
 
   <!--THIS FILTER SHOULD SHOW FOR DEMAND OVERVIEW and DEMAND DISCOVER SCREENS ONLY -->
   <ng-container *ngIf="breadcrumbService.currentModule$ | async as module">
-    <div class="filter-block" [ngClass]="{'d-none': hideFilters}" #filters *ngIf="module=='demand'">
+    <div
+      class="filter-block"
+      [ngClass]="{ 'd-none': hideFilters }"
+      #filters
+      *ngIf="module == 'demand'"
+    >
       <div class="filters" (click)="toggleFilters()">
         <span class="filter-title">Filters</span>
         <span class="filter-close">+</span>
@@ -76,21 +90,17 @@
               <div class="filter-label">Status</div>
               <span class="k-dropdown-wrap">
                 <span class="k-input">Status</span>
-              <span class="k-select">
+                <span class="k-select">
                   <span class="k-icon k-i-arrow-s"></span>
-              </span>
+                </span>
               </span>
             </div>
             <div class="filter-item">
               <div class="filter-label">Dates</div>
               <div class="datepicker">
-                <div class="from-date">
-                  8/31/2021
-                </div>
+                <div class="from-date">8/31/2021</div>
                 <div class="text-date">TO</div>
-                <div class="to-date">
-                  12/31/2021
-                </div>
+                <div class="to-date">12/31/2021</div>
                 <span role="button" class="k-select">
                   <span class="k-icon k-i-calendar"></span>
                 </span>
@@ -101,8 +111,9 @@
               <div class="filter-label">Type</div>
               <span class="k-dropdown-wrap">
                 <span class="k-input">Type</span>
-              <span class="k-select"
-                  ><span class="k-icon k-i-arrow-s"></span></span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
               </span>
             </div>
 
@@ -110,16 +121,18 @@
               <div class="filter-label">Sites</div>
               <span class="k-dropdown-wrap"
                 ><span class="k-input">Manufacturing Sites</span>
-              <span class="k-select"
-                  ><span class="k-icon k-i-arrow-s"></span></span></span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span></span
+              ></span>
             </div>
 
             <div class="filter-item">
               <div class="filter-label">Supplier</div>
               <span class="k-dropdown-wrap">
                 <span class="k-input">Supplier</span>
-              <span class="k-select"
-                  ><span class="k-icon k-i-arrow-s"></span></span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
               </span>
             </div>
           </div>
@@ -134,7 +147,12 @@
     </div>
 
     <!--THIS FILTER SHOULD SHOW FOR OUTBOUND SHIPPING OVERVIEW and OUTBOUND SHIPPING DISCOVER SCREENS ONLY -->
-    <div class="filter-block" [ngClass]="{'d-none': hideFilters}" #outboundfilters *ngIf="module=='outbound'">
+    <div
+      class="filter-block"
+      [ngClass]="{ 'd-none': hideFilters }"
+      #outboundfilters
+      *ngIf="module == 'outbound'"
+    >
       <div class="filters" (click)="toggleOutboundFilters()">
         <span class="filter-title">Filters</span>
         <span class="filter-close">+</span>
@@ -146,21 +164,17 @@
               <div class="filter-label">Customer</div>
               <span class="k-dropdown-wrap">
                 <span class="k-input">Customer</span>
-              <span class="k-select">
+                <span class="k-select">
                   <span class="k-icon k-i-arrow-s"></span>
-              </span>
+                </span>
               </span>
             </div>
             <div class="filter-item">
               <div class="filter-label">Dates</div>
               <div class="datepicker">
-                <div class="from-date">
-                  8/31/2021
-                </div>
+                <div class="from-date">8/31/2021</div>
                 <div class="text-date">TO</div>
-                <div class="to-date">
-                  12/31/2021
-                </div>
+                <div class="to-date">12/31/2021</div>
                 <span role="button" class="k-select">
                   <span class="k-icon k-i-calendar"></span>
                 </span>
@@ -171,8 +185,9 @@
               <div class="filter-label">Supplier</div>
               <span class="k-dropdown-wrap">
                 <span class="k-input">Supplier</span>
-              <span class="k-select"
-                  ><span class="k-icon k-i-arrow-s"></span></span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
               </span>
             </div>
 
@@ -180,16 +195,18 @@
               <div class="filter-label">incoTerms</div>
               <span class="k-dropdown-wrap"
                 ><span class="k-input">incoTerms</span>
-              <span class="k-select"
-                  ><span class="k-icon k-i-arrow-s"></span></span></span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span></span
+              ></span>
             </div>
 
             <div class="filter-item">
               <div class="filter-label">Ship From</div>
               <span class="k-dropdown-wrap">
                 <span class="k-input">Warehouse</span>
-              <span class="k-select"
-                  ><span class="k-icon k-i-arrow-s"></span></span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
               </span>
             </div>
 
@@ -197,8 +214,9 @@
               <div class="filter-label">Ship To</div>
               <span class="k-dropdown-wrap">
                 <span class="k-input">Warehouse</span>
-              <span class="k-select"
-                  ><span class="k-icon k-i-arrow-s"></span></span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
               </span>
             </div>
           </div>
@@ -206,15 +224,18 @@
           <div class="block-filterbuttons">
             <button kendobutton="" class="secondary">Reset</button>
             <button kendobutton="" class="blue">Apply</button>
-            <div class="close-filters" (click)="toggleOutboundFilters()">
-              +
-            </div>
+            <div class="close-filters" (click)="toggleOutboundFilters()">+</div>
           </div>
         </div>
       </div>
     </div>
     <!--THIS FILTER SHOULD SHOW FOR JUST HUBS -->
-    <div class="filter-block hubfilters" [ngClass]="{'d-none': hideFilters}" #hubfilters *ngIf="module=='hubs'">
+    <div
+      class="filter-block hubfilters"
+      [ngClass]="{ 'd-none': hideFilters }"
+      #hubfilters
+      *ngIf="module == 'hubs'"
+    >
       <div class="filters" (click)="toggleHubFilters()">
         <span class="filter-title">Filters</span>
         <span class="filter-close">+</span>
@@ -226,18 +247,18 @@
               <div class="filter-label">Supplier</div>
               <span class="k-dropdown-wrap">
                 <span class="k-input">Supplier</span>
-              <span class="k-select">
+                <span class="k-select">
                   <span class="k-icon k-i-arrow-s"></span>
-              </span>
+                </span>
               </span>
             </div>
             <div class="filter-item">
               <div class="filter-label">Dates</div>
               <span class="k-dropdown-wrap">
                 <span class="k-input">1 year</span>
-              <span class="k-select">
+                <span class="k-select">
                   <span class="k-icon k-i-arrow-s"></span>
-              </span>
+                </span>
               </span>
             </div>
 
@@ -245,8 +266,9 @@
               <div class="filter-label">Type</div>
               <span class="k-dropdown-wrap">
                 <span class="k-input">Type</span>
-              <span class="k-select"
-                  ><span class="k-icon k-i-arrow-s"></span></span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
               </span>
             </div>
 
@@ -254,8 +276,9 @@
               <div class="filter-label">Warehouse Name</div>
               <span class="k-dropdown-wrap"
                 ><span class="k-input">All Warehouses</span>
-              <span class="k-select"
-                  ><span class="k-icon k-i-arrow-s"></span></span></span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span></span
+              ></span>
             </div>
           </div>
 

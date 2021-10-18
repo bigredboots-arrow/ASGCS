@@ -179,9 +179,9 @@
     grid-column: 2;
     font-size: 14px;
     font-weight: 500;
-    max-width: 75px;
+    min-width: 80px;
     text-overflow: ellipsis;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 }
 .reportscreen .header {

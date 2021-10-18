@@ -146,6 +146,7 @@ button.search-submit {
   .user-block {
     .avatar {
       margin-right: 10px;
+      min-width: 40px;
       transition: $default-transition;
     }
   }
@@ -640,6 +641,7 @@ button.search-submit {
 
       .avatar {
         width: 30px;
+        min-width: 30px;
       }
     }
     .name {

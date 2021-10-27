@@ -5,7 +5,7 @@ import {
   ViewChild,
   ElementRef,
   Output,
-  EventEmitter
+  EventEmitter,
 } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil, filter } from 'rxjs/operators';
@@ -17,7 +17,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
   private _subscriptionsSubject$: Subject<void>;
@@ -34,6 +34,7 @@ export class HeaderComponent implements OnInit {
   @ViewChild('filters') filters: ElementRef;
   @ViewChild('hubfilters') hubfilters: ElementRef;
   @ViewChild('outboundfilters') outboundfilters: ElementRef;
+  @ViewChild('supplyfilters') supplyfilters: ElementRef;
 
   breadCrumb = GlobalConstants.breadCrumb;
 
@@ -48,6 +49,10 @@ export class HeaderComponent implements OnInit {
     this.hubfilters.nativeElement.classList.toggle('filter-active');
     this.overview.nativeElement.classList.toggle('filter-active');
   }
+  toggleSupplyFilters() {
+    this.supplyfilters.nativeElement.classList.toggle('filter-active');
+    this.overview.nativeElement.classList.toggle('filter-active');
+  }
   toggleOutboundFilters() {
     this.outboundfilters.nativeElement.classList.toggle('filter-active');
     this.overview.nativeElement.classList.toggle('filter-active');
@@ -60,11 +65,11 @@ export class HeaderComponent implements OnInit {
     this._sidePanelService.panelStateChanges
       .pipe(takeUntil(this._subscriptionsSubject$))
       .subscribe((state: SidePanelState) => (this.currentPanelState = state));
-    this.breadcrumbService.currentModule$.subscribe(parent => {
+    this.breadcrumbService.currentModule$.subscribe((parent) => {
       this.myBreadCrumb = parent;
     });
 
-    this.breadcrumbService.filter$.subscribe(hideFilters => {
+    this.breadcrumbService.filter$.subscribe((hideFilters) => {
       this.hideFilters = hideFilters;
     });
   }

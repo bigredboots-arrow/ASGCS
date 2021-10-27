@@ -27,7 +27,11 @@
       </div>
       <input type="checkbox" id="toggle-search" />
       <div class="top-fields">
-        <nav aria-label="breadcrumb" role="navigation" class="breadcrumb">
+        <nav
+          aria-label="breadcrumb"
+          role="navigation"
+          class="breadcrumb {{ this.myBreadCrumb }}"
+        >
           <span>{{ this.myBreadCrumb }}</span>
           <app-breadcrumb></app-breadcrumb>
         </nav>
@@ -66,7 +70,7 @@
       <div class="mobile-header-events"></div>
       <div class="user-block" (click)="toggleSidebar()">
         <div class="avatar"></div>
-        <div class="name">Super Level User</div>
+        <div class="name">LongFirstNameWithNoBreakingSpace V.</div>
       </div>
     </div>
   </div>
@@ -286,6 +290,79 @@
             <button kendobutton="" class="secondary">Reset</button>
             <button kendobutton="" class="blue">Apply</button>
             <div class="close-filters" (click)="toggleHubFilters()">+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--THIS FILTER SHOULD SHOW FOR JUST SUPPLY -->
+    <div
+      class="filter-block supplyfilters"
+      [ngClass]="{ 'd-none': hideFilters }"
+      #supplyfilters
+      *ngIf="module == 'supply'"
+    >
+      <div class="filters" (click)="toggleSupplyFilters()">
+        <span class="filter-title">Filters</span>
+        <span class="filter-close">+</span>
+      </div>
+      <div class="overview-filters">
+        <div class="filter-container">
+          <div class="block-filters">
+            <div class="filter-item">
+              <div class="filter-label">Supplier</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Supplier</span>
+                <span class="k-select">
+                  <span class="k-icon k-i-arrow-s"></span>
+                </span>
+              </span>
+            </div>
+            <div class="filter-item">
+              <div class="filter-label">Owner</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Owner</span>
+                <span class="k-select">
+                  <span class="k-icon k-i-arrow-s"></span>
+                </span>
+              </span>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">Aging Category</div>
+              <span class="k-dropdown-wrap">
+                <span class="k-input">Aging Category</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span
+                ></span>
+              </span>
+            </div>
+
+            <div class="filter-item">
+              <div class="filter-label">Warehouse</div>
+              <span class="k-dropdown-wrap"
+                ><span class="k-input">All Warehouses</span>
+                <span class="k-select"
+                  ><span class="k-icon k-i-arrow-s"></span></span
+              ></span>
+            </div>
+
+            <div class="filter-item filter-by">
+              <div class="filter-label">Filter</div>
+              <span class="k-dropdown-wrap">
+                <input
+                  class="k-textbox"
+                  type="text"
+                  placeholder="+3 characters"
+                />
+                <span class="advanced-link">Advanced</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="block-filterbuttons">
+            <button kendobutton="" class="secondary">Reset</button>
+            <button kendobutton="" class="blue">Apply</button>
+            <div class="close-filters" (click)="toggleSupplyFilters()">+</div>
           </div>
         </div>
       </div>

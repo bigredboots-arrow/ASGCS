@@ -5,7 +5,7 @@ import { filter } from 'rxjs/operators';
 import { Breadcrumb } from '../models/breadcrumb.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BreadcrumbService {
   private readonly _breadcrumbs$ = new BehaviorSubject<Breadcrumb[]>([]);
@@ -17,8 +17,8 @@ export class BreadcrumbService {
 
   constructor(private router: Router) {
     this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe(event => {
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event) => {
         this.changeCurrentRoute(this.router.url);
         const root = this.router.routerState.snapshot.root;
         const breadcrumbs: Breadcrumb[] = [];
@@ -34,6 +34,8 @@ export class BreadcrumbService {
       this._currentRoute$.next('outbound');
     } else if (url.includes('hubs')) {
       this._currentRoute$.next('hubs');
+    } else if (url.includes('supply')) {
+      this._currentRoute$.next('supply');
     } else {
       this._currentRoute$.next('');
     }
@@ -45,7 +47,7 @@ export class BreadcrumbService {
 
       if (route.data.breadcrumb) {
         const breadcrumb = {
-          label: this.getLabel(route.data)
+          label: this.getLabel(route.data),
         };
         breadcrumbs.push(breadcrumb);
       }

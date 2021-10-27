@@ -19,23 +19,24 @@ import { OutboundReportsWavechartComponent } from './pages/outbound/outbound-rep
 import { OutboundReportsProfileComponent } from './pages/outbound/outbound-reports-profile/outboundReportsProfile.component';
 
 import { HubsComponent } from './pages/hubs/hubs/hubs.component';
+import { SupplyComponent } from './pages/supply/supply/supply.component';
 import { SettingsComponent } from './pages/settings/settings/settings.component';
 
 const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    data: { title: '8Main Page', breadcrumb: 'Dashboard' }
+    data: { title: '8Main Page', breadcrumb: 'Dashboard' },
   },
   {
     path: 'demandOverview',
     component: DemandOverviewComponent,
-    data: { title: '1Main Page', breadcrumb: 'Overview' }
+    data: { title: '1Main Page', breadcrumb: 'Overview' },
   },
   {
     path: 'demandDiscover',
     component: DemandDiscoverComponent,
-    data: { title: '2Main Page', breadcrumb: 'Discover' }
+    data: { title: '2Main Page', breadcrumb: 'Discover' },
   },
   {
     path: 'demandReports',
@@ -43,8 +44,8 @@ const routes: Routes = [
     data: {
       title: '3Main Page',
       breadcrumb: 'Reports',
-      filter: true
-    }
+      filter: true,
+    },
   },
   {
     path: 'demandReportsWavechart',
@@ -52,8 +53,8 @@ const routes: Routes = [
     data: {
       title: '9Main Page',
       breadcrumb: 'Activity Report',
-      filter: true
-    }
+      filter: true,
+    },
   },
   {
     path: 'demandReportsLocations',
@@ -61,8 +62,8 @@ const routes: Routes = [
     data: {
       title: '11Main Page',
       breadcrumb: 'Locations Report',
-      filter: true
-    }
+      filter: true,
+    },
   },
   {
     path: 'demandReportsProfile',
@@ -70,8 +71,8 @@ const routes: Routes = [
     data: {
       title: '14Main Page',
       breadcrumb: 'Profile Report',
-      filter: true
-    }
+      filter: true,
+    },
   },
   {
     path: 'demandReportsTotalDemand',
@@ -79,18 +80,18 @@ const routes: Routes = [
     data: {
       title: '4Main Page',
       breadcrumb: 'Status Report',
-      filter: true
-    }
+      filter: true,
+    },
   },
   {
     path: 'outboundOverview',
     component: OutboundOverviewComponent,
-    data: { title: '5Main Page', breadcrumb: 'Overview' }
+    data: { title: '5Main Page', breadcrumb: 'Overview' },
   },
   {
     path: 'outboundDiscover',
     component: OutboundDiscoverComponent,
-    data: { title: '7Main Page', breadcrumb: 'Discover' }
+    data: { title: '7Main Page', breadcrumb: 'Discover' },
   },
   {
     path: 'outboundReports',
@@ -98,8 +99,8 @@ const routes: Routes = [
     data: {
       title: '6Main Page',
       breadcrumb: 'Reports',
-      filter: true
-    }
+      filter: true,
+    },
   },
 
   {
@@ -108,8 +109,8 @@ const routes: Routes = [
     data: {
       title: '6Main Page',
       breadcrumb: 'Activity Report',
-      filter: true
-    }
+      filter: true,
+    },
   },
   {
     path: 'outboundReportsLocations',
@@ -117,8 +118,8 @@ const routes: Routes = [
     data: {
       title: '6Main Page',
       breadcrumb: 'Locations Report',
-      filter: true
-    }
+      filter: true,
+    },
   },
   {
     path: 'outboundReportsProfile',
@@ -126,8 +127,8 @@ const routes: Routes = [
     data: {
       title: '6Main Page',
       breadcrumb: 'Profile Report',
-      filter: true
-    }
+      filter: true,
+    },
   },
   {
     path: 'outboundReportsTotaldemand',
@@ -135,35 +136,40 @@ const routes: Routes = [
     data: {
       title: '6Main Page',
       breadcrumb: 'Status Report',
-      filter: true
-    }
+      filter: true,
+    },
   },
   {
     path: 'hubs',
     component: HubsComponent,
-    data: { title: '12Main Page', breadcrumb: '' }
+    data: { title: '12Main Page', breadcrumb: '' },
+  },
+  {
+    path: 'supply',
+    component: SupplyComponent,
+    data: { title: '15Main Page', breadcrumb: '' },
   },
   {
     path: 'settings',
     component: SettingsComponent,
-    data: { title: 'settings Page', breadcrumb: 'Settings', filter: true }
+    data: { title: 'settings Page', breadcrumb: 'Settings', filter: true },
   },
   {
     path: '**',
     redirectTo: 'dashboard',
-    pathMatch: 'full'
-  }
+    pathMatch: 'full',
+  },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule implements OnInit {
   public href: string = '';
   public url = '';
 
   constructor(private router: Router) {
-    router.events.subscribe(route => {
+    router.events.subscribe((route) => {
       if (route instanceof NavigationEnd) {
         this.url = route.url;
         if (this.url && this.url.length > 0) {

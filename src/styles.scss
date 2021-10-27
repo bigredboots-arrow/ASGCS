@@ -51,7 +51,7 @@ a {
   padding: 0px 5px;
   background: $grey-lightest;
   color: $black;
-  font-size: $small-font;
+  font-size: $smaller-font;
   border-radius: 5px 0px 0px 5px;
   display: flex;
   align-items: center;
@@ -67,6 +67,18 @@ a {
   text-align: center;
   cursor: pointer;
   border-left: 1px solid $grey-light;
+}
+.k-textbox {
+  border-radius: 5px;
+  border: 0px;
+  padding: 4px 3px;
+}
+.advanced-link {
+  color: $blue-color;
+  font-size: $small-font;
+  margin: 2px 5px;
+  text-underline-offset: 1px;
+  text-decoration: underline;
 }
 .k-dropdown-wrap {
   padding: 0px;
@@ -107,7 +119,7 @@ a {
 }
 .external-ui-link {
   position: absolute;
-  background: rgba(0, 0, 255, .7);
+  background: rgba(0, 0, 255, 0.7);
   border: 1px solid white;
   padding: 10px;
   width: 200px;

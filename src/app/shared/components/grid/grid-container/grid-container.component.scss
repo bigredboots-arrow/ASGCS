@@ -396,7 +396,7 @@
   }
   .title {
     font-weight: 200;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
     margin-right: 15px;
   }
@@ -420,12 +420,15 @@
   padding-bottom: 1px;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1399px) {
   ::ng-deep .card-items.part-overview {
     flex-direction: column;
   }
   :host ::ng-deep .card-element .numbers {
     font-size: 32px;
+  }
+  :host ::ng-deep .card-element .title {
+    font-size: 14px;
   }
 }
 

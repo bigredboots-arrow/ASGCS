@@ -78,7 +78,12 @@ a {
   font-size: $small-font;
   margin: 2px 5px;
   text-underline-offset: 1px;
-  text-decoration: underline;
+}
+.advanced-link:after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  display: block;
 }
 .k-dropdown-wrap {
   padding: 0px;

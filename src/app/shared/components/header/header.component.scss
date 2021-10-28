@@ -422,6 +422,10 @@ button.search-submit {
 .filter-label {
   font-size: $smaller-font;
   padding-bottom: 1px;
+
+  span {
+    color: $grey-light
+  }
 }
 .overlayer {
   background: $overlayer;

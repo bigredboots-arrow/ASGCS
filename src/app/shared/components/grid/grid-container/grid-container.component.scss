@@ -162,41 +162,18 @@
     margin-left: -10px;
   }
   .moreinfo-icon {
-    display: flex;
-    width: 10px;
+    content: '';
+    width: 14px;
+    height: 14px;
+    display: block;
+    background-repeat: no-repeat;
+    border: 1px solid $tertiary-color-a;
     position: relative;
-    margin-left: 3px;
-    cursor: pointer;
-    justify-content: flex-end;
-    top: 4px;
-    padding-right: 10px;
-    margin-right: -10px;
-
-    span {
-      display: block;
-      width: 2px;
-      height: 2px;
-      background-color: white;
-      top: 10px;
-      position: absolute;
-    }
-  }
-  .moreinfo-icon::before {
-    display: block;
-    width: 2px;
-    height: 2px;
-    content: '';
-    background-color: white;
-    position: absolute;
-  }
-  .moreinfo-icon::after {
-    display: block;
-    width: 2px;
-    height: 2px;
-    content: '';
-    background-color: white;
-    position: absolute;
-    top: 5px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: 3px;
+    top: 2px;
+    right: -3px;
   }
   .card-icons {
     display: flex;
@@ -211,6 +188,7 @@
     background-size: cover;
     position: relative;
     top: 4px;
+    margin-right: 5px;
   }
   .maximize-icon::before {
     content: 'View Detailed Report';

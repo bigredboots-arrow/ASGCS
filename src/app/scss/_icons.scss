@@ -63,7 +63,9 @@
 }
 .maximize-icon {
   background-image: url(/assets/icons/maximize.svg);
+  filter: brightness(0.8);
 }
 .moreinfo-icon {
   background-image: url(/assets/icons/info.svg);
+  filter: saturate(0) brightness(1.5);
 }

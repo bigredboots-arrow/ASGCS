@@ -22,8 +22,7 @@
             class="maximize-icon"
             [routerLink]="['/demandReportsLocations']"
           ></a>
-          <div class="moreinfo-icon" (click)="FMapMoreInfo()">
-          </div>
+          <div class="moreinfo-icon" (click)="FMapMoreInfo()"></div>
 
           <div class="moreinfo-block" #mapmoreinfo>
             <div class="moreinfo-header">
@@ -47,17 +46,24 @@
     </div>
     <div gridCell class="card card-body">
       <div class="card-title">
-        <div class="card-title-text">Total Demand</div>
+        <div class="card-title-text">Summary</div>
       </div>
-      <div class="card-element">
+      <div class="card-element four-totals">
         <div class="lines">
-          <div class="title">Count:</div>
-          <div class="numbers">446.3K</div>
+          <div class="title">Order Count</div>
+          <div class="numbers">99</div>
         </div>
-        <!-- <div class="gridline"></div> -->
         <div class="lines">
-          <div class="title">Value:</div>
-          <div class="numbers">$4.2M</div>
+          <div class="title">Order Sales</div>
+          <div class="numbers">$99,999</div>
+        </div>
+        <div class="lines">
+          <div class="title">Customers</div>
+          <div class="numbers">99</div>
+        </div>
+        <div class="lines">
+          <div class="title">Parts</div>
+          <div class="numbers">99</div>
         </div>
       </div>
     </div>
@@ -79,8 +85,7 @@
             class="maximize-icon"
             [routerLink]="['/demandReportsTotalDemand']"
           ></a>
-          <div class="moreinfo-icon" (click)="TreeMapMoreInfo()">
-          </div>
+          <div class="moreinfo-icon" (click)="TreeMapMoreInfo()"></div>
 
           <div class="moreinfo-block" #treemapmoreinfo>
             <div class="moreinfo-header">
@@ -138,8 +143,7 @@
         </div>
         <div class="card-icons">
           <a class="maximize-icon" [routerLink]="['/demandReportsProfile']"></a>
-          <div class="moreinfo-icon" (click)="DProfileMoreInfo()">
-          </div>
+          <div class="moreinfo-icon" (click)="DProfileMoreInfo()"></div>
 
           <div class="moreinfo-block" #dprofilemoreinfo>
             <div class="moreinfo-header">
@@ -194,8 +198,7 @@
             class="maximize-icon"
             [routerLink]="['/demandReportsWavechart']"
           ></a>
-          <div class="moreinfo-icon" (click)="DActivityMoreInfo()">
-          </div>
+          <div class="moreinfo-icon" (click)="DActivityMoreInfo()"></div>
 
           <div class="moreinfo-block" #dactivitymoreinfo>
             <div class="moreinfo-header">

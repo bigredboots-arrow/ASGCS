@@ -163,14 +163,14 @@
   }
   .moreinfo-icon {
     content: '';
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
     display: block;
     background-repeat: no-repeat;
     border: 1px solid $tertiary-color-a;
     position: relative;
     border-radius: 10px;
-    background-position: center;
+    background-position: 6px 2px;
     background-size: 3px;
     top: 2px;
     right: -3px;

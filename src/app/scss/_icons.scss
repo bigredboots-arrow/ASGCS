@@ -23,6 +23,7 @@
 }
 .main-navigation ul li.inbound .icon::before {
   background-image: url(/assets/icons/shipping.svg);
+  transform: rotateY(180deg);
 }
 .main-navigation ul li.supply .icon::before {
   background-image: url(/assets/icons/supply.svg);

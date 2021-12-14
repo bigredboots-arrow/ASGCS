@@ -22,6 +22,13 @@ a {
   font-weight: 400;
   text-decoration: none;
 }
+h1 {
+  margin: 0px 0px 10px 0px;
+}
+h2 {
+  padding: 0;
+  margin: 10px 0px 0px 0px;
+}
 
 // /* Scrollbar on Firefox */
 * {
@@ -51,7 +58,7 @@ a {
   padding: 0px 5px;
   background: $grey-lightest;
   color: $black;
-  font-size: $smaller-font;
+  font-size: $smallest-font;
   border-radius: 5px 0px 0px 5px;
   display: flex;
   align-items: center;
@@ -76,7 +83,7 @@ a {
 }
 .advanced-link {
   color: $blue-color;
-  font-size: $smaller-font;
+  font-size: $smallest-font;
   margin: 0px;
   padding-left: 2px;
   white-space: nowrap;

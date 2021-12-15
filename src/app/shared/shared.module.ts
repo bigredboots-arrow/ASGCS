@@ -10,6 +10,7 @@ import { SingleDoubleClickDirective } from './directives/single-double-click.dir
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { DonutComponent } from './components/charts/donut-chart/donut-chart.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
     SingleDoubleClickDirective,
     HeaderComponent,
     SidebarComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    DonutComponent
   ],
   imports: [CommonModule, RouterModule],
   exports: [
@@ -30,7 +32,8 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
     NavigationSidePanelComponent,
     SingleDoubleClickDirective,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    DonutComponent
   ]
 })
 export class SharedModule {}

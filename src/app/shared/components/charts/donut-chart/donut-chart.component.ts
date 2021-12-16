@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-donut-chart',
   templateUrl: './donut-chart.component.html',
   styleUrls: ['./donut-chart.component.scss'],
 })
-export class DonutComponent {
+export class DonutComponent implements OnInit {
   public chartConfig = {
     chartArea: {
       background: 'transparent',
@@ -85,4 +86,5 @@ export class DonutComponent {
       e.preventDefault();
     },
   };
+  ngOnInit(): void {}
 }

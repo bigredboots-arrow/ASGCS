@@ -1,27 +1,20 @@
 <div class="donut-container">
-  <kendo-chart>
-      <kendo-chart-legend [visible]="true" [labels]="{ color: '#DCDCDC', padding: { bottom: 5, top: 5 } }"> </kendo-chart-legend>
-      <kendo-chart-area background="none"></kendo-chart-area>
+  <div id="chart-circles" style="position: relative">
+    <kendo-chart
+      [chartArea]="chartConfig.chartArea"
+      [seriesDefaults]="chartConfig.seriesDefault"
+      [legend]="chartConfig.legend"
+      [series]="chartConfig.series"
+    >
       <kendo-chart-tooltip>
-          <ng-template kendoChartSeriesTooltipTemplate let-value="value" let-category="category" let-series="series">
-              {{ category }}
-          </ng-template>
+        <ng-template
+          kendoChartSeriesTooltipTemplate
+          let-value="value"
+          let-category="category"
+        >
+          {{ category }} - {{ value }}
+        </ng-template>
       </kendo-chart-tooltip>
-      <kendo-chart-series>
-          <kendo-chart-series-item
-              *ngFor="let series of model"
-              [autoFit]="autofit"
-              type="donut"
-              [holeSize]="45"
-              [margin]="6"
-              [startAngle]="90"
-              [size]="14"
-              [data]="series.data"
-              field="value"
-              categoryField="category"
-              colorField="color"
-          >
-          </kendo-chart-series-item>
-      </kendo-chart-series>
-  </kendo-chart>
+    </kendo-chart>
+  </div>
 </div>

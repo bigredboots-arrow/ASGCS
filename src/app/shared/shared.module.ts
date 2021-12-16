@@ -10,22 +10,25 @@ import { SingleDoubleClickDirective } from './directives/single-double-click.dir
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+
 import { DonutComponent } from './components/charts/donut-chart/donut-chart.component';
+import { ChartsModule } from '@progress/kendo-angular-charts';
 
 @NgModule({
   declarations: [
     GridContainerComponent,
     GridCellDirective,
+    DonutComponent,
     NavigationBarComponent,
     NavigationSidePanelComponent,
     SingleDoubleClickDirective,
     HeaderComponent,
     SidebarComponent,
     BreadcrumbComponent,
-    DonutComponent
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, ChartsModule],
   exports: [
+    DonutComponent,
     GridContainerComponent,
     GridCellDirective,
     NavigationBarComponent,
@@ -33,8 +36,7 @@ import { DonutComponent } from './components/charts/donut-chart/donut-chart.comp
     SingleDoubleClickDirective,
     HeaderComponent,
     SidebarComponent,
-    DonutComponent
-  ]
+  ],
+  bootstrap: [DonutComponent],
 })
 export class SharedModule {}
- 

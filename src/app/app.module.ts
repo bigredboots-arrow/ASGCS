@@ -34,7 +34,7 @@ import { HubsComponent } from './pages/hubs/hubs/hubs.component';
 import { SupplyComponent } from './pages/supply/supply/supply.component';
 
 import { SettingsComponent } from './pages/settings/settings/settings.component';
-
+//import { DonutComponent } from './shared/components/charts/donut-chart/donut-chart.component';
 import 'hammerjs';
 
 @NgModule({
@@ -43,6 +43,7 @@ import 'hammerjs';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    // DonutComponent,
     ChartsModule,
     HttpClientModule,
     CoreModule,
@@ -53,6 +54,7 @@ import 'hammerjs';
     AppComponent,
     DashboardComponent,
     DemandOverviewComponent,
+    // DonutComponent,
     DemandDiscoverComponent,
     DemandReportsComponent,
     DemandReportsWavechartComponent,
@@ -70,6 +72,9 @@ import 'hammerjs';
     OutboundReportsLocationsComponent,
     OutboundReportsProfileComponent,
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [
+    AppComponent,
+    // DonutComponent
+  ],
 })
 export class AppModule {}

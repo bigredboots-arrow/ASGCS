@@ -3,20 +3,4 @@
 .donut-container {
   height: auto;
 }
-::ng-deep .k-chart-tooltip-wrapper {
-  background: black;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin: 0;
-  padding: 0;
-  position: a;
-}
-.k-chart-tooltip-wrapper div,
-.k-chart-tooltip-wrapper span {
-  color: white;
-  font-size: 13px;
-  background: transparent !important;
-}
-.tooltips {
-  background: black;
-}
+

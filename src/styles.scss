@@ -125,6 +125,14 @@ h2 {
   border-right: 6px solid transparent;
   border-top: 6px solid $grey-darker;
 }
+.k-chart-tooltip-wrapper {
+  background: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
 .tooltips {
   background: black;
   color: white;

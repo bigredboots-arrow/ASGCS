@@ -35,7 +35,7 @@
     <div gridCell class="card card-body">
       <div class="card-title">
         <div class="card-title-text">Late Ship Orders by Customer</div>
-        <div class="card-icons">
+        <div class="card-icons" #fsiteoverview>
           <div class="moreinfo-icon" (click)="FsitetoggleMoreInfo()"></div>
         </div>
       </div>
@@ -92,7 +92,7 @@
             <span class="map-to">TO:</span>
           </div>
         </div>
-        <div class="card-icons">
+        <div class="card-icons" #flocationsoverview>
           <a
             class="maximize-icon"
             [routerLink]="['/demandReportsLocations']"

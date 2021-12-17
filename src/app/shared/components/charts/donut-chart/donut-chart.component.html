@@ -1,5 +1,7 @@
 <div class="donut-container">
-  <div class="load-more" (click)="onClickMe()">Load More</div>
+  <div class="load-more donut-toggle" (click)="onClickMe()" #donuttoggle>
+    Load More
+  </div>
   <div id="chart-circles" style="position: relative">
     <kendo-chart
       [chartArea]="chartConfig.chartArea"

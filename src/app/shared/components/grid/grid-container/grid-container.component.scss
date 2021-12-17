@@ -267,6 +267,7 @@
     right: 5px;
     font-size: 14px;
     z-index: 1;
+    transition: .3s ease-in-out all;
 
     &.moreinfo-active {
       opacity: 1;

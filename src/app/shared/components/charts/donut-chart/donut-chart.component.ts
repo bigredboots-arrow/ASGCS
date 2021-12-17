@@ -1,31 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-donut-chart',
   templateUrl: './donut-chart.component.html',
   styleUrls: ['./donut-chart.component.scss'],
+
+  encapsulation: ViewEncapsulation.None,
 })
 export class DonutComponent implements OnInit {
   public chartConfig = {
     chartArea: {
       background: 'transparent',
-      height: 250,
+      height: 280,
       top: 0,
       padding: 0,
       margin: 0,
-      width: 250,
+      width: 280,
       autoFit: false,
-    },
-    plotArea: {
-      height: 250,
-      width: 250,
     },
     legend: {
       visible: false,
     },
     series: [
       {
-        holeSize: 55,
+        holeSize: 65,
         margin: 0,
         name: 'parts',
         type: 'donut',

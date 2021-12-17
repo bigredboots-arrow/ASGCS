@@ -365,7 +365,12 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  height: calc(100% - 20px);
+
+  &.charting {
+    background: #151515;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
 }
 :host ::ng-deep .card-element {
   text-align: center;

@@ -3,4 +3,32 @@
 .donut-container {
   height: auto;
 }
+.load-more {
+  position: absolute;
+  top: 12px;
+  font-size: 12px;
+  background: #065aa3;
+  border-radius: 5px;
+  padding: 2px 5px;
+  cursor: pointer;
+  z-index: 3;
+  text-align: center;
+  left: calc(50% - 31px);
 
+  &.five {
+    display: block;
+  }
+  &.ten {
+    display: none;
+  }
+}
+.donut-container.active {
+  .load-more {
+    &.five {
+      display: none;
+    }
+    &.ten {
+      display: block;
+    }
+  }
+}

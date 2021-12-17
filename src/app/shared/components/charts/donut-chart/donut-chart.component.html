@@ -1,7 +1,6 @@
-<div class="donut-container">
-  <div class="load-more donut-toggle" (click)="onClickMe()" #donuttoggle>
-    Load More
-  </div>
+<div class="donut-container" #donutoverview>
+  <div class="load-more five" (click)="onClickMe()">Load More</div>
+  <div class="load-more ten" (click)="onClickMeClicked()">Load Less</div>
   <div id="chart-circles" style="position: relative">
     <kendo-chart
       [chartArea]="chartConfig.chartArea"
@@ -15,7 +14,9 @@
           let-value="value"
           let-category="category"
         >
-          {{ category }} - {{ value }}
+          {{ category }} - {{ value }}%<br />
+          JBIL CORP <br />
+          Avg. 90D Late
         </ng-template>
       </kendo-chart-tooltip>
     </kendo-chart>

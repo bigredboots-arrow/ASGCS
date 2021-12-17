@@ -147,6 +147,10 @@ h2 {
   background: #065aa3;
   border-radius: 5px;
   padding: 2px 5px;
+  cursor: pointer;
+  z-index: 3;
+  text-align: center;
+  left: calc(50% - 31px);
 }
 
 @media only screen and (max-width: 1200px) {

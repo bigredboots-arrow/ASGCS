@@ -3,7 +3,7 @@
     <div gridCell class="card card-body">
       <div class="card-title">
         <div class="card-title-text">Late Ship Orders by Supplier</div>
-        <div class="card-icons">
+        <div class="card-icons" #partoverview>
           <div
             class="moreinfo-icon"
             (click)="PartOverviewtoggleMoreInfo()"
@@ -13,11 +13,8 @@
       <div class="card-items charting">
         <app-donut-chart></app-donut-chart>
       </div>
-      <div class="moreinfo-block" #partoverview>
+      <div class="moreinfo-block" #ipartoverview>
         <div class="moreinfo-header">
-          <a class="close-more" (click)="PartOverviewtoggleMoreInfo()">+</a>
-        </div>
-        <div class="data">
           The content is related to the Master set of filters on the top.<br /><br />
           AFTER YOU SEARCH INSIDE THE GRID (drill down inside the grid), the
           visual on the top will not follow along. ONCE you manipulate again the
@@ -42,11 +39,8 @@
           <div class="moreinfo-icon" (click)="FsitetoggleMoreInfo()"></div>
         </div>
       </div>
-      <div class="moreinfo-block" #fsiteoverview>
+      <div class="moreinfo-block" #ifsiteoverview>
         <div class="moreinfo-header">
-          <a class="close-more" (click)="FsitetoggleMoreInfo()">+</a>
-        </div>
-        <div class="data">
           The content is related to the Master set of filters on the top.<br /><br />
           AFTER YOU SEARCH INSIDE THE GRID (drill down inside the grid), the
           visual on the top will not follow along. ONCE you manipulate again the
@@ -107,11 +101,8 @@
           <div class="moreinfo-icon" (click)="FLocationsMoreInfo()"></div>
         </div>
       </div>
-      <div class="moreinfo-block" #flocationsoverview>
+      <div class="moreinfo-block" #iflocationsoverview>
         <div class="moreinfo-header">
-          <a class="close-more" (click)="FLocationsMoreInfo()">+</a>
-        </div>
-        <div class="data">
           The content is related to the Master set of filters on the top.<br /><br />
           AFTER YOU SEARCH INSIDE THE GRID (drill down inside the grid), the
           visual on the top will not follow along. ONCE you manipulate again the

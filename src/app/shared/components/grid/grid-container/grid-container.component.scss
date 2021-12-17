@@ -177,6 +177,22 @@
     cursor: pointer;
     transform: scale(1);
     transition: $default-transition;
+
+    &::before {
+      display: block;
+      content: '+';
+      color: #000;
+      font-size: 0px;
+      border-left: 0px solid #ccc;
+      transform: rotate(0deg);
+      position: absolute;
+      left: 5px;
+      top: 1px;
+      transition: 0.15s ease-in-out all;
+      width: 0px;
+      height: 0px;
+      line-height: 0px;
+    }
   }
   .moreinfo-icon:hover {
     transform: scale(1.2);
@@ -184,6 +200,19 @@
   .card-icons {
     display: flex;
     position: relative;
+  }
+  .card-icons.moreinfo-active .moreinfo-icon {
+    background-image: none !important;
+    background-color: #4c4c4c;
+    transform: scale(1.5);
+    right: 3px;
+
+    &::before {
+      content: '+';
+      color: #ccc;
+      font-size: 21px;
+      transform: rotate(45deg);
+    }
   }
   .maximize-icon {
     content: '';
@@ -237,11 +266,18 @@
     top: 0px;
     right: 5px;
     font-size: 14px;
-    transition: 0.3s ease-out all;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 20px auto 30px;
     z-index: 1;
+
+    &.moreinfo-active {
+      opacity: 1;
+      padding: 10px;
+      width: calc(100% - 50px);
+      height: calc(100% - 75px);
+      top: 40px;
+      right: 15px;
+      max-width: 500px;
+      max-height: 250px;
+    }
 
     ul {
       margin: 0px 0px 5px;
@@ -277,23 +313,17 @@
       }
     }
   }
-  .moreinfo-active {
-    opacity: 1;
-    padding: 10px;
-    width: calc(100% - 50px);
-    height: calc(100% - 75px);
-    top: 40px;
-    right: 15px;
-    max-width: 500px;
-    max-height: 250px;
-  }
   .moreinfo-block .title {
     font-weight: 600;
     color: $white;
   }
   .moreinfo-header {
-    display: flex;
-    justify-content: space-between;
+    display: block;
+    height: 100%;
+    overflow-y: auto;
+    text-shadow: 0px 0px 8px black;
+    line-height: 20px;
+    letter-spacing: 0.5px;
   }
 
   a.close-more {
@@ -365,6 +395,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  position: relative;
 
   &.charting {
     background: #151515;

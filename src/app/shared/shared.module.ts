@@ -12,6 +12,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 
 import { DonutComponent } from './components/charts/donut-chart/donut-chart.component';
+import { DonutComponentAlt } from './components/charts/donut-chart-alt/donut-chart-alt.component';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { ChartsModule } from '@progress/kendo-angular-charts';
     GridContainerComponent,
     GridCellDirective,
     DonutComponent,
+    DonutComponentAlt,
     NavigationBarComponent,
     NavigationSidePanelComponent,
     SingleDoubleClickDirective,
@@ -29,6 +31,7 @@ import { ChartsModule } from '@progress/kendo-angular-charts';
   imports: [CommonModule, RouterModule, ChartsModule],
   exports: [
     DonutComponent,
+    DonutComponentAlt,
     GridContainerComponent,
     GridCellDirective,
     NavigationBarComponent,

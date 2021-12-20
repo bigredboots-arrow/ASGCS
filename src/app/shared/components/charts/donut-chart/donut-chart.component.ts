@@ -161,6 +161,10 @@ export class DonutComponent implements OnInit {
       ],
     };
   }
+  public labelContent(e: any): string {
+    return e.category;
+  }
+
   onClickMeClicked() {
     this.donutoverview.nativeElement.classList.toggle('active');
     this.chartConfig = {

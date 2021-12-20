@@ -6,12 +6,15 @@
     <span>Load Less</span>
   </div>
   <div id="chart-circles" style="position: relative">
-    <kendo-chart (seriesClick)="onSeriesClick($event)"
+    <kendo-chart
+      (seriesClick)="onSeriesClick($event)"
       [chartArea]="chartConfig.chartArea"
       [seriesDefaults]="chartConfig.seriesDefault"
       [legend]="chartConfig.legend"
       [series]="chartConfig.series"
     >
+     
+      </kendo-chart-series-item-labels>
       <kendo-chart-tooltip tooltipClass="tooltippers">
         <ng-template
           kendoChartSeriesTooltipTemplate

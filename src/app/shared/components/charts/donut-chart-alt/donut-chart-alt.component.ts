@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-donut-chart',
+  selector: 'app-donut-chart-alt',
   templateUrl: './donut-chart-alt.component.html',
   styleUrls: ['./donut-chart-alt.component.scss'],
 

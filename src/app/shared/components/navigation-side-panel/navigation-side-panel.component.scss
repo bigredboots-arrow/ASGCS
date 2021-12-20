@@ -22,7 +22,7 @@
   }
   li {
     margin: 10px 0px;
-    font-weight: 600;
+    font-weight: 400;
     display: flex;
     position: relative;
 
@@ -59,7 +59,7 @@
     margin-top: 6px;
 
     .no-child {
-      font-weight: 600;
+      //font-weight: 600;
     }
   }
 }
@@ -97,6 +97,7 @@
 }
 .is-active .parent {
   color: $white;
+  font-weight: 600;
 }
 
 a {
@@ -130,5 +131,5 @@ a.is-active {
   }
 }
 .dashboard {
-  font-weight: 600;
+  // font-weight: 600;
 }

@@ -5,6 +5,7 @@ import {
   ElementRef,
   ViewChild,
 } from '@angular/core';
+import { geometry } from '@progress/kendo-drawing';
 
 @Component({
   selector: 'app-donut-chart',
@@ -34,7 +35,7 @@ export class DonutComponent implements OnInit {
         name: 'parts',
         type: 'donut',
         border: {
-          width: 2,
+          width: 3,
           color: '#151515',
           dashType: 'solid',
         },
@@ -50,22 +51,22 @@ export class DonutComponent implements OnInit {
           {
             category: 'Data Point 2',
             value: 25,
-            color: '#1f6bac',
+            color: '#1664a9',
           },
           {
             category: 'Data Point 3',
             value: 20,
-            color: '#4886bc',
+            color: '#3d7eb7',
           },
           {
             category: 'Data Point 4',
             value: 10,
-            color: '#8fb5d6',
+            color: '#84add2',
           },
           {
             category: 'Other',
             value: 5,
-            color: '#e8eff6',
+            color: '#d4e3ef',
           },
         ],
       },
@@ -96,7 +97,7 @@ export class DonutComponent implements OnInit {
           name: 'parts',
           type: 'donut',
           border: {
-            width: 2,
+            width: 3,
             color: '#151515',
             dashType: 'solid',
           },
@@ -127,7 +128,7 @@ export class DonutComponent implements OnInit {
             {
               category: 'Data Point 5',
               value: 11,
-              color: '#3f80b8',
+              color: '#4181b9',
             },
             {
               category: 'Data Point 6',
@@ -182,8 +183,8 @@ export class DonutComponent implements OnInit {
           name: 'parts',
           type: 'donut',
           border: {
-            width: 2,
-            color: 'black',
+            width: 3,
+            color: '#151515',
             dashType: 'solid',
           },
           explodeField: 'explode',
@@ -198,26 +199,39 @@ export class DonutComponent implements OnInit {
             {
               category: 'Data Point 2',
               value: 26,
-              color: '#1f6bac',
+              color: '#1664a9',
             },
             {
               category: 'Data Point 3',
               value: 21,
-              color: '#4886bc',
+              color: '#3d7eb7',
             },
             {
               category: 'Data Point 4',
               value: 11,
-              color: '#4886bc',
+              color: '#84add2',
             },
             {
               category: 'Other',
               value: 6,
-              color: '#',
+              color: '#d4e3ef',
             },
           ],
         },
       ],
     };
+  }
+  public onSeriesClick(args: any): void {
+    if (!args.dataItem.highlighted || args.dataItem.highlighted === '') {
+      args.dataItem.highlighted = true;
+      var origin = args.point.sector.center;
+      args.point.visual.transform(
+        (geometry.transform() as any).scale(1.07, 1.07, [origin.x, origin.y])
+      );
+    } else {
+      args.dataItem.highlighted = false;
+      var origin = null; // args.point.box.center()
+      args.point.visual.transform(null);
+    }
   }
 }

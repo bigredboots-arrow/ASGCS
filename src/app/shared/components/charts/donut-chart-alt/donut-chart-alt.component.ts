@@ -96,8 +96,8 @@ export class DonutComponentAlt implements OnInit {
           name: 'parts',
           type: 'donut',
           border: {
-            width: 2,
-            color: 'black',
+            width: 3,
+            color: '#151515',
             dashType: 'solid',
           },
           explodeField: 'explode',

@@ -1,10 +1,12 @@
 <div class="donut-container" #donutoverview>
-  <div class="load-more five" (click)="onClickMe()"><span>Load More</span></div>
+  <div class="load-more five" (click)="onClickMe()">
+    <span>Change View</span>
+  </div>
   <div class="load-more ten" (click)="onClickMeClicked()">
     <span>Load Less</span>
   </div>
   <div id="chart-circles" style="position: relative">
-    <kendo-chart
+    <kendo-chart (seriesClick)="onSeriesClick($event)"
       [chartArea]="chartConfig.chartArea"
       [seriesDefaults]="chartConfig.seriesDefault"
       [legend]="chartConfig.legend"
@@ -18,7 +20,7 @@
         >
           {{ category }} - {{ value }}%<br />
           JBIL CORP <br />
-          Avg. 90D Late
+          Avg. 90D Late and this keeps growing if needed
         </ng-template>
       </kendo-chart-tooltip>
     </kendo-chart>

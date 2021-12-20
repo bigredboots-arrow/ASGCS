@@ -132,6 +132,7 @@ h2 {
   padding: 3px 5px;
   margin: 0;
   position: absolute;
+  z-index: 3;
 
   div,
   span {
@@ -140,7 +141,6 @@ h2 {
     font-size: 12px;
   }
 }
-
 
 @media only screen and (max-width: 1200px) {
   .main-content.open .left-side-content .k-input span,

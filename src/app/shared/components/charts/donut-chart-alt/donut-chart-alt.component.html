@@ -1,6 +1,10 @@
 <div class="donut-container" #donutoverviewalt>
-  <div class="load-more five" (click)="onClickMe()">Load More</div>
-  <div class="load-more ten" (click)="onClickMeClicked()">Load Less</div>
+  <div class="load-more five" (click)="onClickMe()">
+    <span>Change View</span>
+  </div>
+  <div class="load-more ten" (click)="onClickMeClicked()">
+    <span>Load Less</span>
+  </div>
   <div id="chart-circles" style="position: relative">
     <kendo-chart
       [chartArea]="chartConfig.chartArea"

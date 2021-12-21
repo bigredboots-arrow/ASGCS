@@ -78,7 +78,7 @@
   <!--THIS FILTER SHOULD SHOW FOR DEMAND OVERVIEW and DEMAND DISCOVER SCREENS ONLY -->
   <ng-container *ngIf="breadcrumbService.currentModule$ | async as module">
     <div
-      class="filter-block"
+      class="filter-block filter-active filter-active"
       [ngClass]="{ 'd-none': hideFilters }"
       #filters
       *ngIf="module == 'demand'"
@@ -152,7 +152,7 @@
 
     <!--THIS FILTER SHOULD SHOW FOR OUTBOUND SHIPPING OVERVIEW and OUTBOUND SHIPPING DISCOVER SCREENS ONLY -->
     <div
-      class="filter-block"
+      class="filter-block filter-active"
       [ngClass]="{ 'd-none': hideFilters }"
       #outboundfilters
       *ngIf="module == 'outbound'"
@@ -235,7 +235,7 @@
     </div>
     <!--THIS FILTER SHOULD SHOW FOR JUST HUBS -->
     <div
-      class="filter-block hubfilters"
+      class="filter-block hubfilters filter-active"
       [ngClass]="{ 'd-none': hideFilters }"
       #hubfilters
       *ngIf="module == 'hubs'"
@@ -296,7 +296,7 @@
     </div>
     <!--THIS FILTER SHOULD SHOW FOR JUST SUPPLY -->
     <div
-      class="filter-block supplyfilters"
+      class="filter-block supplyfilters filter-active"
       [ngClass]="{ 'd-none': hideFilters }"
       #supplyfilters
       *ngIf="module == 'supply'"
@@ -347,7 +347,9 @@
             </div>
 
             <div class="filter-item filter-by">
-              <div class="filter-label">Filter <span>(Case sensitive)</span></div>
+              <div class="filter-label">
+                Filter <span>(Case sensitive)</span>
+              </div>
               <span class="k-dropdown-wrap">
                 <input
                   class="k-textbox"
